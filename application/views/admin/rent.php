@@ -1,5 +1,5 @@
 <div class="col-md-12 search-table-col">
-                            <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span><button class="btn btn-primary modal-open" style="background-color: rgb(2,73,255);" data-modal="new reservation">New Rent</button>
+                            <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span><button class="btn btn-primary modal-open"  data-modal="new reservation">New Rent</button>
 
                                 <div class="modal" id="new reservation">
                                 <div class="modal-content">
@@ -161,7 +161,7 @@
                                                 <td></td>
                                                 <td></td>
                                                 <td>
-                                                    <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color: rgb(2,73,255);">Options</button>
+                                                    <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
                                                         <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Edit</a><a class="dropdown-item" role="presentation" href="#">Release</a><a class="dropdown-item" role="presentation" href="#">Return</a></div>
                                                     </div>
                                                 </td>

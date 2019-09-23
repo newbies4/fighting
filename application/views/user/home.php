@@ -33,7 +33,7 @@
 
          <form>
             <!-- Button trigger modal -->
-                <button  data-toggle="modal" data-target="#loginModal" > <a href=<?php echo base_url('index.php/pages/login') ?>>Login</a></button>
+                <button  data-toggle="modal" data-target="#loginModal" > <a href=<?php echo base_url('index.php/pages_user/login') ?>>Login</a></button>
                 <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal" >Sign up</button> -->
                      
             </form> 
