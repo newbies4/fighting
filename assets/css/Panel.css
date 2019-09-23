@@ -1,0 +1,123 @@
+.card-header {
+  padding: .5rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #aa0404;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.h5, h5 {
+  font-size: 1.25rem;
+  color: white;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, input {
+  overflow: visible;
+}
+
+.form-group {
+  text-align: right;
+  padding-right: 20px;
+  /*display: inline;*/
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, input {
+  overflow: visible;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fffefe;
+  background-color: rgba(207,197,197,0.5);
+  border-color: #ffffff;
+  font-weight: bold;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: .2rem 0rem;
+  margin-bottom: -1px;
+  background-color: #000000;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.table-responsive {
+  display: block;
+  width: 80;
+  overflow-x: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #ff2d2d;
+  border-color: #fe4e4e;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #bc0000;
+  border-color: rgba(159,1,1,0.68);
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #ff0505;
+  border-color: #cc0000;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: 0 0 0 .2rem rgba(150,2,2,0.5);
+}
+
+.breadcrumb {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: .75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #e9ecef;
+  border-radius: .25rem;
+  content: "|";
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: .50rem;
+  content: "|";
+}
+
+.breadcrumb a.active, .breadcrumb a:hover {
+  background: linear-gradient(#707270,#000000);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #920404;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: rgba(158,158,159,0.25);
+}
+

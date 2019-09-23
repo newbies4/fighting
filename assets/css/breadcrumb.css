@@ -1,0 +1,81 @@
+.wrapper {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.wrapper ul {
+  display: flex;
+}
+
+.wrapper ul li {
+  width: 100px;
+  margin-right: 120px;
+  position: relative;
+}
+
+.wrapper ul li:last-child {
+  margin-right: 0;
+}
+
+.wrapper ul li a {
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.wrapper ul li a .icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 12px;
+  background: #aa0404;
+  line-height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(113,62,62,0.8);
+}
+
+.wrapper ul li p {
+  color: black;
+  font-size: 10px;
+}
+
+.wrapper ul li:before {
+  content: ">>>>>>>>";
+  position: absolute;
+  top: 25%;
+  right: -125px;
+  font-size: 25px;
+  color: #aa0404;
+  transform: translateY(-50%);
+}
+
+.wrapper ul li:last-child:before {
+  display: none;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+.wrapper ul li.active .icon {
+  background: rgb(255,255,255);
+  color: #aa0404;
+}
+
+.wrapper ul li.active p {
+  color: #aa0404;
+  font-weight: bold;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #000000;
+  margin: 1em 0;
+  padding: 0;
+}
+
