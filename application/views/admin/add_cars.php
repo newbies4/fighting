@@ -1,10 +1,6 @@
 <header>
     <h3>ADD CARS </h3>
-    <div class="form-group">
-        <i class="fa fa-search"></i>
-        <label for="search-field"></label>
-        <input type="search" /> 
-    </div>
+    
 </header>
 
 <div class = "container">                 
@@ -60,41 +56,61 @@
 
     <!--right part -->
             <div class="col-sm-6">       
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="" name="" >
-                            <label for="">Car Owner * </label>
-                        </div>                           
+                                                   
                         <div class="form-group">           
-                            <input type="text" class="form-control" id="" name="" >
-                            <label for="">Transmission </label>
+                            <select class="browser-default custom-select">
+                                <option selected>Selec Transmission</option>
+                                <option value="1">Manual</option>
+                                <option value="2">Automatic</option>
+                                <option value="2">Dual Transmission</option>                             
+                            </select>
                         </div>                                
                         <div class="form-group">
-
                             <input type="text" class="form-control" id="" name="" >
                             <label for="">Fuel Capacity </label>
                         </div>                                 
                         <div class="form-group">
-
-                            <input type="text" class="form-control" id="" name="" >
-                            <label for="">Gas Type</label>
+                            <select class="browser-default custom-select">
+                                <option selected>Select Gas Type</option>
+                                <option value="1">Diesel</option>
+                                <option value="2">Unleaded</option>                              
+                            </select>
                         </div>                                
                         <div class="form-group">
-
-                            <input type="text" class="form-control" id="" name="" >
-                            <label for="">Insurance </label>
+                            <select class="browser-default custom-select">
+                                <option selected>Select Insurance Type</option>
+                                <option value="1">Compulsory Third Party (CTP)</option>
+                                <option value="2">Third Party Property</option>  
+                                <option value="3">Third Party, Fire and Theft</option>    
+                                <option value="4">Comprehensive Car Insurance</option>                             
+                            </select>
                         </div>  
 
                         <div class="form-group">
                             <input type="text" class="form-control" id="" name="" >
                             <label for="">Price</label>
                         </div>  
-                        <div class="form-group">
-                                <input type="text" class="form-control" id="" name="" >
-                                <label for="">Driver </label>
-                        </div>  
-                    <a class="btn btn-primary" href="">Save</a>   
+                            <select class="browser-default custom-select">
+                                <option selected>Select Driver</option>
+                                <option value="1">With Driver</option>
+                                <option value="2">Without Driver</option>                           
+                            </select>
+                        <div>
+                            <form>
+                                <div class="form-group">   
+                                    <br>                          
+                                    <label for="">ddd</label>
+                                    <input type="file" class="form-control-file" id="">
+                                    
+                                </div>
+                            </form>
+                        </div>
+                        <div>
+                            <br>
+                            <a class="btn btn-primary" href="">Save</a>   
+                        </div>
                     </div> <!-- end of col-sm-6 -->
-    <!--right part -->                     
+    <!--right part -->                        
             </div> <!-- end of col-sm-6 -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->

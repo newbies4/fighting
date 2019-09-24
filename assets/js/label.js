@@ -9,4 +9,5 @@ $(document).ready(function(){
              $(this).siblings("label").removeClass("active");
         }
     })
+
 })
