@@ -1,6 +1,6 @@
 <header>
-    <h3>ADD CARS </h3>
-    
+    <center><h3>ADD CARS </h3></center>
+    <br>
 </header>
 
 <div class = "container">                 

@@ -78,4 +78,11 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('admin/admin_login');
 	}
+	public function add_customer()
+	{
+		
+		$data['main_view'] = "admin/add_customer";
+		
+		$this->load->view('layouts/main', $data);
+	}
 }
