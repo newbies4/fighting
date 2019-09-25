@@ -1,5 +1,6 @@
 <div class="col-md-12 search-table-col">
-                            <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span><button class="btn btn-primary modal-open"  data-modal="new reservation">New Rent</button>
+                            <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
+                            <button class="btn btn-primary modal-open"  data-modal="new reservation">New Rent</button>
 
                                 <div class="modal" id="new reservation">
                                 <div class="modal-content">
