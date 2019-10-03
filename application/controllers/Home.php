@@ -85,4 +85,60 @@ class Home extends CI_Controller {
 		
 		$this->load->view('layouts/main', $data);
 	}
+<<<<<<< HEAD
+	public function add_employee()
+	{
+		
+		$data['main_view'] = "admin/add_employee";
+		
+		$this->load->view('layouts/main', $data);
+	}
+	public function add_reservation()
+	{
+		
+		$data['main_view'] = "admin/add_reservation";
+		
+		$this->load->view('layouts/main', $data);
+	}
+	public function add_rent()
+	{
+		
+		$data['main_view'] = "admin/add_rent";
+		
+		$this->load->view('layouts/main', $data);
+	}
+	public function fetchMemberData() 
+	{
+		$result = array('data' => array());
+
+		$data = $this->model_member->fetchMemberData();
+		foreach ($data as $key => $value) {
+			$name = $value['fname'] . ' ' . $value['lname'];
+
+			// button
+			$buttons = '
+			<div class="btn-group">
+			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Action <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu">
+			    <li><a type="button" onclick="editMember('.$value['id'].')" data-toggle="modal" data-target="#editMemberModal">Edit</a></li>
+			    <li><a type="button" onclick="removeMember('.$value['id'].')" data-toggle="modal" data-target="#removeMemberModal">Remove</a></li>			    
+			  </ul>
+			</div>
+			';
+
+			$result['data'][$key] = array(
+				$name,
+				$value['age'],
+				$value['contact'],
+				$value['address'],
+				$buttons
+			);
+		} // /foreach
+
+		echo json_encode($result);
+	}
+=======
+>>>>>>> 2fdb5952fc2234fd03d593f255d44b8f449a7242
 }

@@ -7,12 +7,13 @@
      
       <!-- bootstrap css -->
 			<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/Content-filter/css/reset.css') ?>">
+         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/Content-filter/css/style.css') ?>">
 			<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>">
             <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css') ?>">     -->
-    
+         
       <!-- custom css -->
 			
-      <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/Content-filter/css/style.css') ?>">
+      
     
     
    </head>    
@@ -39,6 +40,7 @@
 
 <!-- JQuery -->
 <script type="text/javascript" src="<?php echo base_url('assets/jquery/jquery.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/Content-filter/js/jquery-2.1.1.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/Content-filter/js/jquery.mixitup.min.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/Content-filter/js/main.js') ?>"></script>
