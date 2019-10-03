@@ -6,6 +6,7 @@
     <script src="assets/js/modal.js?h=106753b11d10f7ee179d9c47f414662d"></script>
     <script src="assets/js/Sidebar-Menu.js?h=799b9a88f11384c3d5b19774a5e8d1ed"></script>
     <script src="assets/js/Table-With-Search.js?h=aeb9a0ac8b6cc9ec2e3b9cc3add2f239"></script>
+    <script src="assets/js/home.js"></script>
 </body>
 
 </html>
