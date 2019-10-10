@@ -85,7 +85,7 @@ class Home extends CI_Controller {
 		
 		$this->load->view('layouts/main', $data);
 	}
-<<<<<<< HEAD
+/* head */
 	public function add_employee()
 	{
 		
@@ -139,6 +139,6 @@ class Home extends CI_Controller {
 
 		echo json_encode($result);
 	}
-=======
->>>>>>> 2fdb5952fc2234fd03d593f255d44b8f449a7242
+
+
 }
