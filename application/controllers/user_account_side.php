@@ -18,17 +18,12 @@ class Pages_user extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+
+public function index()
 	{
-		$data['main_view'] = "user/home";
+		$data['main_view'] = "user/user_account";
 
 		$this->load->view('layouts/main_user', $data);
 	}
-	
-	public function login()
-	{
-		$data['main_view'] = "user/login_user";
 
-		$this->load->view('layouts/main_user', $data);
-	}
-	
+}
