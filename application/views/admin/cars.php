@@ -1,16 +1,16 @@
 
 <div class="col-md-12 search-table-col">
 <h3> CARS </h3>
-<<<<<<< HEAD
+
 </header>
 <a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/add_cars">Add New</a><div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
-=======
+
     <div class="form-group">
-        <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
+     
     </div>
 </header>
 <div class="table-responsive">
->>>>>>> 2fdb5952fc2234fd03d593f255d44b8f449a7242
+
     <table class="table table-bordered table-hover" id="">
         <thead class="bill-header cs">
             <tr>
@@ -58,11 +58,6 @@
                     </div>
                 </td>
             </tr>
-<<<<<<< HEAD
         </tbody>       
-=======
-        </tbody>
-       
->>>>>>> 2fdb5952fc2234fd03d593f255d44b8f449a7242
     </table>
 </div>

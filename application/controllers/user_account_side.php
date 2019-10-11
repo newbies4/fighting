@@ -19,7 +19,7 @@ class User_account_side extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	public function index()
+	public function user_account()
 	{
 		$data['main_view'] = "user/user_account";
 

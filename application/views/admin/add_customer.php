@@ -76,11 +76,9 @@
     </div>
     <div class="d-flex justify-content-center">
         <button class="btn btn-primary" type="submit">Save</button> 
-<<<<<<< HEAD
+
         <a class="btn btn-primary pull pull-rightclass="btn btn-primary pull pull-right" href="<?php echo base_url();?>index.php/home/customer"> Back </a>       
-=======
-        <button class="btn btn-primary" type="submit">Back</button>        
->>>>>>> 2fdb5952fc2234fd03d593f255d44b8f449a7242
+
     </div>
     
 </form>
