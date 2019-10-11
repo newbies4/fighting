@@ -5,7 +5,7 @@
 </header>
     <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control">
     </div><span class="counter pull-right"></span>
-        <a class="btn btn-primary modal-open" href="<?php echo base_url();?>index.php/home/add_rent">New Rent</a>     
+        <a class="btn btn-primary modal-open" href="<?php echo base_url();?>index.php/admin_controller/add_rent">New Rent</a>     
         <div class="table-responsive table-bordered table table-hover table-bordered results">
                 <table class="table table-bordered table-hover">
                     <thead class="bill-header cs">

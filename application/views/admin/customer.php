@@ -4,7 +4,7 @@
 <h3> CUSTOMERS </h3>
 
 </header>
-    <a class="btn btn-primary"  href="<?php echo base_url();?>index.php/home/add_customer">Add Customer</a>
+    <a class="btn btn-primary"  href="<?php echo base_url();?>index.php/admin_controller/add_customer">Add Customer</a>
         <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
             <div class="table-responsive">
                 <table class="table table-bordered" id="manageMemberTable">
