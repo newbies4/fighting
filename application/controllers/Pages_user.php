@@ -32,3 +32,4 @@ class Pages_user extends CI_Controller {
 		$this->load->view('layouts/main_user', $data);
 	}
 	
+}

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pages_user extends CI_Controller {
+class User_account_side extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
