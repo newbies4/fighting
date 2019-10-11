@@ -31,4 +31,11 @@ class Pages_user extends CI_Controller {
 
 		$this->load->view('layouts/main_user', $data);
 	}
-	
+	public function useraccount()
+	{
+		$data['main_view'] = "user/user_account";
+
+		$this->load->view('layouts/main_user', $data);
+	}
+
+}
