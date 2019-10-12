@@ -3,7 +3,7 @@
 /**
 * 
 */
-class model_employee extends CI_Model
+class Model_employee extends CI_Model
 {
 public function fetchMemberData($id = null) 
 	{

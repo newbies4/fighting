@@ -1,35 +1,42 @@
 <div class="col-md-12 search-table-col">
-<header>
-<h3>EMPLOYEES</h3> 
-</header>
-    <a class="btn btn-primary"  href="<?php echo base_url();?>index.php/admin_controller/add_employee">Add Employee</a>
-    <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
+  <header>
+    <h3>EMPLOYEES</h3> 
+  </header>
+  <a class="btn btn-primary"  href="<?php echo base_url();?>index.php/admin_controller/add_employee">Add Employee</a>
+  <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
     <div class="table-responsive table-bordered table table-hover table-bordered results">
-    <table class="table table-bordered" id="">
-      <thead class="bill-header cs">
-        <tr>
-          <th id="trs-hd" class="">ID</th>
-          <th id="trs-hd" class="">Name</th>
-          <th id="trs-hd" class="">Contact No.</th>
-          <th id="trs-hd" class="">Options</th>                     
-        </tr>
-      </thead>
-      <tbody>
-             <tr class="warning no-result">
-                <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>                    
+      <table class="table table-bordered" id="">
+        <thead class="bill-header cs">
+          <tr>
+            <th id="trs-hd" class="">First Name</th>
+            <th id="trs-hd" class="">Last Name</th>
+            <th id="trs-hd" class="">Middle Name</th>
+            <th id="trs-hd" class="">Contact No.</th>
+            <th id="trs-hd" class="">Options</th>                     
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="warning no-result">
+            <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+          </tr>
+          <?php if($fetch_data->num_rows() > 0):?>
+            <?php foreach($fetch_data->result_array() as $row): ?>
+              <tr>
+                <td><?php echo $row['first_name'] ?></td>
+                <td><?php echo $row['last_name'] ?></td>
+                <td><?php echo $row['middle_name'] ?></td> 
+                <td><?php echo $row['contact'] ?></td>                   
                 <td>
-                    <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
-                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Edit</a><a class="dropdown-item" role="presentation" href="#">Release</a><a class="dropdown-item" role="presentation" href="#">Return</a></div>
-                    </div>
+                  <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
+                  <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Edit</a><a class="dropdown-item" role="presentation" href="#">Release</a><a class="dropdown-item" role="presentation" href="#">Return</a></div>
+                  </div>
                 </td>
-            </tr>
+              </tr>
+            <?php endforeach; ?>
+          <?php endif; ?>
         </tbody> 
-    </table>
+      </table>
+    </div>
 </div>
 
 

@@ -47,6 +47,9 @@ class Admin_controller extends CI_Controller {
 
 	public function employee()
 	{
+		$this->load->model('employee_model');
+		$data['fetch_data'] = $this->employee_model->fetch_data();
+
 		$data['main_view'] = "admin/employee";
 
 		$this->load->view('layouts/main', $data);

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2019 at 07:55 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 5.6.37
+-- Generation Time: Oct 12, 2019 at 04:24 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.1.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -90,6 +90,32 @@ CREATE TABLE `tbl_customer` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_employee`
+--
+
+CREATE TABLE `tbl_employee` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `middle_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `contact` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_employee`
+--
+
+INSERT INTO `tbl_employee` (`id`, `first_name`, `middle_name`, `last_name`, `contact`, `created_at`) VALUES
+(2, 'Arczhar', 'Jhet', 'Mummuh', '09051234123', '2019-10-12 14:08:02'),
+(3, 'Mig', 'Bryan', 'Tan', '09090989123', '2019-10-12 14:21:13'),
+(4, 'Haidir', 'Yoy', 'Hassan', '09051241123', '2019-10-12 14:21:13'),
+(7, 'Euginie', 'Bant', 'Tubo', '09124153423', '2019-10-12 14:23:10'),
+(8, 'Khabeer', 'Hadjibain', 'Sadidul', '09125177132', '2019-10-12 14:23:49');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_lease`
 --
 
@@ -156,6 +182,12 @@ ALTER TABLE `tbl_customer`
   ADD KEY `user_id_fk` (`user_id_fk`);
 
 --
+-- Indexes for table `tbl_employee`
+--
+ALTER TABLE `tbl_employee`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_lease`
 --
 ALTER TABLE `tbl_lease`
@@ -196,6 +228,12 @@ ALTER TABLE `tbl_car_rent`
 --
 ALTER TABLE `tbl_customer`
   MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_employee`
+--
+ALTER TABLE `tbl_employee`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_lease`
