@@ -14,11 +14,13 @@
                     <input type="text" class="form-control" id="" name="" >
                     <label for="">Customer Name* </label>
                 </div>    
+                <br> <center>SCHEDULE OF RENT
                 <div class="form-group">
                   <label >Start Date</label>
                   <input type="date" name="bday" max="3000-12-31" 
                           min="1000-01-01" class="form-control">
                   </div>
+                  <br>
                 <div class="form-group">
                   <label >End Date</label>
                   <input type="date" name="bday" min="1000-01-01"

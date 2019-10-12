@@ -90,11 +90,11 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: .5rem .5rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 0px solid rgba(0, 0, 0, 0.3);
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #000000;
+  color: #feffff;
 }
 
 .badge-primary {
@@ -120,7 +120,7 @@
 
 a {
   DISPLAY: block;
-  color: #000000;
+  color: #feffff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
