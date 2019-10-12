@@ -1,13 +1,13 @@
-$(document).ready(function(){
+// $(document).ready(function(){
     
-    $(".form-group .form-control").blur(function(){
-        if($(this).val()!==""){
-            $(this).siblings("label").addClass("active");
+//     $(".form-group .form-control").blur(function(){
+//         if($(this).val()!==""){
+//             $(this).siblings("label").addClass("active");
             
-        }
-        else{
-             $(this).siblings("label").removeClass("active");
-        }
-    })
+//         }
+//         else{
+//              $(this).siblings("label").removeClass("active");
+//         }
+//     })
 
-})
+// })

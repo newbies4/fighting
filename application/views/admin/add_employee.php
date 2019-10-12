@@ -1,35 +1,48 @@
-<header>
-    <center><h3>ADD CUSTOMER </h3></center>
-    <br>
-</header>
 
-<form>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault01"></label>
-      <input type="text" class="form-control" id="validationDefault01" placeholder="Employee ID" value="" required>
-    </div>  
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault01"></label>
-      <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="" required>
+<!-- <div class="container"> -->
+  <div class="container">
+    
+    <header>
+      <left><h3>ADD EMPLOYEE </h3></left>
+      <br>
+    </header>
+    <?php // echo validation_errors('<div class="text-danger">','</div>'); ?>
+    <?= form_open('Employee_controller/add_employee') ?>
+    
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control <?= (form_error('firstname') == '' ? '':'is-invalid') ?>" name="firstname" id="firstname" placeholder="First Name" value="<?php echo set_value('firstname'); ?>">
+        <?= form_error('firstname'); ?>
+      </div>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault02"></label>
-      <input type="text" class="form-control" id="validationDefault02" placeholder="Middle name" value="" required>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault02"></label>
-      <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="" required>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault02"></label>
-      <input type="text" class="form-control" id="validationDefault02" placeholder="Contact Number" value="" required>
 
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="middlename"></label>
+        <input type="text" class="form-control <?= (form_error('middlename') == "" ? '':'is-invalid') ?>" name="middlename" id="middlename" placeholder="Middle Name" value="<?php echo set_value('middlename'); ?>">
+        <?= form_error('middlename'); ?>
+      </div>
     </div>
-    <br>
-    
-        <br>
-        <button class="btn btn-primary" type="submit">Save</button> 
-        <a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/employee">Back</a>        
-    
-</form>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="lastname"></label>
+        <input type="text" class="form-control <?= (form_error('lastname') == "" ? '':'is-invalid') ?>" name="lastname" id="lastname" placeholder="Last Name" value="<?php echo set_value('lastname'); ?>">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="contactnumber"></label>
+        <input type="text" class="form-control <?= (form_error('contactnumber') == "" ? '':'is-invalid') ?>" name="contactnumber" id="contactnumber" placeholder="Contact Number" value="<?php echo set_value('contactnumber'); ?>">
+      </div>
+    </div>
+
+    <button class="btn btn-primary" name="addemployeesubmit" type="submit">Save</button> 
+    <a class="btn btn-primary" href="<?php echo base_url();?>admin_controller/employee">Back</a>        
+
+
+    <?= form_close() ?>
+  </div>
+<!-- </div> end of div.container -->

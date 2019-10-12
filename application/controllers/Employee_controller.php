@@ -12,4 +12,27 @@ class Employee_controller extends CI_Controller {
 
 		$this->load->view('layouts/main', $data);
 	}
+
+	public function add_employee()
+	{
+		// Setting up the rules
+		$this->form_validation->set_rules('firstname', 'First Name', 'required|min_length[2]|max_length[50]');
+		$this->form_validation->set_rules('middlename', 'Middle Name', 'required|min_length[2]|max_length[50]');
+		$this->form_validation->set_rules('lastname', 'Last Name', 'required|min_length[2]|max_length[50]');
+		$this->form_validation->set_rules('contactnumber', 'Contact Number', 'required|min_length[7]|max_length[15]|numeric');
+
+		if ($this->form_validation->run() == FALSE)
+        {
+            // $this->load->view('admin/add_employee');
+            // redirect('Admin_controller/add_employee');
+            $data['main_view'] = "admin/add_employee";
+
+			$this->load->view('layouts/main', $data);
+        }
+        else
+        {
+            // $this->load->view('formsuccess');
+            echo "Hi";
+        }
+	}
 }
