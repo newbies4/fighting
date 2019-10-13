@@ -45,6 +45,6 @@
     <a class="btn btn-primary" href="<?php echo base_url();?>admin_controller/employee">Back</a>        
 
 
-    <?= form_close() ?>
+    <?= form_close(); ?>
   </div>
 <!-- </div> end of div.container -->

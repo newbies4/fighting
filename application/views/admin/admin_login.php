@@ -1,21 +1,29 @@
 <div class="admin-login-wrapper">
-<form class="admin-login-form-signin">
+<!-- <form class="admin-login-form-signin"> -->
+<?= form_open('Login_controller/login', 'class="admin-login-form-signin"') ?>
+
     <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
     <div class="form-group">
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="username">Username</label>
+        <input type="text" id="username" class="form-control <?= (form_error('username') == '' ? '':'is-invalid') ?>" name="username" placeholder="Username" required autofocus>
+        <?= form_error('firstname'); ?>
     </div>
+
     <div class="form-group">
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control <?= (form_error('password') == '' ? '':'is-invalid') ?>" name="password" placeholder="Password" required>
+        <?= form_error('password'); ?>
     </div>
+
     <div class="checkbox mb-3">
     <label>
         <input type="checkbox" value="remember-me"> Remember me
     </label>
     </div>
+
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-</form>
+<?= form_close(); ?>
 </div>
