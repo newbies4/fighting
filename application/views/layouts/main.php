@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php
+/**<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -48,3 +49,39 @@
     <script src="<?php echo base_url();?>assets/js/Table-With-Search.js?h=aeb9a0ac8b6cc9ec2e3b9cc3add2f239"></script>
 </body>
 </html>
+*/
+?>
+
+
+<?php $this->load->view('layouts/header'); ?>
+<!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-0">
+    <a class="navbar-brand" href="#">ZC CAR RENTAL</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item" role="presentation"><a class="nav-link" href="#">NOTIFICATIONS<span class="badge badge-primary">00</span></a></li>
+      <li class="nav-item" role="presentation"><a class="nav-link" href="#">HOME</a></li>
+      <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">ADMIN</a>    
+      <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Settings</a><a class="dropdown-item" role="presentation" href="#">Log Out</a></div> 
+    </div>
+  </nav>
+
+    <div class="wrapper">
+   <?php $this->load->view('layouts/sidebar'); ?>
+
+    <div id="content">
+    <a id="sidebarCollapse" class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a>
+    <!-- <button type="button" id="sidebarCollapse" class="btn btn-info">
+       <i class="fa fa-bars"></i>
+    </button> -->
+    
+      <?php $this->load->view($main_view); ?>
+    
+      </div> <!-- content -->
+    </div> <!-- end of wrapper -->
+
+
+<?php $this->load->view('layouts/footer'); ?>
