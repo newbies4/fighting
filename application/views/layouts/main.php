@@ -19,6 +19,17 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/Sidebar-Menu-1.css?h=adf8fd0aa4cdf75c6dfc78989ffd7748">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/Table-With-Search-1.css?h=70e12aa61bd6652a1b6ca0664ec38c0d">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/Table-With-Search.css?h=604cb4e2e523f88e3270d5f1dbcb81fa">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+         <!-- Bootstrap core CSS -->
+         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>">
+         <link href="css/bootstrap.min.css" rel="stylesheet">
+         <!-- Material Design Bootstrap -->
+         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/mdb.min.css') ?>">
+         <link href="css/mdb.min.css" rel="stylesheet">
+         <!-- Your custom styles (optional) -->
+         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css') ?>">
+         <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -47,6 +58,21 @@
     <script src="<?php echo base_url();?>assets/js/modal.js?h=106753b11d10f7ee179d9c47f414662d"></script>
     <script src="<?php echo base_url();?>assets/js/Sidebar-Menu.js?h=799b9a88f11384c3d5b19774a5e8d1ed"></script>
     <script src="<?php echo base_url();?>assets/js/Table-With-Search.js?h=aeb9a0ac8b6cc9ec2e3b9cc3add2f239"></script>
+
+    <script type="text/javascript" src="<?php echo base_url('assetes/js/jquery-3.3.1.min.js') ?>"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="<?php echo base_url('assetes/js/popper.min.js') ?>"></script>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="<?php echo base_url('assetes/js/bootstrap.min.js') ?>"></script>
+    
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="<?php echo base_url('assetes/js/mdb.min.js') ?>"></script>
+   
+
+    <script type="text/javascript"></script>
+
 </body>
 </html>
 */
