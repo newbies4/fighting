@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2019 at 04:24 PM
+-- Generation Time: Oct 13, 2019 at 11:06 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.31
 
@@ -111,7 +111,16 @@ INSERT INTO `tbl_employee` (`id`, `first_name`, `middle_name`, `last_name`, `con
 (3, 'Mig', 'Bryan', 'Tan', '09090989123', '2019-10-12 14:21:13'),
 (4, 'Haidir', 'Yoy', 'Hassan', '09051241123', '2019-10-12 14:21:13'),
 (7, 'Euginie', 'Bant', 'Tubo', '09124153423', '2019-10-12 14:23:10'),
-(8, 'Khabeer', 'Hadjibain', 'Sadidul', '09125177132', '2019-10-12 14:23:49');
+(8, 'Khabeer', 'Hadjibain', 'Sadidul', '09125177132', '2019-10-12 14:23:49'),
+(9, 'firs_tname', 'middle_name', 'last_name', 'contactnumber', '2019-10-13 06:32:43'),
+(10, 'Simba', 'Nala', 'Mufasa', '09042341009', '2019-10-13 06:36:24'),
+(11, 'Bulati', 'Juan', 'Dela', '09120110123', '2019-10-13 06:38:40'),
+(12, 'Test', 'Test', 'Test', '11111111111', '2019-10-13 07:18:22'),
+(13, 'Test', 'Test', 'Test', '11111111111', '2019-10-13 07:20:17'),
+(14, 'Test', 'Test', 'Test', '11111111111', '2019-10-13 07:20:39'),
+(15, 'Test', 'Test', 'Test', '22222222222', '2019-10-13 07:20:50'),
+(16, 'Test', 'Test', 'Test', '33333333333', '2019-10-13 07:21:36'),
+(17, 'Test', 'Test', 'Test', '44444444444', '2019-10-13 09:05:09');
 
 -- --------------------------------------------------------
 
@@ -233,7 +242,7 @@ ALTER TABLE `tbl_customer`
 -- AUTO_INCREMENT for table `tbl_employee`
 --
 ALTER TABLE `tbl_employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `tbl_lease`
