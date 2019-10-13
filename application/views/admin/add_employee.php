@@ -29,6 +29,7 @@
       <div class="form-group col-md-6">
         <label for="lastname"></label>
         <input type="text" class="form-control <?= (form_error('lastname') == "" ? '':'is-invalid') ?>" name="lastname" id="lastname" placeholder="Last Name" value="<?php echo set_value('lastname'); ?>">
+        <?= form_error('lastname'); ?>
       </div>
     </div>
 
@@ -36,6 +37,7 @@
       <div class="form-group col-md-6">
         <label for="contactnumber"></label>
         <input type="text" class="form-control <?= (form_error('contactnumber') == "" ? '':'is-invalid') ?>" name="contactnumber" id="contactnumber" placeholder="Contact Number" value="<?php echo set_value('contactnumber'); ?>">
+        <?= form_error('contactnumber'); ?>
       </div>
     </div>
 

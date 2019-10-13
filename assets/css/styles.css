@@ -176,6 +176,31 @@ a.article:hover {
 }
 
 /* ---------------------------------------------------
+    ADMIN LOGIN
+----------------------------------------------------- */
+
+.admin-login-wrapper {
+  margin: 80px;
+}
+.admin-login-form-signin {
+  max-width: 380px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 15px 40px 50px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+}
+.admin-login-form-signin .admin-login-form-signin-heading, .admin-login-form-signin .checkbox {
+  margin-bottom: 30px;
+}
+.admin-login-form-signin input[type="text"], .admin-login-form-signin input[type="password"] {
+  margin-bottom: 20px;
+}
+.admin-login-form-signin .admin-login-form-control {
+  padding: 10px;
+}
+
+/* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
 

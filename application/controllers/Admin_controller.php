@@ -64,7 +64,10 @@ class Admin_controller extends CI_Controller {
 
 	public function admin_login()
 	{
+		
+		$this->load->view('layouts/header');
 		$this->load->view('admin/admin_login');
+		$this->load->view('layouts/footer');
 	}
 	public function add_customer()
 	{

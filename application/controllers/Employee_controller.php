@@ -32,7 +32,25 @@ class Employee_controller extends CI_Controller {
         else
         {
             // $this->load->view('formsuccess');
-            echo "Hi";
+
+        	$data = array(
+        		'first_name' => $this->input->post('firstname'),
+				'middle_name' => $this->input->post('middlename'),
+				'last_name' => $this->input->post('lastname'),
+				'contact' => $this->input->post('contactnumber')
+        	);
+
+            // $data['firstname'] = $this->input->post('firstname');
+            // $data['middlename'] = $this->input->post('middlename');
+            // $data['lastname'] = $this->input->post('lastname');
+            // $data['contactnumber'] = $this->input->post('contactnumber');
+
+            $this->load->model('Employee_model');
+
+            // echo $data['firstname'];
+            $result = $this->Employee_model->insert_data($data);
+
+            redirect('admin_controller/add_employee');
         }
 	}
 }

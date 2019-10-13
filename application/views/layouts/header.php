@@ -43,7 +43,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css');?>" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/fonts/font-awesome.min.css');?>">
     <title>Hello, world!</title>
