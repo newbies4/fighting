@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/fonts/font-awesome.min.css');?>">
-    <title>Hello, world!</title>
+    <title>Title Page Here</title>
   </head>
   <body>
 

@@ -31,13 +31,22 @@ class Login_controller extends CI_Controller {
         }
         else
         {
-        	echo "Login success";
+        	$this->load->model('login_model');
+        	
     //         // $this->load->view('formsuccess');
 
         	$data = array(
         		'username' => $this->input->post('username'),
 				'password' => $this->input->post('password')
         	);
+			$data['fetch_data'] = $this->login_model->admin_login($data);
+
+			if($data['fetch_data']->num_rows() == 1) {
+				// echo $data['fetch_data']->num_rows();
+				echo "Login success";
+			} else {
+				echo "Login failed";
+			}
 
     //         // $data['firstname'] = $this->input->post('firstname');
     //         // $data['middlename'] = $this->input->post('middlename');

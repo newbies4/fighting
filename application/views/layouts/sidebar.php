@@ -15,7 +15,7 @@
 <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Admin Dashboard</h3>
+                <h3><a href="<?php echo base_url('admin_controller'); ?>">Admin Dashboard</a></h3>
             </div>
 
             <ul class="list-unstyled components">                
