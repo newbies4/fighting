@@ -50,7 +50,7 @@
   </head>
   <body>
 
-</nav>
+<!-- </nav> -->
 
  <!--Navbar-->
  <!-- <nav class="navbar navbar-expand-lg navbar-dark danger-color">

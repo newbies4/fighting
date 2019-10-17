@@ -1,50 +1,11 @@
-  <!--
-  <header> 
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-md-4">
-     
-      <div class="navbar-header">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-        </button>
 
-                <a class="navbar-brand" href="#">
-               <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
-               ZC Car Rental
-                </a>
-        </div>  
-        <div class="collapse navbar-collapse" id="navbar">
-             <ul class="navbar-nav navbar-left">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Disabled</a>
-                </li>
-             </ul>
-        </div>
-
-         <form>
-            Button trigger modal 
-                <button  data-toggle="modal" data-target="#loginModal" > <a href=<?php echo base_url('index.php/pages_user/login') ?>>Login</a></button>
-               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal" >Sign up</button> 
-            </form> 
-   </nav>
-	</header> 
--->
-   <!--Navbar-->
    <header>
    <nav class="navbar navbar-expand-lg navbar-dark danger-color">
    		<div class="navbar-header">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
 		</button>
-</div>
+		</div>
 		<a class="navbar-brand" href="#">Navbar</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
