@@ -29,7 +29,7 @@ a:focus {
     background: #fff;
     border: none;
     border-radius: 0;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -53,6 +53,7 @@ a:focus {
 .card-header {
   padding: .5rem 1.25rem;
   margin-bottom: 0;
+  color: white;
   background-color: #aa0404;
   border-bottom: 1px solid rgba(0,0,0,.125);
 }
@@ -215,3 +216,24 @@ a.article:hover {
         display: none;
     }
 }
+
+/* ---------------------------------------------------
+    USER SIDEBAR STYLE
+----------------------------------------------------- */
+#user-sidebar{
+    position:fixed;
+    width: 200px;
+    height: 100%;
+    background: black;
+    left: -200px;
+}
+#user-sidebar.active{
+    left: 0px;
+}
+#user-sidebar ul li{
+    color: white;
+    list-style: None;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+

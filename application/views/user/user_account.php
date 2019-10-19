@@ -29,4 +29,28 @@
         </div>
         </nav>
         </header>
-    <h1>USER ACCOUNT</h1>
+   <!-- <h1>USER ACCOUNT</h1> -->
+   <!-- Sidebar  -->
+     <nav id="user-sidebar">
+        
+        <ul>                
+                <li>
+                <a href="">Profile</a>
+                </li>
+               
+                <li>
+                    <a href="">Storeroom</a>
+                </li>
+                <li>
+                    <a href="">Reservation</a>
+                </li>
+                <li>
+                    <a href="">History</a>
+                </li>
+        </ul>
+      
+    
+   
+    </nav>
+   
+
