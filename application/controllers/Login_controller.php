@@ -42,8 +42,14 @@ class Login_controller extends CI_Controller {
 			$data['fetch_data'] = $this->login_model->admin_login($data);
 
 			if($data['fetch_data']->num_rows() == 1) {
-				// echo $data['fetch_data']->num_rows();
-				echo "Login success";
+				$rows = $data['fetch_data']->row();
+				$sess_data = array(
+					'username' => $rows->username,
+					'logged_in' => TRUE
+				);
+				$this->session->set_userdata($sess_data);
+				echo $rows->username;
+				redirect('admin_controller');
 			} else {
 				echo "Login failed";
 			}
