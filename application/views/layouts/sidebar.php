@@ -56,6 +56,9 @@
                 <li>
                     <a href="<?php echo base_url('admin_controller/employee'); ?>">EMPLOYEE</a>
                 </li>
+                <li>
+                    <a href="<?php echo base_url('admin_controller/team'); ?>">ABOUT US</a>
+                </li>
             </ul>
 
             

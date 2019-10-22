@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <div class="col-md-12 search-table-col">
   <header>
     <h3>EMPLOYEES</h3> 
@@ -37,6 +38,7 @@
         </tbody> 
       </table>
     </div>
+</div>
 </div>
 
 

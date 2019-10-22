@@ -98,6 +98,13 @@ class Admin_controller extends CI_Controller {
 		
 		$this->load->view('layouts/main', $data);
 	}
+	public function team()
+	{
+		
+		$data['main_view'] = "user/team";
+		
+		$this->load->view('layouts/main', $data);
+	}
 	
 
 

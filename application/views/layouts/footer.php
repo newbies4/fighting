@@ -1,4 +1,12 @@
-	<!-- Optional JavaScript -->
+
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; SCINET TECHNOLOGY</small>
+      
+    </div>
+  </footer>
+</body>
+    <!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="<?php echo base_url('assets/js/jquery-3.3.1.slim.min.js');?>" ></script>
 	<script src="<?php echo base_url('assets/js/popper.min.js');?>" ></script>

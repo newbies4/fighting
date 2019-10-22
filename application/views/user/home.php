@@ -1,42 +1,36 @@
 
    <header>
-   <nav class="navbar navbar-expand-lg navbar-dark danger-color">
-   		<div class="navbar-header">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">ZC Car Rental</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-		</button>
-		</div>
-		<a class="navbar-brand" href="#">Navbar</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link waves-effect waves-light" href="#">Home
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">HOME
                 <span class="sr-only">(current)</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect waves-light" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect waves-light" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-              </a>
-              <div class="dropdown-menu dropdown-danger" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
-                <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
-                <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-          <form class="form-inline">
-            <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-          </form>
-        </div>
-	  </nav>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">PRICING</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SERVICES</a>
+        </li>
+		<li class="nav-item dropdown">
+			<a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="">SIGN IN</a>    
+				<div class="dropdown-menu" role="menu">
+					<a class="dropdown-item" role="presentation" href="<?php echo base_url();?>index.php/User_controller/user_account">Settings</a>
+					<a class="dropdown-item" role="presentation" href="#">Log Out</a>
+				</div> 
+		</li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </header>
       <!--/.Navbar-->
  
