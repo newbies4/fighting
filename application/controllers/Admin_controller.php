@@ -5,9 +5,29 @@ class Admin_controller extends CI_Controller {
 
 	public function index()
 	{
-		$data['main_view'] = "admin/dashboard";
+		if ($this->session->userdata('logged_in'))
+		{
+			$data['main_view'] = "admin/dashboard";
 
-		$this->load->view('layouts/main', $data);
+			$this->load->view('layouts/main', $data);
+		} else {
+			redirect('admin_controller/admin_login');
+		}
+	}
+
+	public function admin_login()
+	{
+		
+		$this->load->view('layouts/header');
+		$this->load->view('admin/admin_login');
+		$this->load->view('layouts/footer');
+	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('admin_controller/admin_login');
+
 	}
 
 	public function rent()
@@ -62,13 +82,6 @@ class Admin_controller extends CI_Controller {
 		$this->load->view('layouts/main', $data);
 	}
 
-	public function admin_login()
-	{
-		
-		$this->load->view('layouts/header');
-		$this->load->view('admin/admin_login');
-		$this->load->view('layouts/footer');
-	}
 	public function add_customer()
 	{
 		
