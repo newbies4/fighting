@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2019 at 11:06 AM
+-- Generation Time: Oct 23, 2019 at 01:42 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.31
 
@@ -120,7 +120,8 @@ INSERT INTO `tbl_employee` (`id`, `first_name`, `middle_name`, `last_name`, `con
 (14, 'Test', 'Test', 'Test', '11111111111', '2019-10-13 07:20:39'),
 (15, 'Test', 'Test', 'Test', '22222222222', '2019-10-13 07:20:50'),
 (16, 'Test', 'Test', 'Test', '33333333333', '2019-10-13 07:21:36'),
-(17, 'Test', 'Test', 'Test', '44444444444', '2019-10-13 09:05:09');
+(17, 'Test', 'Test', 'Test', '44444444444', '2019-10-13 09:05:09'),
+(18, 'jumong', 'asdfad', 'adsf', '0123123213', '2019-10-15 09:08:29');
 
 -- --------------------------------------------------------
 
@@ -162,6 +163,13 @@ CREATE TABLE `tbl_useraccount` (
   `username` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_useraccount`
+--
+
+INSERT INTO `tbl_useraccount` (`user_id`, `user_type`, `username`, `password`) VALUES
+(1, 'admin', 'admin', 'password');
 
 --
 -- Indexes for dumped tables
@@ -242,7 +250,7 @@ ALTER TABLE `tbl_customer`
 -- AUTO_INCREMENT for table `tbl_employee`
 --
 ALTER TABLE `tbl_employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `tbl_lease`
@@ -260,7 +268,7 @@ ALTER TABLE `tbl_reserve`
 -- AUTO_INCREMENT for table `tbl_useraccount`
 --
 ALTER TABLE `tbl_useraccount`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
