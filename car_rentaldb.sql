@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2019 at 01:42 PM
+-- Generation Time: Oct 23, 2019 at 02:04 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.31
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `car_rentaldb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ci_sessions`
+--
+
+CREATE TABLE `ci_sessions` (
+  `id` varchar(128) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `data` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('bqb4eqegd82fdasno3emgf3uuoqb4dt7', '::1', 1571781815, 0x5f5f63695f6c6173745f726567656e65726174657c693a313537313738313831353b757365726e616d657c733a353a2261646d696e223b6c6f676765645f696e7c623a313b),
+('dh0g83qhm0ubrkn1lacsvlgii5495gjm', '::1', 1571781888, 0x5f5f63695f6c6173745f726567656e65726174657c693a313537313738313836393b757365726e616d657c733a353a2261646d696e223b6c6f676765645f696e7c623a313b),
+('h2h3k387ugojm9tvjj9mhmg9b2gsj3b7', '::1', 1571781263, 0x5f5f63695f6c6173745f726567656e65726174657c693a313537313738313236333b757365726e616d657c733a353a2261646d696e223b6c6f676765645f696e7c623a313b);
 
 -- --------------------------------------------------------
 
@@ -174,6 +196,13 @@ INSERT INTO `tbl_useraccount` (`user_id`, `user_type`, `username`, `password`) V
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `ci_sessions`
+--
+ALTER TABLE `ci_sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `ci_sessions_timestamp` (`timestamp`);
 
 --
 -- Indexes for table `tbl_car_profile`
