@@ -1,11 +1,10 @@
 <header>
-    <center><h3>ADD Reservations </h3></center>
+    <center><h3>ADD RESERVATION </h3></center>
     <br>
 </header>
 
 
-<div class = "container">                 
-    
+<div class = "container">                    
         <div class="row">
             <!-- left part -->
             
@@ -13,14 +12,14 @@
                 <div class="form-group">
                     <input type="text" class="form-control" id="" name="" >
                     <label for="">Customer Name* </label>
-                </div>    
-                <br> <center>SCHEDULE OF RENT
+                </div>
+                <br> <center>SCHEDULE OF RENT   
                 <div class="form-group">
                   <label >Start Date</label>
                   <input type="date" name="bday" max="3000-12-31" 
                           min="1000-01-01" class="form-control">
                   </div>
-                  <br>
+                <br>
                 <div class="form-group">
                   <label >End Date</label>
                   <input type="date" name="bday" min="1000-01-01"
@@ -91,11 +90,11 @@
                           <!-- Table body -->
                         </table>
                         <h3>Chosen Cars</h3>
-                        <a class="btn btn-primary" href="">Add Reservation</a>   
+                        <a class="btn btn-primary" href="">RESERVE</a>   
                         <a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/cars">View Cars</a>  
-                        <!-- Table  --                    
+                        <!-- Table  --  >                  
                 </div> <!-- end of col-sm-3 --> 
                     <!--right part -->                      
             </div> <!-- end of row -->
     </div> <!-- end of container -->
-        
+      </div>  

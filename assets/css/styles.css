@@ -240,8 +240,12 @@ a.article:hover {
     USER ACCOUNT SIDEBAR 
 ----------------------------------------------------- */
 
-/* Profile container */
-.profile {
+body {
+    background: #F1F3FA;
+  }
+  
+  /* Profile container */
+  .profile {
     margin: 20px 0;
   }
   

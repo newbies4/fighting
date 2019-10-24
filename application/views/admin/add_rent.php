@@ -4,8 +4,7 @@
 </header>
 
 
-<div class = "container">                 
-    
+<div class = "container">                    
         <div class="row">
             <!-- left part -->
             
@@ -91,11 +90,11 @@
                           <!-- Table body -->
                         </table>
                         <h3>Chosen Cars</h3>
-                        <a class="btn btn-primary" href="">Add RENT</a>   
+                        <a class="btn btn-primary" href="">RENT</a>   
                         <a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/cars">View Cars</a>  
-                        <!-- Table  --                    
+                        <!-- Table  --  >                  
                 </div> <!-- end of col-sm-3 --> 
                     <!--right part -->                      
             </div> <!-- end of row -->
     </div> <!-- end of container -->
-        
+      </div>  
