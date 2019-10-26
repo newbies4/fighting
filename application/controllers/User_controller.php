@@ -29,6 +29,7 @@ class User_controller extends CI_Controller {
 		
 		$this->load->view('layouts/main_user', $data);
 	}
+	
 
 
 	public function login()
@@ -39,7 +40,7 @@ class User_controller extends CI_Controller {
 	}
 	public function team()
 	{
-		$data['main_view'] = "user/team";
+		$data['main_view'] = "user/user_team";
 
 		$this->load->view('layouts/main_user', $data);
 	}
