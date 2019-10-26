@@ -8,21 +8,23 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="<?php echo base_url('User_controller/index');?>">HOME </a>
+          <a class="nav-link" href="<?php echo base_url('User_controller/index');?>">HOME
+                
+              </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">PRICING</a>
-        </li>
-        <li class="nav-item">
+		</li>
+		<li class="nav-item">
           <a class="nav-link" href="<?php echo base_url('User_controller/team'); ?>">ABOUT US</a>
-		    </li>
-		    <li class="nav-item">
+		</li>
+		<li class="nav-item">
           <a class="nav-link" href="#">HELP</a>
         </li>
         <li class="nav-item dropdown">
             <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="">SIGN IN</a>    
                 <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" role="presentation" href="<?php echo base_url();?>index.php/User_controller/user_account">My Account</a>
+				<a class="dropdown-item" role="presentation" href="<?php echo base_url();?>index.php/User_controller/user_account">My Account</a>
                     <a class="dropdown-item" role="presentation" href="<?php echo base_url();?>index.php/User_controller/user_account_storeroom">My Reservation</a>
                     <a class="dropdown-item" role="presentation" href="#">Log Out</a>
                 </div> 
@@ -52,7 +54,7 @@ body {
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+                    <img src="" class="img-responsive" alt="">
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
@@ -71,7 +73,7 @@ body {
                 <!-- SIDEBAR MENU -->
                 <div class="profile-usermenu">
                     <ul class="list-unstyled components">
-                    <li class="active" >
+                        <li >
                             <a href="<?php echo base_url('index.php/User_controller/user_account');?>">
                             <i class="glyphicon glyphicon-home"></i>
                             Overview </a>
@@ -81,7 +83,7 @@ body {
                             <i class="glyphicon glyphicon-user"></i>
                             Account Settings </a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="<?php echo base_url('User_controller/user_account_storeroom');?>">
                             <i class="glyphicon glyphicon-ok"></i>
                             Storeroom </a>
@@ -94,7 +96,7 @@ body {
         </div>
         <div class="col-md-9">
             <div class="profile-content">
-               Some user related content goes here...
+               
             </div>
         </div>
     </div>
