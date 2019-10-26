@@ -13,11 +13,24 @@
 	<script src="<?php echo base_url('assets/js/bootstrap.min.js');?>" ></script>
 
 	<script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-    </script>
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+      });
+    });
+
+    // $(document).ready(function() {
+
+    //   $(".form-group .form-control").blur(function() {
+    //     if($(this).val()!=="") {
+    //       $(this).siblings("label").addClass("active");
+    //     } else {
+    //       $(this).siblings("label").removeClass("active");
+    //     }
+    //   })
+
+    // })
+
+  </script>
   </body>
 </html>
