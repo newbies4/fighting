@@ -1,15 +1,4 @@
-<div class="animation-area">
-        <ul class="box-area">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-</div>
+<br>
 <section class = "container-fluid">
     <section class="row justify-content-center">
         <section class="col 12 col-sm-6 col-lg-3">
@@ -38,7 +27,7 @@
     </div>
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
 <?= form_close(); ?>
 
         </section>
