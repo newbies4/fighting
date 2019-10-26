@@ -1,5 +1,10 @@
 <div class="admin-login-wrapper">
 <!-- <form class="admin-login-form-signin"> -->
+
+<?php if($this->session->flashdata('login_failed')): ?>
+    <p class="text-danger"><?php echo $this->session->flashdata('login_failed'); ?></p>
+<?php endif; ?>
+
 <?= form_open('Login_controller/login', 'class="admin-login-form-signin"') ?>
 
     <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">

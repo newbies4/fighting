@@ -8,19 +8,58 @@ class Employee_controller extends CI_Controller {
         parent::__construct();
 
         // $this->load->library('form_validation');
+        $this->load->model('employee_model');
 		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
     }
 
-	public function index()
+    // ========================================================================================= //
+    //                                          FRONT END 
+	public function show($start = 0)
 	{
-		$this->load->model('employee_model');
-		$data['fetch_data'] = $this->employee_model->fetch_data();
+        $this->load->library('pagination');
 
-		$data['main_view'] = "admin/employee";
+        $config['base_url'] = base_url().'employee_controller/show/';
+        $config['total_rows'] = $this->employee_model->get_count();
+        $config['per_page'] = 5;
 
-		$this->load->view('layouts/main', $data);
+        $config['full_tag_open'] = '<ul class="pagination justify-content-end">';
+        $config['full_tag_close'] = '</ul>';
+        $config['first_tag_open'] = '<li page-item">';
+        $config['first_tag_close'] = '</li>';
+        $config['next_tag_open'] = '<li class="page-item">';
+        $config['next_tag_close'] = '</li>';
+        $config['prev_tag_open'] = '<li class="page-item">';
+        $config['prev_tag_close'] = '</li>';
+        $config['cur_tag_open'] = '<li class="page-item active"><a class="page-link">';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['num_tag_open'] = '<li class="page-item">';
+        $config['num_tag_close'] = '</li>';
+        $config['last_tag_open'] = '<li class="page-item">';
+        $config['last_tag_close'] = '</li>';
+        $config['attributes'] = array('class' => 'page-link');
+
+        $this->pagination->initialize($config);
+
+        $data['pagination'] = $this->pagination->create_links();
+
+        $data['fetch_data'] = $this->employee_model->fetch_data($config['per_page'], $start);
+
+        $data['main_view'] = "admin/employee";
+
+        $this->load->view('layouts/main', $data);
+        
 	}
 
+    public function edit_employee($id=null)
+    {
+
+        $data['employee'] = $this->employee_model->get_employee_by_id($id);
+        $data['main_view'] = "admin/edit_employee";
+        $this->load->view('layouts/main', $data);
+    }
+
+    // ========================================================================================= //
+    //                                          BACK END 
 	public function add_employee()
 	{
 		// Setting up the rules
@@ -57,8 +96,60 @@ class Employee_controller extends CI_Controller {
 
             // echo $data['firstname'];
             $result = $this->Employee_model->insert_data($data);
-
+            $this->session->set_flashdata('add_employee_success', 'Employee successfully added.');
             redirect('admin_controller/add_employee');
         }
 	}
+
+    public function update_employee()
+    {
+        // Setting up the rules
+        $this->form_validation->set_rules('firstname', 'First Name', 'required|min_length[2]|max_length[50]');
+        $this->form_validation->set_rules('middlename', 'Middle Name', 'required|min_length[2]|max_length[50]');
+        $this->form_validation->set_rules('lastname', 'Last Name', 'required|min_length[2]|max_length[50]');
+        $this->form_validation->set_rules('contactnumber', 'Contact Number', 'required|min_length[7]|max_length[15]|numeric');
+
+        if ($this->form_validation->run() == FALSE)
+        {
+            // $this->load->view('admin/add_employee');
+            // redirect('Admin_controller/add_employee');
+            $data['main_view'] = "admin/edit_employee";
+
+            $this->load->view('layouts/main', $data);
+        }
+        else
+        {
+            // $this->load->view('formsuccess');
+
+            $data = array(
+                'id' => $this->input->post('id'),
+                'first_name' => $this->input->post('firstname'),
+                'middle_name' => $this->input->post('middlename'),
+                'last_name' => $this->input->post('lastname'),
+                'contact' => $this->input->post('contactnumber')
+            );
+
+            // $data['firstname'] = $this->input->post('firstname');
+            // $data['middlename'] = $this->input->post('middlename');
+            // $data['lastname'] = $this->input->post('lastname');
+            // $data['contactnumber'] = $this->input->post('contactnumber');
+
+            $this->load->model('Employee_model');
+
+            // echo $data['firstname'];
+            $result = $this->Employee_model->update_data($data);
+            $this->session->set_flashdata('update_employee_success', 'Employee successfully updated.');
+            redirect('employee_controller/show');
+        }
+    }
+
+    public function delete_employee($id) {
+        $result = $this->employee_model->delete_employee($id);
+        if ($result) {
+            $this->session->set_flashdata('success_msg', 'Record deleted successfully');
+        } else {
+            $this->session->set_flashdata('error_msg', 'Faill to delete record');
+        }
+        redirect('employee_controller/show');
+    }
 }

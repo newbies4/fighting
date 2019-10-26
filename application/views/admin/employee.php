@@ -3,8 +3,18 @@
   <header>
     <h3>EMPLOYEES</h3> 
   </header>
-  <a class="btn btn-primary"  href="<?php echo base_url();?>index.php/admin_controller/add_employee">Add Employee</a>
+    <?php if($this->session->flashdata('success_msg')): ?>
+      <p class="alert alert-success"><?php echo $this->session->flashdata('success_msg'); ?></p>
+    <?php endif; ?>
+    <?php if($this->session->flashdata('error_msg')): ?>
+      <p class="alert alert-success"><?php echo $this->session->flashdata('error_msg'); ?></p>
+    <?php endif; ?>
+    <?php if($this->session->flashdata('update_employee_success')): ?>
+      <p class="alert alert-success"><?php echo $this->session->flashdata('update_employee_success'); ?></p>
+    <?php endif; ?>
+  <a class="btn btn-primary"  href="<?php echo base_url('admin_controller/add_employee');?>">Add Employee</a>
   <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
+
     <div class="table-responsive table-bordered table table-hover table-bordered results">
       <table class="table table-bordered" id="">
         <thead class="bill-header cs">
@@ -17,9 +27,11 @@
           </tr>
         </thead>
         <tbody>
+          <?php if($fetch_data->num_rows() == 0): ?>
           <tr class="warning no-result">
             <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
           </tr>
+          <?php endif; ?>
           <?php if($fetch_data->num_rows() > 0):?>
             <?php foreach($fetch_data->result_array() as $row): ?>
               <tr>
@@ -29,7 +41,7 @@
                 <td><?php echo $row['contact'] ?></td>                   
                 <td>
                   <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
-                  <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Edit</a><a class="dropdown-item" role="presentation" href="#">Release</a><a class="dropdown-item" role="presentation" href="#">Return</a></div>
+                  <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo base_url('employee_controller/edit_employee/'.$row["id"]);?>">Edit</a><a class="dropdown-item" role="presentation" href="<?php echo base_url('employee_controller/delete_employee/'.$row["id"]);?>">Delete</a></div>
                   </div>
                 </td>
               </tr>
@@ -37,7 +49,9 @@
           <?php endif; ?>
         </tbody> 
       </table>
+      
     </div>
+    <?php echo $pagination; ?>
 </div>
 </div>
 
