@@ -15,6 +15,19 @@ class User_controller extends CI_Controller {
 		$data['main_view'] = "user/user_account";
 
 		$this->load->view('layouts/main_user', $data);
+		//$this->load->view('layouts/footer');
+	}
+	public function user_account_settings()
+	{
+		$data['main_view'] = "user/user_account_settings";
+
+		$this->load->view('layouts/main_user', $data);
+	}
+	public function user_account_storeroom()
+	{
+		$data['main_view'] = "user/user_account_storeroom";
+		
+		$this->load->view('layouts/main_user', $data);
 	}
 
 

@@ -23,7 +23,7 @@
 		<li class="nav-item dropdown">
 			<a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="">SIGN IN</a>    
 				<div class="dropdown-menu" role="menu">
-					<a class="dropdown-item" role="presentation" href="<?php echo base_url();?>index.php/User_controller/user_account">Settings</a>
+					<a class="dropdown-item" role="presentation" href="<?php echo base_url('user_controller/user_account');?>">Settings</a>
 					<a class="dropdown-item" role="presentation" href="#">Log Out</a>
 				</div> 
 		</li>
@@ -49,7 +49,7 @@
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view">
-        <img class="d-block w-100" src=<?php echo base_url('assets/Content-filter/img/Dc.jpg') ?>
+        <img class="d-block w-100" src=<?php echo base_url('assets/Content-filter/img/carousel-img1.jpg') ?>
           alt="First slide">
         <div class="mask rgba-black-light"></div>
       </div>
