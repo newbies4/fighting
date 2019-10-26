@@ -1,8 +1,22 @@
-<div class="admin-login-wrapper">
+<div class="animation-area">
+        <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+</div>
+<section class = "container-fluid">
+    <section class="row justify-content-center">
+        <section class="col 12 col-sm-6 col-lg-3">
 <!-- <form class="admin-login-form-signin"> -->
 <?= form_open('Login_controller/login', 'class="admin-login-form-signin"') ?>
 
-    <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <img src=<?php echo base_url('assets/Content-filter/img/logo.png')?> class="logo">  
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 
     <div class="form-group">
@@ -26,4 +40,7 @@
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
 <?= form_close(); ?>
-</div>
+
+        </section>
+    </section>
+</section>
