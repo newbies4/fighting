@@ -200,10 +200,20 @@ a.article:hover {
   max-width: 380px;
   margin: 0 auto;
   background-color: #fff;
-  padding: 60px 40px 50px;
+  padding: 60px 40px 20px;
   border: 1px solid #e5e5e5;
   border-radius: 10px; 
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.664);
+}
+
+.btn-primary-login{
+  color:#fff;
+  background: linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+}
+.btn-primary-login:hover {
+  color: white;
+  background: linear-gradient(to right, #bd0303, rgb(243, 125, 14));
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.863);
 }
 .logo{
   width:100px;
