@@ -1,13 +1,19 @@
-<br>
+<div class="animation-area">
+        <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+</div>
 <section class = "container-fluid">
     <section class="row justify-content-center">
         <section class="col 12 col-sm-6 col-lg-3">
 <!-- <form class="admin-login-form-signin"> -->
-
-<?php if($this->session->flashdata('login_failed')): ?>
-    <p class="text-danger"><?php echo $this->session->flashdata('login_failed'); ?></p>
-<?php endif; ?>
-
 <?= form_open('Login_controller/login', 'class="admin-login-form-signin"') ?>
 
     <img src=<?php echo base_url('assets/Content-filter/img/logo.png')?> class="logo">  

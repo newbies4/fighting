@@ -25,9 +25,9 @@ class Login_controller extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
         {
             // redirect('admin_controller/admin_login');
-            $this->load->view('layouts/header');
+            
 			$this->load->view('admin/admin_login');
-			$this->load->view('layouts/footer');
+			
         }
         else
         {

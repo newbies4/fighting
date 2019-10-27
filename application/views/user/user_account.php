@@ -58,10 +58,10 @@ body {
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
-                        Marcus Doe
+                        Arczhar Mummuh
                     </div>
                     <div class="profile-usertitle-job">
-                        Developer
+                        VERIFIED
                     </div>
                 </div>
                 <!-- END SIDEBAR USER TITLE -->
@@ -94,7 +94,7 @@ body {
         </div>
         <div class="col-md-9">
             <div class="profile-content">
-               Some user related content goes here...
+               Overview
             </div>
         </div>
     </div>
