@@ -97,6 +97,73 @@ body {
         <div class="col-md-9">
             <div class="profile-content">
                <h4><center>My Reservation</center></h4>
+               <table class="table table-bordered">
+                          <!-- Table head -->
+                          <thead>
+                            <tr>
+                              <th>Model</th>
+                              <th>Picture</th>
+                              <th>Quantity</th>
+                              <th>Price</th>
+                              <th>Subtotal</th>
+
+
+                              
+                            </tr>
+                          </thead>
+                          <!-- Table head -->
+
+                          <!-- Table body -->
+                          <tbody>
+                            <tr>
+                              <th scope="row">
+                                <!-- Default unchecked -->
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck2" checked>
+                                  <label class="custom-control-label" for="tableDefaultCheck2">Check 2</label>
+                                </div>
+                              </th>
+                              <td>Cell 1</td>
+                              <td>Cell 2</td>
+                              <td>Cell 3</td>
+                              <td>Cell 4</td>
+                              
+                              
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                <!-- Default unchecked -->
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck3">
+                                  <label class="custom-control-label" for="tableDefaultCheck3">Check 3</label>
+                                </div>
+                              </th>
+                              <td>Cell 4</td>
+                              <td>Cell 5</td>
+                              <td>Cell 6</td>
+                              <td>Cell 4</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                <!-- Default unchecked -->
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck4">
+                                  <label class="custom-control-label" for="tableDefaultCheck4">Check 4</label>
+                                </div>
+                              </th>
+                              <td>Cell 7</td>
+                              <td>Cell 8</td>
+                              <td>Cell 9</td>
+                              <td>Cell 4</td>
+                           
+                            </tr>
+                            <tr>
+                                <td colspan="4" align ="right">Total</td>
+                                <td align="right">0.00</td>
+                          </tbody>
+                          <!-- Table body -->
+                        </table>
+                        <a class="btn btn-primary modal-open pull pull-right" href="">Reserve</a>   
             </div>
         </div>
     </div>
