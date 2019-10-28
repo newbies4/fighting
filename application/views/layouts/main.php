@@ -100,7 +100,7 @@
       <li class="nav-item dropdown">
         <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">ADMIN</a>    
           <div class="dropdown-menu" role="menu">
-            <a class="dropdown-item" role="presentation" href="#">Settings</a>
+            <a class="dropdown-item" role="presentation" href="#">Help</a>
             <a class="dropdown-item" role="presentation" href="<?php echo base_url('admin_controller/logout'); ?>">Log Out</a>
           </div> 
 
