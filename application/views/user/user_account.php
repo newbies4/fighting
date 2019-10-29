@@ -52,7 +52,9 @@ body {
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+                      <img src=<?php echo base_url("assets\Content-filter\img\koala.jpg" )?> id="profile-display" />
+                      
+                   <!-- <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">-->
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
@@ -83,7 +85,7 @@ body {
                         </li>
                         <li >
                             <a href="<?php echo base_url('User_controller/user_account_storeroom');?>">
-                            <i class="glyphicon glyphicon-ok"></i>
+                            <i class="fa fa-warehouse"></i>
                             Storeroom </a>
                         </li>
                     
@@ -94,7 +96,81 @@ body {
         </div>
         <div class="col-md-9">
             <div class="profile-content">
-               Overview
+            <h4><center><i class="fa fa-user"></i> Personal Information </center> </h4>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3 col-md-2 col-5">
+                    <label style="font-weight:bold;">Full Name</label>
+                </div>
+                <div class="col-md-8 col-6">
+                      Arczhar Mummuh
+                </div>
+             </div>
+             <hr />
+
+             <div class="row">
+                                            
+              <div class="col-sm-3 col-md-2 col-5">
+                <label style="font-weight:bold;">Username</label>
+              </div>
+              <div class="col-md-8 col-6">
+                My Username
+              </div>
+            </div>
+            <hr />
+            
+            <div class="row">
+                                            
+              <div class="col-sm-3 col-md-2 col-5">
+                 <label style="font-weight:bold;">Birth Date</label>
+                </div>
+              <div class="col-md-8 col-6">
+                  your Birthdate
+              </div>
+             </div>
+             <hr />
+                                        
+                                        
+            <div class="row">
+              <div class="col-sm-3 col-md-2 col-5">
+                 <label style="font-weight:bold;">Gender</label>
+                </div>
+              <div class="col-md-8 col-6">
+                  Male/Female
+                </div>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class="col-sm-3 col-md-2 col-5">
+                <label style="font-weight:bold;">Email Address</label>
+              </div>
+              <div class="col-md-8 col-6">
+                 myemail@email.com
+              </div>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class="col-sm-3 col-md-2 col-5">
+                <label style="font-weight:bold;">Permanent Address</label>
+              </div>
+              <div class="col-md-8 col-6">
+                My Permanent Address
+              </div>
+            </div>
+             <hr />            
+
+            <div class="row">
+              <div class="col-sm-3 col-md-2 col-5">
+                <label style="font-weight:bold;">Current Address</label>
+              </div>
+              <div class="col-md-8 col-6">
+                My Current Address
+              </div>
+            </div>
+             <hr />            
+                                       
             </div>
         </div>
     </div>

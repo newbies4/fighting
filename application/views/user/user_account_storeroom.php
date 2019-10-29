@@ -54,7 +54,8 @@ body {
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="" class="img-responsive" alt="">
+                <img src=<?php echo base_url("assets\Content-filter\img\koala.jpg" )?> id="profile-display" />
+                    <!--<img src="" class="img-responsive" alt="">-->
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
@@ -95,8 +96,10 @@ body {
             </div>
         </div>
         <div class="col-md-9">
-            <div class="profile-content">
-               <h4><center>My Reservation</center></h4>
+          <div class="profile-content">
+            <h4><center>Storeroom</center></h4>
+            <div class="table-responsive table-bordered table table-hover table-bordered results">
+               
                <table class="table table-bordered">
                           <!-- Table head -->
                           <thead>
@@ -105,10 +108,8 @@ body {
                               <th>Picture</th>
                               <th>Quantity</th>
                               <th>Price</th>
-                              <th>Subtotal</th>
-
-
-                              
+                              <th>Driver</th>
+                              <th>Subtotal</th>                              
                             </tr>
                           </thead>
                           <!-- Table head -->
@@ -127,6 +128,7 @@ body {
                               <td>Cell 2</td>
                               <td>Cell 3</td>
                               <td>Cell 4</td>
+                              <td>Cell 5</td>
                               
                               
                             </tr>
@@ -142,6 +144,7 @@ body {
                               <td>Cell 5</td>
                               <td>Cell 6</td>
                               <td>Cell 4</td>
+                              <td>Cell 5</td>
                             </tr>
                             <tr>
                               <th scope="row">
@@ -155,15 +158,17 @@ body {
                               <td>Cell 8</td>
                               <td>Cell 9</td>
                               <td>Cell 4</td>
+                              <td>Cell 5</td>
                            
                             </tr>
                             <tr>
-                                <td colspan="4" align ="right">Total</td>
+                                <td colspan="5" align ="right">Total</td>
                                 <td align="right">0.00</td>
                           </tbody>
                           <!-- Table body -->
-                        </table>
-                        <a class="btn btn-primary modal-open pull pull-right" href="">Reserve</a>   
+                        </table>                           
+                </div>
+              <a class="btn btn-primary modal-open pull pull-right" href="">Reserve</a>
             </div>
         </div>
     </div>
