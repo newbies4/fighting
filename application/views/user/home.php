@@ -26,9 +26,10 @@
 		<li class="nav-item dropdown">
 			<a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="">SIGN IN</a>    
 				<div class="dropdown-menu" role="menu">
-				<a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_account');?>">My Account</a>
+				<a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_overview');?>">My Account</a>
                     <a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_account_storeroom');?>">My Reservation</a>
 					<a class="dropdown-item" role="presentation" href="<?php echo base_url('admin_controller/admin_login');?>">Sign In</a>
+          <a class="dropdown-item" role="presentation" href="<?php echo base_url('admin_controller/user_signup');?>">Sign Up</a>
 				</div> 
 		</li>
       </ul>

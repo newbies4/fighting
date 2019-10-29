@@ -75,9 +75,14 @@ body {
                 <div class="profile-usermenu">
                     <ul class="list-unstyled components">
                         <li >
-                            <a href="<?php echo base_url('index.php/User_controller/user_account');?>">
+                            <a href="<?php echo base_url('index.php/User_controller/user_overview');?>">
                             <i class="glyphicon glyphicon-home"></i>
                             Overview </a>
+                        </li>
+                        <li >
+                            <a href="<?php echo base_url('User_controller/user_profile');?>">
+                            <i class="glyphicon glyphicon-user"></i>
+                            Profile Settings </a>
                         </li>
                         <li>
                             <a href="<?php echo base_url('User_controller/user_account_settings');?>">

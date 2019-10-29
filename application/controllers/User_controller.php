@@ -10,9 +10,9 @@ class User_controller extends CI_Controller {
 		$this->load->view('layouts/main_user', $data);
 	}
 
-	public function user_account()
+	public function user_overview()
 	{
-		$data['main_view'] = "user/user_account";
+		$data['main_view'] = "user/user_overview";
 
 		$this->load->view('layouts/main_user', $data);
 		//$this->load->view('layouts/footer');
@@ -29,7 +29,19 @@ class User_controller extends CI_Controller {
 		
 		$this->load->view('layouts/main_user', $data);
 	}
+	public function user_profile()
+	{
+		$data['main_view'] = "user/user_profile";
+		
+		$this->load->view('layouts/main_user', $data);
+	}
 	
+	public function user_signup()
+	{
+		$data['main_view'] = "user/user_signup";
+		
+		$this->load->view('layouts/main_user', $data);
+	}
 
 
 	public function login()
