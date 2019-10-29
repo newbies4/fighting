@@ -384,7 +384,7 @@ a.article:hover {
     background: #fff;
   }
   
-  .profile-userpic img {
+  /*.profile-userpic img {
     float: none;
     margin: 0 auto;
     width: 50%;
@@ -392,11 +392,11 @@ a.article:hover {
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
-  }
+  }*/
   
   .profile-usertitle {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   .profile-usertitle-name {
@@ -476,3 +476,18 @@ a.article:hover {
     background: #fff;
     min-height: 460px;
   }
+
+  #profile-display{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+    border: 3px solid white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.863);
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+  }
+
+ 
