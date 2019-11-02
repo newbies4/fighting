@@ -40,15 +40,13 @@ a:focus {
 }
 
 .nav-link:hover{
-  border: 3px solid #aa0404;
-  border-radius: 15px;
-  padding: 5px 8px;
+  border-bottom: 3px solid #aa0404;
+
 }
 
 .nav-item .nav-link:focus{
-  border: 3px solid #aa0404;
-  border-radius: 15px;
-  padding: 5px 8px;
+  border-bottom: 3px solid #aa0404;
+
   
 }
 
@@ -67,7 +65,7 @@ a:focus {
   padding: .5rem 1.25rem;
   margin-bottom: 0;
   color: white;
-  background-color: #aa0404;
+  background:linear-gradient(to right, #bd0303, rgb(243, 125, 14));
   border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
@@ -490,4 +488,73 @@ a.article:hover {
     border-radius: 50% !important;
   }
 
- 
+  .content-table{
+    border-collapse: collapse;
+    margin: 8px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  }
+
+  .content-table thead tr{
+    background: linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+    color: white;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .content-table th, .content-table td{
+    padding: 10px 35px;
+  }
+
+  .content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+  }
+  .content-table tbody tr:last-of-type{
+    border-bottom: 2px solid red;
+  }
+
+/* ---------------------------------------------------
+    SIGN UP
+----------------------------------------------------- */
+
+.wrap{
+  max-width: 700px;
+  border-radius:20px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  color: #000000;
+  margin-top: 13vh;
+  padding: 20px;
+}
+/*
+input[type=submit]{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  margin-top: 30px;
+  outline: none;
+  border: none;
+  background: #60adde;
+  opacity: 0.7;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+input[type=submit]:hover{
+  background: #003366;
+  opacity:0.7;
+}
+*/
+.sign-up-bg{
+  background:linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+}

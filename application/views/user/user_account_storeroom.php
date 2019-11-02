@@ -54,7 +54,7 @@ body {
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                <img src=<?php echo base_url("assets\Content-filter\img\koala.jpg" )?> id="profile-display" />
+                <img src=<?php echo base_url("assets\Content-filter\img\Profile_Photo.jpg" )?> id="profile-display" />
                     <!--<img src="" class="img-responsive" alt="">-->
                 </div>
                 <!-- END SIDEBAR USERPIC -->
@@ -103,6 +103,8 @@ body {
         <div class="col-md-9">
           <div class="profile-content">
             <h4><center>Storeroom</center></h4>
+            <p>* Payment must be settled within the day.</p>
+            <hr />
             <div class="table-responsive table-bordered table table-hover table-bordered results">
                
                <table class="table table-bordered">
