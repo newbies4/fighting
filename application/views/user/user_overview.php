@@ -80,11 +80,7 @@ body {
                             <i class="glyphicon glyphicon-home"></i>
                             Overview </a>
                         </li>
-                        <li >
-                            <a href="<?php echo base_url('User_controller/user_profile');?>">
-                            <i class="glyphicon glyphicon-user"></i>
-                            Profile Settings </a>
-                        </li>
+                        
                         <li>
                             <a href="<?php echo base_url('User_controller/user_account_settings');?>">
                             <i class="glyphicon glyphicon-user"></i>

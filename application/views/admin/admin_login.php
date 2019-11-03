@@ -38,7 +38,7 @@
     </div>
 
     <button class="btn btn-lg btn-primary-login btn-block" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+    <p class="mt-5 mb-3 text-muted">Don't Have Account?</p><a href="<?php echo base_url('admin_controller/user_signup');?>">Sign Up Here</a>
 <?= form_close(); ?>
 
         </section>

@@ -41,8 +41,8 @@
 
 
               		<span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
-                    	<button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">
-                        	Create my account</button>
+                    	<a href="<?php echo base_url('admin_controller/user_signup_credentials');?>" button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">
+                        	Create my account</a>
 		 		</div><!--end of col-sm-6-->
 				</div>
 			</div>            

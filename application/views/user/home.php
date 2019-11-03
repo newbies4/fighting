@@ -325,45 +325,40 @@ xtab-filter
 xgallery
 
 -------------------------------- */
-.cd-gallery {
-  padding: 26px 5%;
-  width: 100%;
-}
-.cd-gallery li {
-  margin-bottom: 1.6em;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  display: none;
-}
-.cd-gallery li.gap {
-  /* used in combination with text-align: justify to align gallery elements */
-  opacity: 0;
-  height: 0;
-  display: inline-block;
-}
-.cd-gallery img {
-  display: block;
-  width: 100%;
-}
-.cd-gallery .cd-fail-message {
-  display: none;
-  text-align: center;
-}
-@media only screen and (min-width: 768px) {
-  .cd-gallery {
-    padding: 40px 3%;
-  }
-  .cd-gallery ul {
-    text-align: justify;
-  }
-  .cd-gallery ul:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .cd-gallery li {
-    width: 48%;
-    margin-bottom: 2em;
-  }
+
+.product-grid4,.product-grid4 .product-image4{position:relative}
+.product-grid4{font-family:Poppins,sans-serif;text-align:center;border-radius:5px;overflow:hidden;z-index:1;transition:all .3s ease 0s}
+.product-grid4:hover{box-shadow:0 0 10px rgba(0,0,0,.2)}
+.product-grid4 .product-image4 a{display:block}
+.product-grid4 .product-image4 img{width:100%;height:auto}
+.product-grid4 .pic-1{opacity:1;transition:all .5s ease-out 0s}
+.product-grid4:hover .pic-1{opacity:0}
+.product-grid4 .pic-2{position:absolute;top:0;left:0;opacity:0;transition:all .5s ease-out 0s}
+.product-grid4:hover .pic-2{opacity:1}
+.product-grid4 .social{width:180px;padding:0;margin:0 auto;list-style:none;position:absolute;right:0;left:0;top:50%;transform:translateY(-50%);transition:all .3s ease 0s}
+.product-grid4 .social li{display:inline-block;opacity:0;transition:all .7s}
+.product-grid4 .social li:nth-child(1){transition-delay:.15s}
+.product-grid4 .social li:nth-child(2){transition-delay:.3s}
+.product-grid4 .social li:nth-child(3){transition-delay:.45s}
+.product-grid4:hover .social li{opacity:1}
+.product-grid4 .social li a{color:#222;background:#fff;font-size:17px;line-height:36px;width:40px;height:36px;border-radius:2px;margin:0 5px;display:block;transition:all .3s ease 0s}
+.product-grid4 .social li a:hover{color:#fff;background:#16a085}
+.product-grid4 .social li a:after,.product-grid4 .social li a:before{content:attr(data-tip);color:#fff;background-color:#000;font-size:12px;line-height:20px;border-radius:3px;padding:0 5px;white-space:nowrap;opacity:0;transform:translateX(-50%);position:absolute;left:50%;top:-30px}
+.product-grid4 .social li a:after{content:'';height:15px;width:15px;border-radius:0;transform:translateX(-50%) rotate(45deg);top:-22px;z-index:-1}
+.product-grid4 .social li a:hover:after,.product-grid4 .social li a:hover:before{opacity:1}
+.product-grid4 .product-discount-label,.product-grid4 .product-new-label{color:#fff;background-color:#16a085;font-size:13px;font-weight:800;text-transform:uppercase;line-height:45px;height:45px;width:45px;border-radius:50%;position:absolute;left:10px;top:15px;transition:all .3s}
+.product-grid4 .product-discount-label{left:auto;right:10px;background-color:#d7292a}
+.product-grid4:hover .product-new-label{opacity:0}
+.product-grid4 .product-content{padding:25px}
+.product-grid4 .title{font-size:15px;font-weight:400;text-transform:capitalize;margin:0 0 7px;transition:all .3s ease 0s}
+.product-grid4 .title a{color:#222}
+.product-grid4 .title a:hover{color:#16a085}
+.product-grid4 .price{color:#16a085;font-size:17px;font-weight:700;margin:0 2px 15px 0;display:block}
+.product-grid4 .price span{color:#909090;font-size:13px;font-weight:400;letter-spacing:0;text-decoration:line-through;text-align:left;vertical-align:middle;display:inline-block}
+.product-grid4 .add-to-cart{border:1px solid #e5e5e5;display:inline-block;padding:10px 20px;color:#888;font-weight:600;font-size:14px;border-radius:4px;transition:all .3s}
+.product-grid4:hover .add-to-cart{border:1px solid transparent;background:#16a085;color:#fff}
+.product-grid4 .add-to-cart:hover{background-color:#505050;box-shadow:0 0 10px rgba(0,0,0,.5)}
+@media only screen and (max-width:990px){.product-grid4{margin-bottom:30px}
 }
 @media only screen and (min-width: 1170px) {
   .cd-gallery {
@@ -710,7 +705,7 @@ xcustom form elements
  
 <main>
  <br>
-<div class="bs-example">
+<!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
   <!--Indicators-->
   <ol class="carousel-indicators">
@@ -723,31 +718,40 @@ xcustom form elements
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view">
-        <img class="d-block w-100" src=<?php echo base_url('assets/Content-filter/img/test.jpg') ?>
+        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/carousel-img1.jpg') ?>"
           alt="First slide">
         <div class="mask rgba-black-light"></div>
       </div>
-      
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Light mask</h3>
+        <p>First text</p>
+      </div>
     </div>
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block img-fluid" src=<?php echo base_url('assets/Content-filter/img/Dc.jpg') ?>
+        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/carousel-img2.jpg') ?>"
           alt="Second slide">
         <div class="mask rgba-black-strong"></div>
       </div>
-      
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Strong mask</h3>
+        <p>Secondary text</p>
       </div>
     </div>
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block img-fluid" src=<?php echo base_url('assets/Content-filter/img/ds.jpg') ?>
+        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
           alt="Third slide">
         <div class="mask rgba-black-slight"></div>
       </div>
-      
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Slight mask</h3>
+        <p>Third text</p>
+      </div>
     </div>
+  </div>
   <!--/.Slides-->
   <!--Controls-->
   <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
@@ -759,7 +763,6 @@ xcustom form elements
     <span class="sr-only">Next</span>
   </a>
   <!--/.Controls-->
-</div>
 </div>
 <!--/.Carousel Wrapper-->
 
@@ -777,66 +780,111 @@ xcustom form elements
 		</div> <!-- cd-tab-filter-wrapper -->
 
 		<section class="cd-gallery">
-			<ul>
-				
-				<li class="mix color-1 check1 radio2 option3"><img src="<?php echo base_url('assets/Content-filter/home-img/img-1.jpg') ?>" alt="Image 1">
-				<div>
-					
-					<a  href="<?php echo base_url('admin_controller/admin_login');?>" button class="btn btn-lg btn-primary btn-block"  >RESERVE THIS</a> 
-				</div></li>
-				
-				<li class="mix color-2 check2 radio2 option2"><img src="<?php echo base_url('assets/Content-filter/home-img/img-2.jpg') ?>" alt="Image 2"><div>
-					
-					<a  href="<?php echo base_url('user_controller/user_account_storeroom');?>" button class="btn btn-lg btn-primary btn-block" >RESERVE THIS</a> 
-				</div></li>
-				<li class="mix color-1 check3 radio3 option1"><img src="<?php echo base_url('assets/Content-filter/home-img/img-3.jpg') ?>" alt="Image 3"><div>
-					
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >RESERVE THIS</button> 
-				</div></li>
-				<li class="mix color-1 check3 radio2 option4"><img src="<?php echo base_url('assets/Content-filter/home-img/img-4.jpg') ?>" alt="Image 4"><div>
-					
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >RESERVE THIS</button> 
-				</div></li>
-				<li class="mix color-1 check1 radio3 option2"><img src="<?php echo base_url('assets/Content-filter/home-img/img-5.jpg') ?>" alt="Image 5"><div>
-					
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >RESERVE THIS</button> 
-				</div></li>
-				<li class="mix color-2 check2 radio3 option3"><img src="<?php echo base_url('assets/Content-filter/home-img/img-6.jpg') ?>" alt="Image 6"><div>
-					
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >RESERVE THIS</button> 
-				</div></li>
-				<li class="mix color-2 check2 radio2 option1"><img src="<?php echo base_url('assets/Content-filter/home-img/img-7.jpg') ?>" alt="Image 7"><div>
-					
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >RESERVE THIS</button> 
-				</div></li>
-				<li class="mix color-1 check1 radio3 option4"><img src="<?php echo base_url('assets/Content-filter/home-img/img-8.jpg') ?>" alt="Image 8"><div>
-					
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >RESERVE THIS</button> 
-				</div></li>
-				<li class="mix color-2 check1 radio2 option3"><img src="<?php echo base_url('assets/Content-filter/home-img/img-9.jpg') ?>" alt="Image 9"><div>
-					
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >RESERVE THIS</button> 
-				</div></li>
-				<li class="mix color-1 check3 radio2 option4"><img src="<?php echo base_url('assets/Content-filter/home-img/img-10.jpg') ?>" alt="Image 10"><div>
-					
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >RESERVE THIS</button> 
-				</div></li>
-				<li class="mix color-1 check3 radio3 option2"><img src="<?php echo base_url('assets/Content-filter/home-img/img-11.jpg') ?>" alt="Image 11"><div>
-					
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >RESERVE THIS</button> 
-				</div></li>
-				<li class="mix color-2 check1 radio3 option1"><img src="<?php echo base_url('assets/Content-filter/home-img/img-12.jpg') ?>" alt="Image 12"><div>
-					
-					<button class="btn btn-lg btn-primary btn-block" type="submit" >RESERVE THIS</button> 
-				</div></li>
-				<li class="gap"></li>
-				<li class="gap"></li>
-				<li class="gap"></li>
-			</ul>
-      <button class="uk-button uk-button-large uk-button-outline ladda-button uk-width-1-1"><i class="uk-icon uk-icon-plus"></i> SHOW MORE</button>
-			<div class="cd-fail-message">No results found</div>
-		</section> <!-- cd-gallery -->
+		
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="#">
+                        <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-1.jpg') ?>">
+                        <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-1.1.jpg') ?>">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                    <span class="product-discount-label">-10%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">KIA PICANTO</a></h3>
+                    <div class="price">
+                      ₱2500.00
+                        <span>$16.00</span>
+                    </div>
+                    <a class="add-to-cart" href="">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="#">
+                        <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-2.jpg') ?>">
+                        <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-2.1.jpg') ?>">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-discount-label">-12%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">TOYOTA WIGO</a></h3>
+                    <div class="price">
+                      ₱2300.00
+                       
+                    </div>
+                    <a class="add-to-cart" href="">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="#">
+                        <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-3.jpg') ?>">
+                        <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-3.1.jpg') ?>">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                    <span class="product-discount-label">-10%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">SUZUKI APV</a></h3>
+                    <div class="price">
+                      ₱2400.00
+                        
+                    </div>
+                    <a class="add-to-cart" href="">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="#">
+                        <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-4.jpg') ?>">
+                        <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-4.1.jpg') ?>">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                    <span class="product-discount-label">-10%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">TOYOTA VIOS</a></h3>
+                    <div class="price">
+                      ₱2200.00
+                        
+                    </div>
+                    <a class="add-to-cart" href="">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+		</section> <!-- cd-gallery -->
+      
 		<div class="cd-filter">
 			<form>
         
