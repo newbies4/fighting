@@ -38,8 +38,8 @@
     </div>
 
     <button class="btn btn-lg btn-primary-login btn-block" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">Don't Have Account?</p><a href="<?php echo base_url('admin_controller/user_signup');?>">Sign Up Here</a>
-<?= form_close(); ?>
+    <p><center> Don't have an account? <a href="<?php echo base_url('admin_controller/user_signup');?>"><font color="#0000FF"> Sign In </font> </a> </center></p>
+    
 
         </section>
     </section>

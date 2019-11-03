@@ -109,7 +109,7 @@ body {
                             <tr>
                               <th>Model</th>
                               <th>Picture</th>
-                              <th>Quantity</th>
+                              <th style="width:8%">Quantity</th>
                               <th>Price</th>
                               <th>Driver</th>
                               <th>Subtotal</th>                              
@@ -128,8 +128,8 @@ body {
                                 </div>
                               </th>
                               <td>Cell 1</td>
-                              <td>Cell 2</td>
-                              <td>Cell 3</td>
+                              <td><input type="number" class="form-control text-center" value="1"></td>
+                              <td>Cell 3 </td>
                               <td>Cell 4</td>
                               <td>Cell 5</td>
                               
@@ -144,8 +144,8 @@ body {
                                 </div>
                               </th>
                               <td>Cell 4</td>
-                              <td>Cell 5</td>
-                              <td>Cell 6</td>
+                              <td><input type="number" class="form-control text-center" value="1"></td>
+                              <td>Cell 6 </td>
                               <td>Cell 4</td>
                               <td>Cell 5</td>
                             </tr>
@@ -158,7 +158,7 @@ body {
                                 </div>
                               </th>
                               <td>Cell 7</td>
-                              <td>Cell 8</td>
+                              <td><input type="number" class="form-control text-center" value="1"></td>
                               <td>Cell 9</td>
                               <td>Cell 4</td>
                               <td>Cell 5</td>

@@ -526,14 +526,25 @@ a.article:hover {
 ----------------------------------------------------- */
 
 .wrap{
-  max-width: 700px;
+  max-width: 380px;
+  border-radius:20px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  color: #000000;
+  margin-top: 5vh;
+  padding:20px 20px 20px;
+}
+
+.wrap-credentials{
+  max-width: 380px;
   border-radius:20px;
   margin: auto;
   background: white;
   padding: 20px;
   color: #000000;
   margin-top: 13vh;
-  padding: 20px;
+  padding:20px 20px 20px;
 }
 /*
 input[type=submit]{
@@ -555,6 +566,12 @@ input[type=submit]:hover{
   opacity:0.7;
 }
 */
-.sign-up-bg{
-  background:linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+.btn-primary-signup{
+  color:#fff;
+  background: linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+}
+.btn-primary-signup:hover {
+  color: white;
+  background: linear-gradient(to right, #bd0303, rgb(243, 125, 14));
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.863);
 }
