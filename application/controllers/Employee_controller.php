@@ -85,16 +85,9 @@ class Employee_controller extends CI_Controller {
 				'middle_name' => $this->input->post('middlename'),
 				'last_name' => $this->input->post('lastname'),
 				'contact' => $this->input->post('contactnumber')
-        	);
-
-            // $data['firstname'] = $this->input->post('firstname');
-            // $data['middlename'] = $this->input->post('middlename');
-            // $data['lastname'] = $this->input->post('lastname');
-            // $data['contactnumber'] = $this->input->post('contactnumber');
-
+        	);        
             $this->load->model('Employee_model');
 
-            // echo $data['firstname'];
             $result = $this->Employee_model->insert_data($data);
             $this->session->set_flashdata('add_employee_success', 'Employee successfully added.');
             redirect('admin_controller/add_employee');
@@ -111,16 +104,12 @@ class Employee_controller extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE)
         {
-            // $this->load->view('admin/add_employee');
-            // redirect('Admin_controller/add_employee');
             $data['main_view'] = "admin/edit_employee";
 
             $this->load->view('layouts/main', $data);
         }
         else
         {
-            // $this->load->view('formsuccess');
-
             $data = array(
                 'id' => $this->input->post('id'),
                 'first_name' => $this->input->post('firstname'),
@@ -129,14 +118,8 @@ class Employee_controller extends CI_Controller {
                 'contact' => $this->input->post('contactnumber')
             );
 
-            // $data['firstname'] = $this->input->post('firstname');
-            // $data['middlename'] = $this->input->post('middlename');
-            // $data['lastname'] = $this->input->post('lastname');
-            // $data['contactnumber'] = $this->input->post('contactnumber');
-
             $this->load->model('Employee_model');
 
-            // echo $data['firstname'];
             $result = $this->Employee_model->update_data($data);
             $this->session->set_flashdata('update_employee_success', 'Employee successfully updated.');
             redirect('employee_controller/show');

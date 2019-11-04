@@ -15,7 +15,6 @@ class User_controller extends CI_Controller {
 		$data['main_view'] = "user/user_overview";
 
 		$this->load->view('layouts/main_user', $data);
-		//$this->load->view('layouts/footer');
 	}
 	public function user_account_settings()
 	{
@@ -36,6 +35,24 @@ class User_controller extends CI_Controller {
 		$this->load->view('layouts/main_user', $data);
 	}
 	
+
+
+	public function login()
+	{
+		$this->load->view('layouts/header');
+
+		$this->load->view('user/login_user'); 
+		$this->load->view('layouts/footer'); 
+
+	}
+
+	public function team()
+	{
+		$data['main_view'] = "user/user_team";
+
+		$this->load->view('layouts/main_user', $data);
+	}
+
 	public function user_signup()
 	{
 		$data['main_view'] = "user/user_signup";
@@ -43,18 +60,12 @@ class User_controller extends CI_Controller {
 		$this->load->view('layouts/main_user', $data);
 	}
 
-
-	public function login()
+	public function user_signup_credentials()
 	{
-		$data['main_view'] = "user/login_user";
+		$this->load->view('layouts/header');
 
-		$this->load->view('layouts/main_user', $data);
-	}
-	public function team()
-	{
-		$data['main_view'] = "user/user_team";
-
-		$this->load->view('layouts/main_user', $data);
+		$this->load->view('user/user_signup_credentials'); 
+		$this->load->view('layouts/footer'); 	
 	}
 
 }

@@ -35,15 +35,11 @@
     <label>
         <input type="checkbox" value="remember-me"> Remember me
     </label>
-	Don't have an account? <a href="#" class="ml-2">Sign Up</a>
     </div>
-	
-					
-						
-					
-    <button class="btn  " type="submit" >Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
-<?= form_close(); ?>
+
+    <button class="btn btn-lg btn-primary-login btn-block" type="submit">Sign in</button>
+    <p><center> Don't have an account? <a href="<?php echo base_url('admin_controller/user_signup');?>"><font color="#0000FF"> Sign In </font> </a> </center></p>
+    
 
         </section>
     </section>

@@ -18,10 +18,6 @@ class Car_controller extends CI_Controller {
     	} else {
 	    	return intval($lastid->lastid) + 1;
     	}
-    	// $result = $this->car_model->generate_id();
-    	// $data['res'] = $result->row()->lastid;
-    	// $data['main_view'] = "admin/test";
-    	// $this->load->view('layouts/main', $data);
     }
 
     public function test() {    	  
@@ -130,13 +126,7 @@ class Car_controller extends CI_Controller {
             if ($result) {
 	            $this->session->set_flashdata('add_car_success', 'Car successfully added.');
 	            redirect('admin_controller/add_car');
-            }
-	        
-	        // Get files data from the database
-	        // $data['files'] = $this->file->getRows();
-	        
-	        // Pass the files data to view
-	        // $this->load->view('upload_files/index', $data);
+            }	        	       
     	}
         
 		// $data['a1'] = $this->input->post('owner');

@@ -37,10 +37,10 @@
                           min="1000-01-01" class="form-control">
 					
 				   <span class="help-block">By clicking Continue, you certify that the above information provided are correct and true.</span>
-				   <a href="<?php echo base_url('admin_controller/user_signup_credentials');?>"><button class="btn btn-lg btn-primary-signup btn-block signup-btn" type="submit">
+				   <a href="<?php echo base_url('user_controller/user_signup_credentials');?>"><button class="btn btn-lg btn-primary-signup btn-block signup-btn" type="submit">
                         	Continue</button></a>
 					
-					<p><center> Already have an account? <a href="<?php echo base_url('admin_controller/admin_login');?>"><font color="#0000FF"> Log In </font> </a> </center></p>
+					<p><center> Already have an account? <a href="<?php echo base_url('user_controller/login');?>"><font color="#0000FF"> Log In </font> </a> </center></p>
 				
 				  </div>
                 

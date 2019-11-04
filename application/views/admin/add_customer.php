@@ -59,27 +59,24 @@
     </div>
   </div>
   
-    <div class="col-md-4 mb-3">
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Example file input</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-            </div>
-        </form>
-    </div>
-    <div class="col-md-4 mb-3">
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Example file input</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-            </div>
-        </form>
-    </div>
-    <div class="d-flex justify-content-center">
-        <button class="btn btn-primary" type="submit">Save</button> 
-
-        <a class="btn btn-primary pull pull-rightclass="btn btn-primary pull pull-right" href="<?php echo base_url();?>index.php/home/customer"> Back </a>       
-
-    </div>
-    
+  <div class="col-md-4 mb-3">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Example file input</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+    </form>
+  </div>
+  <div class="col-md-4 mb-3">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Example file input</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+    </form>
+  </div>
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a class="btn btn-primary pull pull-rightclass="btn btn-primary pull pull-right" href="<?php echo base_url();?>index.php/home/customer"> Back </a> 
+  </div>
 </form>
