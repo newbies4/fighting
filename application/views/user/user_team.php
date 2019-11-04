@@ -34,17 +34,20 @@
     </div>
   </div>
 </nav>
-<div class="bg-primary text-center py-5 mb-4">
+</header>
+<
+<
   
-<div class="container">
-    <h1 class="font-weight-light text-white">Meet the Team</h1>
+
   </div>
 </div>
-</header>
-
 <!-- Page Content -->
+
+<h1 >Meet the Team</h1>
 <div class="container">
+<h1> <center>Meet the Team</center> </h1>
   <div class="row">
+
     <!-- Team Member 1 -->
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card border-0 shadow">

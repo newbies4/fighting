@@ -1,13 +1,19 @@
-<br>
+<div class="animation-area">
+        <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+</div>
 <section class = "container-fluid">
     <section class="row justify-content-center">
         <section class="col 12 col-sm-6 col-lg-3">
 <!-- <form class="admin-login-form-signin"> -->
-
-<?php if($this->session->flashdata('login_failed')): ?>
-    <p class="text-danger"><?php echo $this->session->flashdata('login_failed'); ?></p>
-<?php endif; ?>
-
 <?= form_open('Login_controller/login', 'class="admin-login-form-signin"') ?>
 
     <img src=<?php echo base_url('assets/Content-filter/img/logo.png')?> class="logo">  
@@ -31,9 +37,9 @@
     </label>
     </div>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
-<?= form_close(); ?>
+    <button class="btn btn-lg btn-primary-login btn-block" type="submit">Sign in</button>
+    <p><center> Don't have an account? <a href="<?php echo base_url('admin_controller/user_signup');?>"><font color="#0000FF"> Sign In </font> </a> </center></p>
+    
 
         </section>
     </section>

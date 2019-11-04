@@ -114,6 +114,17 @@ class Admin_controller extends CI_Controller {
 		$this->load->view('layouts/main', $data);
 	}
 	
-
-
+	//Delete this soon
+	public function user_signup()
+	{
+		$data['main_view'] = "user/user_signup";
+		
+		$this->load->view('layouts/main_user', $data);
+	}
+	public function user_signup_credentials()
+	{
+		$data['main_view'] = "user/user_signup_credentials";
+		
+		$this->load->view('layouts/main_user', $data);
+	}
 }

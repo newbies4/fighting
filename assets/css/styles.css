@@ -40,15 +40,13 @@ a:focus {
 }
 
 .nav-link:hover{
-  border: 3px solid #aa0404;
-  border-radius: 15px;
-  padding: 5px 8px;
+  border-bottom: 3px solid #aa0404;
+
 }
 
 .nav-item .nav-link:focus{
-  border: 3px solid #aa0404;
-  border-radius: 15px;
-  padding: 5px 8px;
+  border-bottom: 3px solid #aa0404;
+
   
 }
 
@@ -67,7 +65,7 @@ a:focus {
   padding: .5rem 1.25rem;
   margin-bottom: 0;
   color: white;
-  background-color: #aa0404;
+  background:linear-gradient(to right, #bd0303, rgb(243, 125, 14));
   border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
@@ -200,10 +198,20 @@ a.article:hover {
   max-width: 380px;
   margin: 0 auto;
   background-color: #fff;
-  padding: 60px 40px 50px;
+  padding: 60px 40px 20px;
   border: 1px solid #e5e5e5;
   border-radius: 10px; 
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.664);
+}
+
+.btn-primary-login{
+  color:#fff;
+  background: linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+}
+.btn-primary-login:hover {
+  color: white;
+  background: linear-gradient(to right, #bd0303, rgb(243, 125, 14));
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.863);
 }
 .logo{
   width:100px;
@@ -374,7 +382,7 @@ a.article:hover {
     background: #fff;
   }
   
-  .profile-userpic img {
+  /*.profile-userpic img {
     float: none;
     margin: 0 auto;
     width: 50%;
@@ -382,11 +390,11 @@ a.article:hover {
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
-  }
+  }*/
   
   .profile-usertitle {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   .profile-usertitle-name {
@@ -466,3 +474,104 @@ a.article:hover {
     background: #fff;
     min-height: 460px;
   }
+
+  #profile-display{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+    border: 3px solid white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.863);
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+  }
+
+  .content-table{
+    border-collapse: collapse;
+    margin: 8px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  }
+
+  .content-table thead tr{
+    background: linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+    color: white;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .content-table th, .content-table td{
+    padding: 10px 35px;
+  }
+
+  .content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+  }
+  .content-table tbody tr:last-of-type{
+    border-bottom: 2px solid red;
+  }
+
+/* ---------------------------------------------------
+    SIGN UP
+----------------------------------------------------- */
+
+.wrap{
+  max-width: 380px;
+  border-radius:20px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  color: #000000;
+  margin-top: 5vh;
+  padding:20px 20px 20px;
+}
+
+.wrap-credentials{
+  max-width: 380px;
+  border-radius:20px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  color: #000000;
+  margin-top: 13vh;
+  padding:20px 20px 20px;
+}
+/*
+input[type=submit]{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  margin-top: 30px;
+  outline: none;
+  border: none;
+  background: #60adde;
+  opacity: 0.7;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+input[type=submit]:hover{
+  background: #003366;
+  opacity:0.7;
+}
+*/
+.btn-primary-signup{
+  color:#fff;
+  background: linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+}
+.btn-primary-signup:hover {
+  color: white;
+  background: linear-gradient(to right, #bd0303, rgb(243, 125, 14));
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.863);
+}

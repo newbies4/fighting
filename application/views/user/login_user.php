@@ -1,29 +1,50 @@
-<div class="col-md-6 col-md-offset-3 vertical-off-4">
-	<div class="panel panel-default login-form">
-	  	<div class="panel-body">
-	  		<form method="post" action="<?php echo base_url('pages/login') ?>" id="loginForm">
-		    	<fieldset>
-		    		<legend>
-		    			Login
-		    		</legend>
-
-		    		<div id="message"></div>
-
-					<div class="form-group">
-				    	<label for="username">Username</label>
-				    	<input type="text" class="form-control" id="username" name="username" placeholder="Username" autofocus>
-				  	</div>
-				  	<div class="form-group">
-				    	<label for="password">Password</label>
-				    	<input type="password" class="form-control" id="password" name="password" placeholder="Password">
-				  	</div>					  						 
-				  	
-					  <a href=<?php echo base_url('pages/view_dashboard') ?>	<button class="col-md-12 btn btn-primary btn-lg btn-block login-button" >Login</button></a>
-					  						
-		    	</fieldset>
-		    </form>
-	  	</div>
-	</div>
+<div class="animation-area">
+        <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
 </div>
+<section class = "container-fluid">
+    <section class="row justify-content-center">
+        <section class="col 12 col-sm-6 col-lg-3">
+<!-- <form class="admin-login-form-signin"> -->
+<?= form_open('Login_controller/login', 'class="admin-login-form-signin"') ?>
 
-<script type="text/javascript" src="<?php echo base_url('custom/js/login.js') ?>"></script>
+    <img src=<?php echo base_url('assets/Content-filter/img/logo.png')?> class="logo">  
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="form-control <?= (form_error('username') == '' ? '':'is-invalid') ?>" name="username" placeholder="Username" required autofocus>
+        <?= form_error('firstname'); ?>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control <?= (form_error('password') == '' ? '':'is-invalid') ?>" name="password" placeholder="Password" required>
+        <?= form_error('password'); ?>
+    </div>
+
+    <div class="checkbox mb-3">
+    <label>
+        <input type="checkbox" value="remember-me"> Remember me
+    </label>
+	Don't have an account? <a href="#" class="ml-2">Sign Up</a>
+    </div>
+	
+					
+						
+					
+    <button class="btn  " type="submit" >Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+<?= form_close(); ?>
+
+        </section>
+    </section>
+</section>
