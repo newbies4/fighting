@@ -48,7 +48,6 @@ class Login_controller extends CI_Controller {
 					'logged_in' => TRUE
 				);
 				$this->session->set_userdata($sess_data);
-				echo $rows->username;
 				redirect('admin_controller');
 			} else {
 				$this->session->set_flashdata('login_failed', 'Login failed, check your username or password.');

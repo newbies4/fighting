@@ -22,7 +22,7 @@ class Employee_model extends CI_Model {
 	 //        'contact' => $data_array['contactnumber']
 		// );
 
-		$this->db->insert('tbl_employee', $data);
+		return $this->db->insert('tbl_employee', $data);
 	}
 
 	public function update_data($data) {

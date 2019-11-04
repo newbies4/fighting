@@ -70,7 +70,7 @@ class Admin_controller extends CI_Controller {
 		redirect('Employee_controller/show');
 	}
 
-	public function add_cars()
+	public function add_car()
 	{
 		$data['main_view'] = "admin/add_cars";
 

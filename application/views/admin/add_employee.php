@@ -10,7 +10,7 @@
       <p class="alert alert-success"><?php echo $this->session->flashdata('add_employee_success'); ?></p>
     <?php endif; ?>
     <?php // echo validation_errors('<div class="text-danger">','</div>'); ?>
-    <?= form_open('Employee_controller/add_employee') ?>
+    <?= form_open('employee_controller/add_employee') ?>
     
     <div class="row">
       <div class="form-group col-md-6">
