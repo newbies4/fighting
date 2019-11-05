@@ -6,13 +6,14 @@ class Car_model extends CI_Model {
         parent::__construct();
     }
 
-    public function insert_data($data) {
-		return $this->db->insert('tbl_car_profile', $data);
+    public function insert_car($arr) {
+
+		$this->db->insert('tbl_car_profile', $arr);
+		return $this->db->insert_id();
 	}
 
-	public function insert_picture($data = array()) {
-		$insert = $this->db->insert_batch('tbl_car_pic',$data);
-        return $insert?true:false;
+	public function insert_pictures($arr) {
+		return $this->db->insert_batch('tbl_car_pic', $arr);
 	}
 
 	public function last_id() {

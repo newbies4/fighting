@@ -10,37 +10,6 @@ class Car_controller extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
     }
 
-    public function generate_id() {
-
-    	$lastid = $this->car_model->last_id();
-    	if ($lastid->lastid == null) {
-    		return 1;
-    	} else {
-	    	return intval($lastid->lastid) + 1;
-    	}
-    }
-
-    public function test() {    	  
-    	$data['res'] = $this->generate_id();
-    	$data['main_view'] = "admin/test";
-    	$this->load->view('layouts/main', $data);
-    }
-    public function test2() {    	  
-    	echo $this->input->post('owner').'1owner<br>';
-		echo $this->input->post('model').'2model<br>';
-		echo $this->input->post('brand').'3brand<br>';
-		echo $this->input->post('type').'4type<br>';
-		echo $this->input->post('seats').'5seats<br>';
-		echo $this->input->post('color').'6color<br>';
-		echo $this->input->post('platenumber').'7platenumber<br>';
-		echo $this->input->post('price').'8price<br>';
-		echo $this->input->post('fuelcapacity').'9fuelcapacity<br>';
-		echo $this->input->post('gastype').'10gastype<br>';
-		echo $this->input->post('driver').'11driver<br>';
-		echo $this->input->post('transmission').'12transmission<br>';
-		echo $this->input->post('insurance').'13insurance<br>';
-    }
-
 	public function add_car()
 	{
 		// Setting up the rules
@@ -62,10 +31,85 @@ class Car_controller extends CI_Controller {
 			$data['main_view'] = "admin/add_cars";
 			$this->load->view('layouts/main', $data);
         } else {
+        	if ($this->input->post('addcarsubmit') != null) {
+        		$dataArr = array(
+	        		'car_owner' => $this->input->post('owner'),
+					'car_model' => $this->input->post('model'),
+					'car_brand' => $this->input->post('brand'),
+					'car_type' => $this->input->post('type'),
+					'car_seats' => $this->input->post('seats'),
+					'car_color' => $this->input->post('color'),
+					'car_platenumber' => $this->input->post('platenumber'),
+					'car_price' => $this->input->post('price'),			
+					'car_fuel_capacity' => $this->input->post('fuelcapacity'),
+					'car_gas_type' => $this->input->post('gastype'),
+					'car_driver' => $this->input->post('driver'),
+					'car_transmission' => $this->input->post('transmission'),
+					'car_insurance' => $this->input->post('insurance')
+        		);
+        		$car_id = $this->car_model->insert_car($dataArr);
 
-    		$data = array();
+        		$data = array();
+        		$files = $_FILES;
+        		$fileCount = count($_FILES['carpics']['name']);
+        		$pictureNames = array();
+
+        		for ($i=0; $i < $fileCount; $i++) {
+        			if ($_FILES['carpics']['error'][$i] == UPLOAD_ERR_OK) {
+
+						$_FILES['carpics']['name'] = $files['carpics']['name'][$i];
+						$_FILES['carpics']['type'] = $files['carpics']['type'][$i];
+						$_FILES['carpics']['tmp_name'] = $files['carpics']['tmp_name'][$i];
+						$_FILES['carpics']['error'] = $files['carpics']['error'][$i];
+						$_FILES['carpics']['size'] = $files['carpics']['size'][$i];
+
+						$config['upload_path'] = './assets/img/cars';
+		                $config['allowed_types']= 'png|jpg|jpeg';
+		                $config['max_size'] = 0;
+		                $config['max_width'] = 0;
+		                $config['max_height'] = 0;
+		                $config['remove_spaces'] = true;
+
+		                $this->load->library('upload',$config);
+
+		                if($this->upload->do_upload('carpics')){
+							// Get data about the file
+							$uploadData = $this->upload->data();
+							$pictureNames[] = array(
+								'car_id_fk' => $car_id,
+								'car_pic_name' => $uploadData['file_name']
+							);
+						} else {
+							// upload error
+							$data['error'] = $this->upload->display_errors();
+						}
+        			} 
+        		} // end of for loop
+        		$result = $this->car_model->insert_pictures($pictureNames);
+        		if ($result != false) {
+        			$this->session->set_flashdata('add_car_success', 'Car successfully added.');
+        			redirect('admin_controller/add_car','refresh');
+        		}
+        	} else {
+
+    			var_dump('expression');
+        	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	        // If file upload form submitted
-	        if($this->input->post('addcarsubmit') && !empty($_FILES['carpics']['name'])) {
+	        /*if($this->input->post('addcarsubmit') && !empty($_FILES['carpics']['name'])) {
 	            $filesCount = count($_FILES['carpics']['name']);
 	            for($i = 0; $i < $filesCount; $i++) {
 	                $_FILES['carpic']['name']     = $_FILES['carpics']['name'][$i];
@@ -102,10 +146,10 @@ class Car_controller extends CI_Controller {
 	        } else {
 	        	
 	        	redirect('car_controller/test2');
-	        }
+	        }*/
 
 	        // Insert to tbl_car_profile
-	        $datas = array(
+	        /*$datas = array(
 				'car_id' => $this->generate_id(),
         		'car_owner' => $this->input->post('owner'),
 				'car_model' => $this->input->post('model'),
@@ -126,75 +170,9 @@ class Car_controller extends CI_Controller {
             if ($result) {
 	            $this->session->set_flashdata('add_car_success', 'Car successfully added.');
 	            redirect('admin_controller/add_car');
-            }	        	       
+            }	      */  	       
     	}
         
-		// $data['a1'] = $this->input->post('owner');
-		// $data['a2'] = $this->input->post('model');
-		// $data['a3'] = $this->input->post('brand');
-		// $data['a4'] = $this->input->post('type');
-		// $data['a5'] = $this->input->post('seats');
-		// $data['a6'] = $this->input->post('color');
-		// $data['a7'] = $this->input->post('platenumber');
-		// $data['a8'] = $this->input->post('price');
-		// $data['a9'] = $this->input->post('fuelcapacity');
-		// $data['a10'] = $this->input->post('gastype');
-		// //$data['a10'] = $_POST['gastype'];
-		// $data['a11'] = $this->input->post('driver');
-		// $data['a12'] = $this->input->post('transmission');
-		// $data['a13'] = $this->input->post('insurance');
-		// $this->load->view('admin/test', $data);
-		// echo $this->input->post('owner');
-		// echo $this->input->post('model');
-		// echo $this->input->post('brand');
-		// echo $this->input->post('type');
-		// echo $this->input->post('seats');
-		// echo $this->input->post('color');
-		// echo $this->input->post('platenumber');
-		// echo $this->input->post('price');
-		// echo $this->input->post('fuelcapacity');
-		// echo $this->input->post('gastype');
-		// echo $this->input->post('driver');
-		// echo $this->input->post('transmission');
-		// echo $this->input->post('insurance');
-
-		// // Setting up the rules
-		// $this->form_validation->set_rules('firstname', 'First Name', 'required|min_length[2]|max_length[50]');
-		// $this->form_validation->set_rules('middlename', 'Middle Name', 'required|min_length[2]|max_length[50]');
-		// $this->form_validation->set_rules('lastname', 'Last Name', 'required|min_length[2]|max_length[50]');
-		// $this->form_validation->set_rules('contactnumber', 'Contact Number', 'required|min_length[7]|max_length[15]|numeric');
-
-		// if ($this->form_validation->run() == FALSE)
-  //       {
-  //           // $this->load->view('admin/add_employee');
-  //           // redirect('Admin_controller/add_employee');
-  //           $data['main_view'] = "admin/add_employee";
-
-		// 	$this->load->view('layouts/main', $data);
-  //       }
-  //       else
-  //       {
-  //           // $this->load->view('formsuccess');
-
-  //       	$data = array(
-  //       		'first_name' => $this->input->post('firstname'),
-		// 		'middle_name' => $this->input->post('middlename'),
-		// 		'last_name' => $this->input->post('lastname'),
-		// 		'contact' => $this->input->post('contactnumber')
-  //       	);
-
-  //           // $data['firstname'] = $this->input->post('firstname');
-  //           // $data['middlename'] = $this->input->post('middlename');
-  //           // $data['lastname'] = $this->input->post('lastname');
-  //           // $data['contactnumber'] = $this->input->post('contactnumber');
-
-  //           $this->load->model('Employee_model');
-
-  //           // echo $data['firstname'];
-  //           $result = $this->Employee_model->insert_data($data);
-  //           $this->session->set_flashdata('add_employee_success', 'Employee successfully added.');
-  //           redirect('admin_controller/add_employee');
-  //       }
-	// }
+		
 	}
 }

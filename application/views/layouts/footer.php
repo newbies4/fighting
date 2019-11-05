@@ -13,6 +13,14 @@
       });
     });
 
+    // for file input fields
+    $('input[type="file"]').change(function(e){
+      var fileName = e.target.files[0].name;
+      $(e.target).siblings('.custom-file-label').text(fileName);
+    });
+
+    
+
     // $(document).ready(function() {
 
     //   $(".form-group .form-control").blur(function() {
