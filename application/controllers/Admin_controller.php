@@ -76,6 +76,18 @@ class Admin_controller extends CI_Controller {
 
 		$this->load->view('layouts/main', $data);
 	}
+	public function add_car_picture()
+	{
+		$data['main_view'] = "admin/add_car_picture";
+
+		$this->load->view('layouts/main', $data);
+	}
+	public function add_car_finalize()
+	{
+		$data['main_view'] = "admin/add_car_finalize";
+
+		$this->load->view('layouts/main', $data);
+	}
 
 	public function add_customer()
 	{

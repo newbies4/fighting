@@ -1,5 +1,5 @@
 <header>
-  <center><h3>ADD CARS </h3></center>
+  <center><h3>ADD CARS  </h3></center>
   <br>
 </header>
 
@@ -173,7 +173,8 @@
 		    
 		<div>
 				<button class="btn btn-primary" name="addcarsubmit" value="addcar" type="submit">Save</button>   
-				<a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/cars">View Cars</a>   
+				<a class="btn btn-primary" href="<?php echo base_url();?>index.php/home/cars">View Cars</a>
+				<a class="btn btn-primary" href="<?php echo base_url('admin_controller/add_car_picture');?>">NEXT</a>   
 			</div>                
 	</div> <!-- end of row -->
 	<?php echo form_close(); ?>
