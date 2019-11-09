@@ -189,6 +189,37 @@ a.article:hover {
 }
 
 /* ---------------------------------------------------
+    ADMIN BREADCRUMB
+----------------------------------------------------- */
+.breadcrumb{
+  background: linear-gradient(to left, #bd0303, rgb(243, 125, 14));
+  border-radius: 50px;
+  box-shadow: 2px 2px 4px rgba(0, 0,0, 0.25);
+}
+
+.breadcrumb .breadcrumb-item{
+position: relative;
+z-index: 1;
+}
+
+.breadcrumb .breadcrumb-item a{
+  padding: 16px 15px;
+  font-weight: bold;
+  color: white;
+  border-radius: 0 25px 25px 0;
+  box-shadow: 5px 0 5px -5px #333;
+}
+
+.breadcrumb .breadcrumb-item:before{
+  content:"";
+  position: absolute;
+}
+
+.breadcrumb .breadcrumb-item.active{
+  border-radius: 10px;
+  border-bottom: 5px solid white;
+}
+/* ---------------------------------------------------
     ADMIN LOGIN
 ----------------------------------------------------- */
 
