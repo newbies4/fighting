@@ -1,6 +1,7 @@
 <?php $this->load->view('layouts/header'); ?>
 <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0">
+    <div class="container">
     <a class="navbar-brand" href="#">ZC CAR RENTAL</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,16 +15,17 @@
             </div>
           </form>
       </li>
-      <li class="nav-item" role="presentation"><a class="nav-link" href="#">NOTIFICATIONS<span class="badge badge-primary">00</span></a></li>
-      <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('User_controller/index');?>">HOME</a></li>
+      <li class="nav-item" role="presentation"><a class="nav-link" href="#"><i class="fa fa-bell"></i>NOTIFICATIONS<span class="badge badge-primary">00</span></a></li>
+      <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('User_controller/index');?>"><i class="fa fa-home"></i>HOME</a></li>
       <li class="nav-item dropdown">
-        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">ADMIN</a>    
+        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fa fa-user"></i>ADMIN</a>    
           <div class="dropdown-menu" role="menu">
             <a class="dropdown-item" role="presentation" href="#">Help</a>
             <a class="dropdown-item" role="presentation" href="<?php echo base_url('admin_controller/logout'); ?>">Log Out</a>
           </div> 
 
     </div>
+</div>
   </nav>
 
     <div class="wrapper">

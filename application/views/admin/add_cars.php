@@ -1,3 +1,4 @@
+<div class="admin-content">
 <!--breadcrumb -->
 
 <nav aria-label="breadcrumb">
@@ -191,4 +192,5 @@
 	</div> <!-- end of row -->
 	<?php echo form_close(); ?>
 </div> <!-- end of container -->
+</div> <!-- admin content -->
 	

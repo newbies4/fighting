@@ -1,4 +1,4 @@
-
+<div class="admin-content">
 <div class="col-md-12 search-table-col">
     <header>
         <h3> CUSTOMERS </h3>
@@ -46,7 +46,7 @@
         </table>
     </div>
 </div>
-
+</div><!--admin-content-->
 
 
 

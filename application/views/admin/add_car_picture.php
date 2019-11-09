@@ -1,3 +1,4 @@
+<div class="admin-content">
 <!--breadcrumb -->
 
 <nav aria-label="breadcrumb">
@@ -61,3 +62,4 @@
 				<label for="">Exterior? View</label>	
 			</div>
 <a class="btn btn-primary" href="<?php echo base_url('admin_controller/add_car_finalize');?>">NEXT </a>
+</div> <!-- admin content -->

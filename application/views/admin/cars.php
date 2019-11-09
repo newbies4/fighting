@@ -1,4 +1,4 @@
-
+<div class="admin-content">
 <div class="col-md-12 search-table-col">
     <h3> CARS </h3>
 
@@ -59,3 +59,4 @@
         </table>
     </div> <!-- table-responsive -->
 </div> <!-- col-md-12 search-table-col -->
+</div> <!--admin-content -->

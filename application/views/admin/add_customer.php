@@ -1,3 +1,4 @@
+<div class="admin-content">
 <header>
     <center><h3>ADD CUSTOMER </h3></center>
     <br>
@@ -80,3 +81,4 @@
     <a class="btn btn-primary pull pull-rightclass="btn btn-primary pull pull-right" href="<?php echo base_url();?>index.php/home/customer"> Back </a> 
   </div>
 </form>
+</div> <!-- admin content -->

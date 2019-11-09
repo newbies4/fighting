@@ -1,3 +1,4 @@
+<div class="admin-content">
 <div class="container"> 
   <header>
     <left><h3>ADD EMPLOYEE </h3></left>
@@ -47,3 +48,4 @@
 
   <?= form_close(); ?>
 </div> <!-- container -->
+</div> <!-- admin content -->

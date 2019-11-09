@@ -1,3 +1,4 @@
+<div class="admin-content">
 <div class="container-fluid">
   <div class="col-md-12 search-table-col">
     <header>
@@ -14,7 +15,7 @@
     <?php endif; ?>
     <a class="btn btn-primary"  href="<?php echo base_url('admin_controller/add_employee');?>">Add Employee</a>
     <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
-
+ 
     <div class="table-responsive table-bordered table table-hover table-bordered results">
       <table class="table table-bordered" id="">
         <thead class="bill-header cs">
@@ -49,8 +50,8 @@
           <?php endif; ?>
         </tbody> 
       </table>
-
     </div>
     <?php echo $pagination; ?>
   </div> <!-- col-md-12 search-table-col -->
 </div> <!-- container-fluid -->
+</div> <!-- end of admin content -->

@@ -1,3 +1,4 @@
+<div class="admin-content">
 <div class="container">
   
   <header>
@@ -47,3 +48,4 @@
 
   <?= form_close(); ?>
 </div> <!-- container -->
+</div> <!-- admin-content-->
