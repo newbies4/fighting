@@ -1,5 +1,3 @@
-<!-- Header -->
-<header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="<?php echo base_url('User_controller/index');?>">ZC Car Rental</a>
@@ -25,29 +23,29 @@
 		<li class="nav-item dropdown">
 			<a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="">SIGN IN</a>    
 				<div class="dropdown-menu" role="menu">
-				<a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_account');?>">My Account</a>
+				<a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_overview');?>">My Account</a>
                     <a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_account_storeroom');?>">My Reservation</a>
-					<a class="dropdown-item" role="presentation" href="#">Log Out</a>
+					<a class="dropdown-item" role="presentation" href="<?php echo base_url('user_controller/login');?>">Sign In</a>
+          <a class="dropdown-item" role="presentation" href="<?php echo base_url('admin_controller/user_signup');?>">Sign Up</a>
 				</div> 
 		</li>
       </ul>
     </div>
   </div>
 </nav>
-</header>
-<
-<
-  
-
+<br>
+<br>
+<br>
+<!-- Header -->
+<header class="bg-primary text-center py-5 mb-4">
+  <div class="container">
+    <h1 class="font-weight-light text-white">Meet the Team</h1>
   </div>
-</div>
+</header>
+<br>
 <!-- Page Content -->
-
-<h1 >Meet the Team</h1>
 <div class="container">
-<h1> <center>Meet the Team</center> </h1>
   <div class="row">
-
     <!-- Team Member 1 -->
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card border-0 shadow">
