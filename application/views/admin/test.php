@@ -15,17 +15,12 @@
   <body>
 
 
-    <?php //if($res->num_rows() == 1):?>
-        <?php //echo "afsdaf" ?>
-        <?php 
-            // if ($res->row()->lastid == null) {
-            //     echo "null";
-            // }
-        ?>
-        <?php //echo $res->row()->lastid; ?>
-    <?php //endif; ?>
-    <?php echo $res; ?>
-    <?php echo $main_view; ?>
+ <?php 
+    if(isset($error))
+        var_dump($error); 
+    if(isset($pictureNames))
+        var_dump($pictureNames) ;
+?>
 
   <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center">

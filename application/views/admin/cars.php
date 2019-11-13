@@ -4,7 +4,7 @@
 
     <header>
         <div class="form-group">
-            <a class="btn btn-primary" href="<?php echo base_url('admin_controller/add_car');?>">Add New</a><div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
+            <a class="btn btn-primary" href="<?php echo base_url('car_controller/add_car');?>">Add New</a><div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
         </div>
     </header>
     <div class="table-responsive">

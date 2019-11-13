@@ -12,6 +12,10 @@ class Car_model extends CI_Model {
 		return $this->db->insert_id();
 	}
 
+	public function car_id() {
+		var_dump($this->db->insert_id());
+	}
+
 	public function insert_pictures($arr) {
 		return $this->db->insert_batch('tbl_car_pic', $arr);
 	}
