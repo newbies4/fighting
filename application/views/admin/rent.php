@@ -1,3 +1,4 @@
+<div class="admin-content">
 <div class="col-md-12 search-table-col">
 
     <header>
@@ -36,3 +37,4 @@
         </table>
     </div> <!-- table-responsive -->
 </div> <!-- col-md-12 search-table-col -->
+</div> <!--admin-content-->

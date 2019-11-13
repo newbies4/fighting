@@ -1,7 +1,4 @@
-<header>
-  <center><h3>ADD CARS  </h3></center>
-  <br>
-</header>
+<div class="admin-content">
 <!--breadcrumb -->
 
 <nav aria-label="breadcrumb">
@@ -179,4 +176,5 @@
 		</div>
 	<?php echo form_close(); ?>
 </div> <!-- end of container -->
+</div> <!-- admin content -->
 	

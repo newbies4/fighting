@@ -1,3 +1,4 @@
+<div class="admin-content">
 <header>
   <center><h3>ADD RESERVATION </h3></center>
   <br>
@@ -84,3 +85,4 @@
     </div> <!-- col-sm -->                
   </div> <!-- row -->
 </div> <!-- container --> 
+</div> <!-- admin content -->

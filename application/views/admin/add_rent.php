@@ -1,3 +1,4 @@
+<div class="admin-content">
 <header>
   <center><h3>ADD RENT </h3></center>
   <br>
@@ -94,3 +95,4 @@
     <!--right part -->                      
   </div> <!-- end of row -->
 </div> <!-- container -->
+</div> <!--admin content -->

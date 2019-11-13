@@ -1,7 +1,4 @@
-<header>
-  <center><h3>ADD CARS  </h3></center>
-  <br>
-</header>
+<div class="admin-content">
 <!--breadcrumb -->
 
 <nav aria-label="breadcrumb">
@@ -64,4 +61,16 @@
 			<button class="btn btn-primary" name="addcarpicubmit" value="addcarpic" type="submit">NEXT</button> 
 	<!-- <a class="btn btn-primary" href="<?php echo base_url('admin_controller/add_car_finalize');?>">NEXT </a> -->
 
-</form>
+<!-- </form>
+			<div class="form-group">
+				<div class="input-group">
+				  <div class="custom-file">
+				    <input type="file" name="carpics[]" class="custom-file-input" id="exterior"
+				      aria-describedby="exteriorPicture">
+				    <label class="custom-file-label" for="exterior">Choose file</label>
+				  </div>
+				</div>
+				<label for="">Exterior? View</label>	
+			</div>
+<a class="btn btn-primary" href="<?php echo base_url('admin_controller/add_car_finalize');?>">NEXT </a> -->
+</div> <!-- admin content -->
