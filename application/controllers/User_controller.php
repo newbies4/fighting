@@ -67,5 +67,10 @@ class User_controller extends CI_Controller {
 		$this->load->view('user/user_signup_credentials'); 
 		$this->load->view('layouts/footer'); 	
 	}
-
+	public function user_car_details()
+	{
+		$data['main_view'] = "user/user_car_details";
+		
+		$this->load->view('layouts/main_user', $data);
+	}
 }

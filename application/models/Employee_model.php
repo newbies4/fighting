@@ -7,8 +7,11 @@ class Employee_model extends CI_Model {
 		$this->db->order_by('first_name', 'ASC');
 		$this->db->limit($limit, $start);
 		$query = $this->db->get('tbl_employee');
-
 		return $query;
+		// for($i=0; $i<$num_rows(); $i++)
+		// {
+		// 	asdasd
+		// }
 
 	}
 

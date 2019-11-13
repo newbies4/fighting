@@ -39,9 +39,9 @@ class Employee_controller extends CI_Controller {
         $config['attributes'] = array('class' => 'page-link');
 
         $this->pagination->initialize($config);
-
         $data['pagination'] = $this->pagination->create_links();
 
+        // fetch from database
         $data['fetch_data'] = $this->employee_model->fetch_data($config['per_page'], $start);
 
         $data['main_view'] = "admin/employee";
@@ -54,6 +54,7 @@ class Employee_controller extends CI_Controller {
     {
 
         $data['employee'] = $this->employee_model->get_employee_by_id($id);
+        //var_dump($data['employee']);
         $data['main_view'] = "admin/edit_employee";
         $this->load->view('layouts/main', $data);
     }
@@ -62,7 +63,8 @@ class Employee_controller extends CI_Controller {
     //                                          BACK END 
 	public function add_employee()
 	{
-		// Setting up the rules
+        // Setting up the rules
+        // $this->form_validation->set_rules('input name', 'Display Error Name', 'validation');
 		$this->form_validation->set_rules('firstname', 'First Name', 'required|min_length[2]|max_length[50]');
 		$this->form_validation->set_rules('middlename', 'Middle Name', 'required|min_length[2]|max_length[50]');
 		$this->form_validation->set_rules('lastname', 'Last Name', 'required|min_length[2]|max_length[50]');
@@ -70,25 +72,25 @@ class Employee_controller extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
         {
-            // $this->load->view('admin/add_employee');
-            // redirect('Admin_controller/add_employee');
+            // error
             $data['main_view'] = "admin/add_employee";
 
 			$this->load->view('layouts/main', $data);
         }
         else
         {
-            // $this->load->view('formsuccess');
+            // Succcess
 
         	$data = array(
+                // database column name => input field name
         		'first_name' => $this->input->post('firstname'),
 				'middle_name' => $this->input->post('middlename'),
 				'last_name' => $this->input->post('lastname'),
 				'contact' => $this->input->post('contactnumber')
         	);        
-            $this->load->model('Employee_model');
+            $this->load->model('employee_model');
 
-            $result = $this->Employee_model->insert_data($data);
+            $result = $this->employee_model->insert_data($data);
             $this->session->set_flashdata('add_employee_success', 'Employee successfully added.');
             redirect('admin_controller/add_employee');
         }
@@ -104,6 +106,14 @@ class Employee_controller extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE)
         {
+            $data['employee'] = array(
+                'id' => $this->input->post('id'),
+                'first_name' => $this->input->post('firstname'),
+                'middle_name' => $this->input->post('middlename'),
+                'last_name' => $this->input->post('lastname'),
+                'contact' => $this->input->post('contactnumber')
+            );
+            var_dump($data['employee']);
             $data['main_view'] = "admin/edit_employee";
 
             $this->load->view('layouts/main', $data);

@@ -4,9 +4,11 @@
     <left><h3>ADD EMPLOYEE </h3></left>
     <br>
   </header>
+  <!-- adding employee success message -->
   <?php if($this->session->flashdata('add_employee_success')): ?>
     <p class="alert alert-success"><?php echo $this->session->flashdata('add_employee_success'); ?></p>
   <?php endif; ?>
+  
   <?php // echo validation_errors('<div class="text-danger">','</div>'); ?>
   <?= form_open('employee_controller/add_employee') ?>
   

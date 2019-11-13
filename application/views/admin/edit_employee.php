@@ -13,7 +13,7 @@
   <div class="row">
     <div class="form-group col-md-6">
       <label for="firstname">First Name</label>
-      <input type="text" class="form-control <?= (form_error('firstname') == '' ? '':'is-invalid') ?>" name="firstname" id="firstname" placeholder="First Name" value="<?php echo $employee->first_name; ?>">
+      <input type="text" class="form-control <?= (form_error('firstname') == '' ? '':'is-invalid') ?>" name="firstname" id="firstname" placeholder="First Name" value="<?php $employee->first_name; ?>">
       <?= form_error('firstname'); ?>
     </div>
   </div>
@@ -21,7 +21,7 @@
   <div class="row">
     <div class="form-group col-md-6">
       <label for="middlename"></label>
-      <input type="text" class="form-control <?= (form_error('middlename') == "" ? '':'is-invalid') ?>" name="middlename" id="middlename" placeholder="Middle Name" value="<?php echo $employee->middle_name; ?>">
+      <input type="text" class="form-control <?= (form_error('middlename') == "" ? '':'is-invalid') ?>" name="middlename" id="middlename" placeholder="Middle Name" value="<?php $employee->middle_name; ?>">
       <?= form_error('middlename'); ?>
     </div>
   </div>

@@ -36,7 +36,7 @@
             </label>
             </div>
 
-            <button class="btn btn-lg btn-primary-login btn-block" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary-login btn-block" type="submit">Sign In</button>
             <p><center> Don't have an account? <a href="<?php echo base_url('admin_controller/user_signup');?>"><font color="#0000FF"> Sign In </font> </a> </center></p>
         </section> <!-- col 12 col-sm-6 col-lg-3 -->
     </section> <!-- row justify-content-center -->
