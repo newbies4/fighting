@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login_controller extends CI_Controller {
+class User_Login_controller extends CI_Controller {
 
 	public function __construct()
     {
@@ -22,7 +22,10 @@ class Login_controller extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
         {
-			$this->load->view('user/login_user');
+			$this->load->view('layouts/header');
+
+			$this->load->view('user/login_user'); 
+			$this->load->view('layouts/footer'); 
         }
         else
         {
@@ -32,7 +35,7 @@ class Login_controller extends CI_Controller {
         		'username' => $this->input->post('username'),
 				'password' => $this->input->post('password')
         	);
-			$data['fetch_data'] = $this->login_model->admin_login($data);
+			$data['fetch_data'] = $this->login_User_Model->admin_login($data);
 
 			if($data['fetch_data']->num_rows() == 1) {
 				$rows = $data['fetch_data']->row();
