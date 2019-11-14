@@ -17,7 +17,7 @@ class User_Login_controller extends CI_Controller {
 	public function login()
 	{
 		$this->form_validation->set_rules('username', 'Username', 'required|min_length[3]|max_length[20]');
-		$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]|max_length[20]');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|max_length[20]');
 
 
 		if ($this->form_validation->run() == FALSE)
