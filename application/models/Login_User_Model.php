@@ -6,7 +6,7 @@ class Login_model extends CI_Model {
     {
         parent::__construct();
     }
-	public function admin_login($data) {
+	public function user_login($data) {
 
 		$user = $data['username'];
 		$pass = $data['password'];
