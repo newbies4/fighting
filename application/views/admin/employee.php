@@ -24,7 +24,7 @@
             <th id="trs-hd" class="">Last Name</th>
             <th id="trs-hd" class="">Middle Name</th>
             <th id="trs-hd" class="">Contact No.</th>
-            <th id="trs-hd" class="">Options</th>                     
+            <th id="trs-hd" class="">Options</th>                 
           </tr>
         </thead>
         <tbody>

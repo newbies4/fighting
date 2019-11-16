@@ -4,13 +4,11 @@
     <br>
 </header>
 
-<?php if($this->session->flashdata('add_customer_success')): ?>
-    <p class="alert alert-success"><?php echo $this->session->flashdata('add_customer_success'); 
-     ?></p>
-  <?php endif; ?>
+<?= form_open('Customer_controller/update_customer') ?>
 
-  <?php // echo validation_errors('<div class="text-danger">','</div>'); ?>
-<?= form_open('Customer_controller/add_customer') ?>
+<input type="hidden" name="id" value="<?php echo $customer->id; ?>">
+
+
   <div class="form-row">
 
     <div class="col-md-4 mb-3">

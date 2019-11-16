@@ -25,7 +25,7 @@
             <a href="<?php echo base_url('admin_controller/cars'); ?>">CARS</a>
         </li>
         <li>
-            <a href="<?php echo base_url('admin_controller/customer'); ?>">CUSTOMER</a>
+            <a href="<?php echo base_url('customer_controller/show'); ?>">CUSTOMER</a>
         </li>
         <li>
             <a href="<?php echo base_url('admin_controller/employee'); ?>">EMPLOYEE</a>
