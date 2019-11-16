@@ -19,20 +19,29 @@
           </li>
           <li class="nav-item">
                 <a class="nav-link" href="#">HELP</a>
-              </li>
-              <li clas="nav-linkk">
+          </li>
+          <?php if(!isset($_SESSION['logged_in'])): ?>
+            <li clas="nav-linkk">
               <a class="nav-link"  href="<?php echo base_url('user_controller/login');?>">LOGIN</a>
-              </li>
-          <!--    
-          <li class="nav-item dropdown">
-            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="">My Account</a>    
+            </li>
+          <?php else: ?>
+            <!-- <li clas="nav-linkk">
+              <a class="nav-link"  href="<?php echo base_url('user_controller/logout');?>">LOGOUT</a>
+            </li> -->
+            <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href=""><?php echo $_SESSION['username']; ?></a>    
               <div class="dropdown-menu" role="menu">
                 <a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_overview');?>">My Account</a>
                 <a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_account_storeroom');?>">My Reservation</a>
-                <a class="dropdown-item" role="presentation" href="<?php echo base_url('user_controller/login');?>">Sign In</a>
-                <a class="dropdown-item" role="presentation" href="<?php echo base_url('admin_controller/user_signup');?>">Sign Up</a>
+                <?php if($_SESSION['type'] == 'admin'): ?>
+                  <a class="dropdown-item" role="presentation" href="<?php echo base_url('admin_controller/');?>">DASHBOARD</a>
+                <?php endif; ?>
+                <a class="dropdown-item" role="presentation" href="<?php echo base_url('user_controller/logout');?>">LOGOUT</a>
               </div> 
-          </li> -->
+          </li>
+          <?php endif; ?>
+             
+          
       </ul>
     </div>
   </div>

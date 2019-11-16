@@ -6,10 +6,71 @@ class Car_model extends CI_Model {
         parent::__construct();
     }
 
+    public function fetch_data($limit, $start) {
+		// Select * from tbl_employee
+		$queryString = "SELECT *, IF(is_available, 'Available', 'Unavailable') is_available FROM tbl_car_profile ORDER BY created_at ASC LIMIT $limit OFFSET $start";
+		// $this->db->order_by('created_at', 'ASC');
+		// $this->db->limit($limit, $start);
+		//var_dump($this->db->get_compiled_select('tbl_car_profile'));
+
+		// $query = $this->db->get('tbl_car_profile');
+		$query = $this->db->query($queryString);
+
+		return $query;
+		// for($i=0; $i<$num_rows(); $i++)
+		// {
+		// 	asdasd
+		// }
+	}
+
+	public function get_car_by_id($id) {
+		$this->db->where('car_id', $id);
+		$query = $this->db->get('tbl_car_profile');
+		if($query->num_rows() > 0){
+			return $query->row();
+		}else{
+			return false;
+		}
+	}
+
+    public function get_count() {
+		return $this->db->count_all('tbl_car_profile');
+	}
+
+	public function getPictureNames($carId) {
+		$this->db->order_by('right(car_pic_name, 10) ASC');
+		$this->db->where('car_id_fk', $carId);
+		return $this->db->get('tbl_car_pic');
+	}
+
+	public function update_data($data) {
+
+		$this->db->set('car_owner', $data['car_owner']);
+		$this->db->set('car_model', $data['car_model']);
+		$this->db->set('car_brand', $data['car_brand']);
+		$this->db->set('car_type', $data['car_type']);
+		$this->db->set('car_seats', $data['car_seats']);
+		$this->db->set('car_color', $data['car_color']);
+		$this->db->set('car_platenumber', $data['car_platenumber']);
+		$this->db->set('car_price', $data['car_price']);
+		$this->db->set('car_fuel_capacity', $data['car_fuel_capacity']);
+		$this->db->set('car_gas_type', $data['car_gas_type']);
+		$this->db->set('car_driver', $data['car_driver']);
+		$this->db->set('car_transmission', $data['car_transmission']);
+		$this->db->set('car_insurance', $data['car_insurance']);
+		$this->db->where('car_id', $data['car_id']);
+		return $this->db->update('tbl_car_profile');
+	}
+
     public function insert_car($arr) {
 
 		$this->db->insert('tbl_car_profile', $arr);
 		return $this->db->insert_id();
+	}
+
+	public function editAvailability($id) {
+		$queryString = "UPDATE tbl_car_profile SET is_available = IF(is_available = 0, 1, 0) WHERE car_id = $id";
+		$this->db->query($queryString);
 	}
 
 	public function car_id() {
@@ -18,6 +79,45 @@ class Car_model extends CI_Model {
 
 	public function insert_pictures($arr) {
 		return $this->db->insert_batch('tbl_car_pic', $arr);
+	}
+	public function update_pictures($arr) {
+
+		// $que=$this->db->get_compiled_update('tbl_car_profile');
+		// var_dump($que);
+		// print_r($arr[1]['car_pic_name']);
+		/*$data = array(
+		    array(
+		    	'pic_id' => 62 ,
+		        'car_id_fk' => $arr[0]['car_id_fk'] ,
+		        'car_pic_name' => $arr[0]['car_pic_name']
+		    ),
+		    array(
+		    	'pic_id' => 63 ,
+		        'car_id_fk' => $arr[1]['car_id_fk'] ,
+		        'car_pic_name' => $arr[1]['car_pic_name']
+		    ),
+		    array(
+		    	'pic_id' => 64 ,
+		        'car_id_fk' => $arr[2]['car_id_fk'] ,
+		        'car_pic_name' => $arr[2]['car_pic_name']
+		    )
+		);*//*
+		$data = array(
+		    array(
+		        'car_id_fk' => $arr[0]['car_id_fk'] ,
+		        'car_pic_name' => $arr[0]['car_pic_name']
+		    ),
+		    array(
+		        'car_id_fk' => $arr[1]['car_id_fk'] ,
+		        'car_pic_name' => $arr[1]['car_pic_name']
+		    ),
+		    array(
+		        'car_id_fk' => $arr[2]['car_id_fk'] ,
+		        'car_pic_name' => $arr[2]['car_pic_name']
+		    )
+		);*/
+		return $this->db->update_batch('tbl_car_pic', $arr, 'car_id_fk');
+
 	}
 
 	public function last_id() {

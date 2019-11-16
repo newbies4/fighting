@@ -25,10 +25,7 @@ class User_Login_controller extends CI_Controller {
 			$this->load->view('layouts/header');
 
 			$this->load->view('user/login_user'); 
-			
-        }
-        else
-        {
+        } else {
         	$this->load->model('login_User_Model');
         	
         	$data = array(
@@ -51,6 +48,5 @@ class User_Login_controller extends CI_Controller {
 
 			}
 		}
-
 	}
 }
