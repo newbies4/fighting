@@ -3,8 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_controller extends CI_Controller {
 
+	public function test()
+	{
+		$this->load->model('user_model');
+
+		$data['fetch_data'] = $this->user_model->getCars();
+		$data['main_view'] = "user/test";
+
+		$this->load->view('layouts/main_user', $data);
+	}
+
 	public function index()
 	{
+		// $data['test'] = $_SESSION['logged_in'];
+		$this->load->model('user_model');
+
+		$data['fetch_data'] = $this->user_model->getCars();
 		$data['main_view'] = "user/home";
 
 		$this->load->view('layouts/main_user', $data);
@@ -44,6 +58,12 @@ class User_controller extends CI_Controller {
 		$this->load->view('user/login_user'); 
 		$this->load->view('layouts/footer'); 
 
+	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('user_controller/index');
 	}
 
 	public function team()

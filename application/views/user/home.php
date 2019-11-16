@@ -749,12 +749,15 @@ xcustom form elements
 		<section class="cd-gallery">
 		
     <div class="row">
+
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
-                    <a href="<?php echo base_url('/User_controller/user_car_details');?>">
-                        <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-1.jpg') ?>">
-                        <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-1.1.jpg') ?>">
+                    <a href="<?php echo base_url('User_controller/user_car_details');?>">
+                        <!-- <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-1.jpg') ?>">
+                        <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-1.1.jpg') ?>"> -->
+                        <img class="pic-1" src="<?php echo base_url('assets/img/cars/'. $fetch_data->row(0)->car_pic_name) ?>">
+                        <img class="pic-2" src="<?php echo base_url('assets/img/cars/'. $fetch_data->row(1)->car_pic_name) ?>">
                     </a>
                     <ul class="social">
                         <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
@@ -770,10 +773,11 @@ xcustom form elements
                       ₱2500.00
                         <span>$16.00</span>
                     </div>
-                    <a class="add-to-cart" href="">ADD TO CART</a>
+                    <a class="add-to-cart" href=""><?php echo $fetch_data->num_rows(); ?>ADD TO CART</a>
                 </div>
             </div>
         </div>
+
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
@@ -798,6 +802,7 @@ xcustom form elements
                 </div>
             </div>
         </div>
+
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
@@ -823,6 +828,7 @@ xcustom form elements
                 </div>
             </div>
         </div>
+
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
@@ -840,6 +846,7 @@ xcustom form elements
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="#">TOYOTA VIOS</a></h3>
+                    <?php echo $_SESSION['type']; ?>
                     <div class="price">
                       ₱2200.00
                         
@@ -848,7 +855,8 @@ xcustom form elements
                 </div>
             </div>
         </div>
-    </div>
+
+    </div> <!-- end of row -->
 
 		</section> <!-- cd-gallery -->
       

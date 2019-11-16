@@ -14,7 +14,7 @@
     <section class="row justify-content-center">
         <section class="col 12 col-sm-6 col-lg-3">
 <!-- <form class="admin-login-form-signin"> -->
-<?= form_open('User_Login_controller/login', 'class="admin-login-form-signin"') ?>
+<?= form_open('login_controller/user_login', 'class="admin-login-form-signin"') ?>
 
     <img src=<?php echo base_url('assets/Content-filter/img/logo.png')?> class="logo">  
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
@@ -39,6 +39,8 @@
 
     <button class="btn btn-lg btn-primary-login btn-block" type="submit">Sign in</button>
     <p><center> Don't have an account? <a href="<?php echo base_url('admin_controller/user_signup');?>"><font color="#0000FF"> Sign In </font> </a> </center></p>
+
+    <?= form_close(); ?>
     
 
         </section>

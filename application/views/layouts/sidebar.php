@@ -22,7 +22,7 @@
             <a href="<?php echo base_url('admin_controller/reservation'); ?>">RESERVATION</a>
         </li>
         <li>
-            <a href="<?php echo base_url('admin_controller/cars'); ?>">CARS</a>
+            <a href="<?php echo base_url('car_controller/show'); ?>">CARS</a>
         </li>
         <li>
             <a href="<?php echo base_url('admin_controller/customer'); ?>">CUSTOMER</a>

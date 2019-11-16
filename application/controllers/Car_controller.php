@@ -10,6 +10,72 @@ class Car_controller extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
     }
 
+    public function show($start = 0)
+    {
+    	$this->load->library('pagination');
+
+        $config['base_url'] = base_url().'car_controller/show/';
+        $config['total_rows'] = $this->car_model->get_count();
+        $config['per_page'] = 5;
+
+        $config['full_tag_open'] = '<ul class="pagination justify-content">';
+        $config['full_tag_close'] = '</ul>';
+        $config['first_tag_open'] = '<li page-item">';
+        $config['first_tag_close'] = '</li>';
+        $config['next_tag_open'] = '<li class="page-item">';
+        $config['next_tag_close'] = '</li>';
+        $config['prev_tag_open'] = '<li class="page-item">';
+        $config['prev_tag_close'] = '</li>';
+        $config['cur_tag_open'] = '<li class="page-item active"><a class="page-link">';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['num_tag_open'] = '<li class="page-item">';
+        $config['num_tag_close'] = '</li>';
+        $config['last_tag_open'] = '<li class="page-item">';
+        $config['last_tag_close'] = '</li>';
+        $config['attributes'] = array('class' => 'page-link');
+
+
+        $this->pagination->initialize($config);
+        $data['pagination'] = $this->pagination->create_links();
+
+        // fetch from database
+        $data['fetch_data'] = $this->car_model->fetch_data($config['per_page'], $start);
+
+
+    	$data['main_view'] = "admin/cars";
+
+		$this->load->view('layouts/main', $data);
+    }
+
+    public function edit_availability($id=null)
+    {
+    	if ($id != null) {
+    		$this->car_model->editAvailability($id);
+    		redirect('car_controller/show', 'refresh');
+    	}
+    }
+
+    public function edit_car_details($id=null)
+    {
+
+        $data['car'] = $this->car_model->get_car_by_id($id);
+        //var_dump($data['employee']);
+        $data['main_view'] = "admin/edit_car_details";
+        $this->load->view('layouts/main', $data);
+    }
+
+    public function edit_car_pictures($id=null)
+    {
+
+        //$data['car'] = $this->car_model->get_car_by_id($id);
+        //var_dump($data['employee']);
+        $data['car_names'] = $this->car_model->getPictureNames($id);       
+        $data['main_view'] = "admin/edit_car_pictures";
+        $this->session->set_flashdata('car_id', $id);
+        $this->load->view('layouts/main', $data);
+    }
+
+
     public function index()
     {
     	redirect('admin_controller/add_car', 'refresh');
@@ -26,6 +92,73 @@ class Car_controller extends CI_Controller {
     	$data['main_view'] = "admin/add_car_picture";
 		$this->load->view('layouts/main', $data);
     }
+
+    public function edit_car_data()
+    {
+    	//echo '<script type="text/javascript">alert("your alert);</script>';
+    	// Setting up the rules
+		$this->form_validation->set_rules('owner', 'Car Owner', 'required|min_length[2]|max_length[50]');
+		$this->form_validation->set_rules('model', 'Model', 'required|min_length[2]|max_length[50]');
+		$this->form_validation->set_rules('brand', 'Brand', 'required|min_length[2]|max_length[50]');
+		$this->form_validation->set_rules('type', 'Type', 'required|min_length[2]|max_length[15]');
+		$this->form_validation->set_rules('seats', 'Seats', 'required|integer');
+		$this->form_validation->set_rules('color', 'Color', 'required');
+		$this->form_validation->set_rules('platenumber', 'Platenumber', 'required|alpha_numeric');
+		$this->form_validation->set_rules('price', 'Price', 'required|numeric');
+		$this->form_validation->set_rules('fuelcapacity', 'Fuelcapacity', 'required');
+		$this->form_validation->set_rules('gastype', 'Gastype', 'required');
+		$this->form_validation->set_rules('driver', 'Driver', 'required');
+		$this->form_validation->set_rules('transmission', 'Transmission', 'required');
+		$this->form_validation->set_rules('insurance', 'Insurance', 'required');
+		$id = $this->input->post('carid');
+		if ($this->form_validation->run() == FALSE) {
+			//echo '<script type="text/javascript">alert("your alert);</script>';
+			// $this->edit_car($id);
+			$data['main_view'] = "admin/edit_car";
+        	$this->load->view('layouts/main', $data);
+        } else {
+    		$dataArr = array(
+    			'car_id' => $this->input->post('carid'),		
+        		'car_owner' => $this->input->post('owner'),
+				'car_model' => $this->input->post('model'),
+				'car_brand' => $this->input->post('brand'),
+				'car_type' => $this->input->post('type'),
+				'car_seats' => $this->input->post('seats'),
+				'car_color' => $this->input->post('color'),
+				'car_platenumber' => $this->input->post('platenumber'),
+				'car_price' => $this->input->post('price'),			
+				'car_fuel_capacity' => $this->input->post('fuelcapacity'),
+				'car_gas_type' => $this->input->post('gastype'),
+				'car_driver' => $this->input->post('driver'),
+				'car_transmission' => $this->input->post('transmission'),
+				'car_insurance' => $this->input->post('insurance')
+    		);
+    		$result = $this->car_model->update_data($dataArr);
+    		// $this->session->set_flashdata('car_id', $this->input->post('carid'));
+    		if ($result) {
+    			$this->session->set_flashdata('edit_car_message', 'Car updated successfully.');
+    		} else {
+    			$this->session->set_flashdata('edit_car_message', 'Car update failed.');
+    		}
+			redirect('car_controller/show', 'refresh');
+    	}
+
+    		/*$data['main_view'] = "admin/test";
+			$this->load->view('layouts/main', $data);*/
+	}
+
+	public function delete_car($id=null)
+	{
+		if ($id != null) {
+			$this->db->where('id', $id);
+			$this->db->delete('tbl_employee');
+			if ($this->db->affected_rows() > 0){
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
 
 	public function add_car_data()
 	{
@@ -189,13 +322,14 @@ class Car_controller extends CI_Controller {
     	}
 	}
 
-	public function add_pictures()
+	public function edit_pictures()
 	{
 		$fileCount = count($_FILES);
 		DEFINE('arrayIndex', array('front', 'back', 'interior'));
 		$files = $_FILES;
 		//var_dump(array_keys($_FILES));
 		$data = array();
+		$error = null;
 		$pictureNames = array();
 		// var_dump($_FILES[1]);
 		$config['upload_path']          = './assets/img/cars';
@@ -203,12 +337,77 @@ class Car_controller extends CI_Controller {
         $config['max_size']             = 0;
         $config['max_width']            = 0;
         $config['max_height']           = 0;
+        $config['overwrite']           	= TRUE;
 
-        $this->load->library('upload', $config);
+        $this->load->library('upload');
 
         for ($i=0; $i < 3; $i++) {
+        	
+        	$config['file_name'] = arrayIndex[$i] . '-car-img-' . $this->input->post('carid') . ($i + 1);
+        	$this->upload->initialize($config);
+
         	if ( !$this->upload->do_upload(arrayIndex[$i])) {
-            	$data = array('error' => $this->upload->display_errors('<p style="color: red;">', '</p>'));
+            	// $data = array('error' => $this->upload->display_errors('<p style="color: red;">', '</p>'));
+            	$error .= $this->upload->display_errors('<p style="color: red;">', '</p>');
+            // $this->load->view('admin/test', $data);
+	        } else {
+	            $data = array('upload_data' => $this->upload->data());
+	            array_push($pictureNames, array('car_id_fk' => $this->input->post('carid'),
+					'car_pic_name' => $data['upload_data']['file_name']));
+	            echo "<script> console.log('yah')</script>";
+	        }
+        }
+
+        if (isset($error)) {
+/*
+        	for($i=0; $i < count($pictureNames); $i++) {
+        		unlink('./assets/img/cars/'.$pictureNames[$i]['car_pic_name']);
+        	}*/
+        	$this->session->set_flashdata('car_id', $this->input->post('carid'));
+        	$data['car_names'] = $this->car_model->getPictureNames($this->input->post('carid'));  
+        	$data['main_view'] = "admin/edit_car_pictures";
+        	$data['error'] = $error;
+			$this->load->view('layouts/main', $data);
+        } else {
+        	// var_dump($pictureNames);
+        	$this->car_model->update_pictures($pictureNames);
+        	/*$data['main_view'] = "admin/cars";
+
+			$this->load->view('layouts/main', $data);*/
+			$this->session->set_flashdata('edit_car_message', 'Pictures updated successfully.');
+			$this->show();
+        }
+    }
+
+	public function add_pictures()
+	{
+		$fileCount = count($_FILES);
+		DEFINE('arrayIndex', array('front', 'back', 'interior'));
+		$files = $_FILES;
+		//var_dump(array_keys($_FILES));
+		$data = array();
+		// $error = array();
+		$error = null;
+		$pictureNames = array();
+		// var_dump($_FILES[1]);
+		$config['upload_path']          = './assets/img/cars';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size']             = 0;
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
+        $config['overwrite']           	= TRUE;
+
+        $this->load->library('upload');
+
+        for ($i=0; $i < 3; $i++) {
+        	
+        	$config['file_name'] = arrayIndex[$i] . '-car-img-' . $this->input->post('carid') . ($i + 1);
+        	$this->upload->initialize($config);
+
+        	if ( !$this->upload->do_upload(arrayIndex[$i])) {
+            	// $data = array('error' => $this->upload->display_errors('<p style="color: red;">', '</p>'));
+            	// array_push($error, $this->upload->display_errors('<p style="color: red;">', '</p>'));
+            	$error .= $this->upload->display_errors('<p style="color: red;">', '</p>');
             // $this->load->view('admin/test', $data);
 	        } else {
 	            $data = array('upload_data' => $this->upload->data());
@@ -217,12 +416,13 @@ class Car_controller extends CI_Controller {
 	        }
         }
 
-        if (isset($data['error'])) {
+        if (isset($error)) {
 
         	for($i=0; $i < count($pictureNames); $i++) {
         		unlink('./assets/img/cars/'.$pictureNames[$i]['car_pic_name']);
         	}
         	$this->session->set_flashdata('car_id', $this->input->post('carid'));
+        	$data['error'] = $error;
         	$data['main_view'] = "admin/add_car_picture";
 			$this->load->view('layouts/main', $data);
         } else {
@@ -231,6 +431,7 @@ class Car_controller extends CI_Controller {
         	$data['main_view'] = "admin/add_car_finalize";
 
 			$this->load->view('layouts/main', $data);
+			// $this->show();
         }
         // print_r($data['error']);
         // $this->load->view('admin/test', $data);

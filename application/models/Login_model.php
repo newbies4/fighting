@@ -6,6 +6,7 @@ class Login_model extends CI_Model {
     {
         parent::__construct();
     }
+
 	public function admin_login($data) {
 
 		$user = $data['username'];
@@ -13,6 +14,17 @@ class Login_model extends CI_Model {
 		$this->db->where('username', $user);
 		$this->db->where('password', $pass);
 		$this->db->where('user_type', 'admin');
+		$query = $this->db->get('tbl_useraccount');
+		return $query;
+	}
+
+	public function user_login($data) {
+
+		$user = $data['username'];
+		$pass = $data['password'];
+		$this->db->where('username', $user);
+		$this->db->where('password', $pass);
+		//$this->db->where('user_type', 'admin');
 		$query = $this->db->get('tbl_useraccount');
 		return $query;
 	}
