@@ -7,10 +7,21 @@ class User_controller extends CI_Controller {
 	{
 		$this->load->model('user_model');
 
-		$data['fetch_data'] = $this->user_model->getCars();
+		$data['fetch_data'] = $this->user_model->test();
 		$data['main_view'] = "user/test";
 
 		$this->load->view('layouts/main_user', $data);
+	}
+
+	public function reserve_car($id = null)
+	{
+		if ($id != null) {
+			$this->load->model('user_model');
+
+			$data['fetch_data'] = $this->user_model->getSelectedCar($id);
+			$data['main_view'] = "user/user_car_details";
+			$this->load->view('layouts/main_user', $data);
+		}
 	}
 
 	public function index()
@@ -18,7 +29,7 @@ class User_controller extends CI_Controller {
 		// $data['test'] = $_SESSION['logged_in'];
 		$this->load->model('user_model');
 
-		$data['fetch_data'] = $this->user_model->getCars();
+		$data['fetch_data'] = $this->user_model->test();
 		$data['main_view'] = "user/home";
 
 		$this->load->view('layouts/main_user', $data);
@@ -75,9 +86,10 @@ class User_controller extends CI_Controller {
 
 	public function user_signup()
 	{
-		$data['main_view'] = "user/user_signup";
-		
-		$this->load->view('layouts/main_user', $data);
+		$this->load->view('layouts/header');
+
+		$this->load->view('user/user_signup'); 
+		$this->load->view('layouts/footer'); 
 	}
 
 	public function user_signup_credentials()

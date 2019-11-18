@@ -14,7 +14,14 @@ class Admin_controller extends CI_Controller {
 			redirect('admin_controller/admin_login');
 		}
 	}
+	public function edit_customer()
+    {
+        
+        $data['main_view'] = "admin/edit_customer";
 
+        $this->load->view('layouts/main', $data);
+        
+    }
 	public function admin_login()
 	{
 		

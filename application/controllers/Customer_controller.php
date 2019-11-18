@@ -86,7 +86,7 @@ class Customer_controller extends CI_Controller {
                 'Birth_Date' => $this->input->post('date'),
                 'Gender' => $this->input->post('gender'),
                 'license_no' => $this->input->post('licenseno'),
-                'email' => $this->input->post('email')
+                'Email' => $this->input->post('email')
         	);
             $this->load->model('Customer_model');
 
@@ -149,4 +149,5 @@ class Customer_controller extends CI_Controller {
         $data['main_view'] = "admin/edit_customer";
         $this->load->view('layouts/main', $data);
     }
+    
 }

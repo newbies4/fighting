@@ -37,10 +37,13 @@
                 <td><?php echo $row['email'] ?></td>   
                 <td><?php echo $row['Birth_Date'] ?></td>  
                 <td><?php echo $row['Gender'] ?></td>  
-                <td><?php echo $row['license_no'] ?></td>                  
+                <td><?php echo $row['license_no'] ?></td>
+
+                
+
                 <td>
                 <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
-                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo base_url('Customer_controller/edit_customer/'.$row['id']);?>">Edit</a>
+                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo base_url('Customer_controller/edit_customer/'.$row['customer_id']);?>">Edit</a></div>
                 </div>
                 </td>
               </tr>

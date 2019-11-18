@@ -709,7 +709,7 @@ xcustom form elements
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+        <img class="d-block w-100" src="#"
           alt="Third slide">
         <div class="mask rgba-black-slight"></div>
       </div>
@@ -750,29 +750,33 @@ xcustom form elements
 		
     <div class="row">
 
+      <?php if($fetch_data->num_rows() > 0):?>
+        <?php foreach($fetch_data->result_array() as $row): ?>
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
-                    <a href="<?php echo base_url('User_controller/user_car_details');?>">
+                    <a href="<?php echo base_url('user_controller/reserve_car/'.$row['car_id']);?>">
                         <!-- <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-1.jpg') ?>">
                         <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-1.1.jpg') ?>"> -->
-                        <img class="pic-1" src="<?php echo base_url('assets/img/cars/'. $fetch_data->row(0)->car_pic_name) ?>">
-                        <img class="pic-2" src="<?php echo base_url('assets/img/cars/'. $fetch_data->row(1)->car_pic_name) ?>">
+                        <img class="pic-1" src="<?php echo base_url('assets/img/cars/'. $row['car_pic_name']) ?>">
+                        <!-- <img class="pic-2" src="<?php echo base_url('assets/img/cars/'. $fetch_data->row(1)->car_pic_name) ?>"> -->
                     </a>
                   
                 </div>
                 <div class="product-content">
-                    <h3 class="title"><a href="#">KIA PICANTO</a></h3>
+                    <h3 class="title"><a href="#"><?php echo $row['car_model'] ?></a></h3>
                     <div class="price">
-                      ₱2500.00
-                        <span>$16.00</span>
+                      ₱<?php echo $row['car_price'] ?>
+                        <span></span>
                     </div>
-                    <a class="add-to-cart" href=""><?php echo $fetch_data->num_rows(); ?>ADD TO CART</a>
+                    <a class="add-to-cart" href="<?php echo base_url('user_controller/reserve_car/'.$row['car_id']); ?>">RESERVE</a>
                 </div>
             </div>
         </div>
+        <?php endforeach; ?>
+      <?php endif; ?>
 
-        <div class="col-md-3 col-sm-6">
+        <!-- <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
                     <a href="#">
@@ -832,7 +836,7 @@ xcustom form elements
                 </div>
             </div>
         </div>
-
+ -->
     </div> <!-- end of row -->
 
 		</section> <!-- cd-gallery -->
@@ -908,7 +912,10 @@ xcustom form elements
 		<a href="#0" class="cd-filter-trigger">Filters</a>
 	</main> <!-- cd-main-content -->
 </body>
-<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script><script src='https://cdn.jsdelivr.net/jquery.mixitup/2.1.11/jquery.mixitup.min.js'></script>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+<script src='https://cdn.jsdelivr.net/jquery.mixitup/2.1.11/jquery.mixitup.min.js'></script>
 <script >jQuery(document).ready(function($){
 	//open/close lateral filter
 	$('.cd-filter-trigger').on('click', function(){
