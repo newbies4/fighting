@@ -759,13 +759,7 @@ xcustom form elements
                         <img class="pic-1" src="<?php echo base_url('assets/img/cars/'. $fetch_data->row(0)->car_pic_name) ?>">
                         <img class="pic-2" src="<?php echo base_url('assets/img/cars/'. $fetch_data->row(1)->car_pic_name) ?>">
                     </a>
-                    <ul class="social">
-                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
-                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                    <span class="product-new-label">New</span>
-                    <span class="product-discount-label">-10%</span>
+                  
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="#">KIA PICANTO</a></h3>
@@ -785,12 +779,7 @@ xcustom form elements
                         <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-2.jpg') ?>">
                         <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-2.1.jpg') ?>">
                     </a>
-                    <ul class="social">
-                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
-                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                    <span class="product-discount-label">-12%</span>
+                 
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="#">TOYOTA WIGO</a></h3>
@@ -810,13 +799,7 @@ xcustom form elements
                         <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-3.jpg') ?>">
                         <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-3.1.jpg') ?>">
                     </a>
-                    <ul class="social">
-                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
-                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                    <span class="product-new-label">New</span>
-                    <span class="product-discount-label">-10%</span>
+                    
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="#">SUZUKI APV</a></h3>
@@ -836,13 +819,7 @@ xcustom form elements
                         <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-4.jpg') ?>">
                         <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-4.1.jpg') ?>">
                     </a>
-                    <ul class="social">
-                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
-                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                    <span class="product-new-label">New</span>
-                    <span class="product-discount-label">-10%</span>
+                
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="#">TOYOTA VIOS</a></h3>

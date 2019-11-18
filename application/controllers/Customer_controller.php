@@ -88,7 +88,7 @@ class Customer_controller extends CI_Controller {
                 'license_no' => $this->input->post('licenseno'),
                 'email' => $this->input->post('email')
         	);
-            $this->load->model('customer_model');
+            $this->load->model('Customer_model');
 
             $result = $this->Customer_model->insert_data($data);
             $this->session->set_flashdata('add_customer_success', 'Customer successfully added.');
