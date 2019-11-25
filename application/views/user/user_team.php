@@ -1,58 +1,65 @@
+<br>
+<!-- Section: Team v.1 -->
+<section class="team-section text-center my-5">
 
-<br>
-<br>
+  <!-- Section heading -->
+  <h2 class="h1-responsive font-weight-bold my-5">Our Team</h2>
+  <!-- Section description -->
+  <p class="grey-text w-responsive mx-auto mb-5"></p>
 
-<!-- Header -->
-<header class="bg-primary text-center py-5 mb-4">
-  <div class="container">
-    <h1 class="font-weight-light text-white">Meet the Team</h1>
-  </div>
-</header>
-<br>
-<!-- Page Content -->
-<div class="container">
+  <!-- Grid row -->
   <div class="row">
-    <!-- Team Member 1 -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-0 shadow">
-        <img src="https://vignette.wikia.nocookie.net/kimetsu-no-yaiba/images/3/3b/Giyuu_anime.png/revision/latest?cb=20190818131909&path-prefix=fr" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-          <h5 class="card-title mb-0">Arczhar Mummuh</h5>
-          <div class="card-text text-black-50">Web Developer</div>
-        </div>
+
+    <!-- Grid column -->
+    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+      <div class="avatar mx-auto">
+        <img src="<?php echo base_url('assets/Content-filter/img/jhet.jpg') ?>" class="rounded-circle z-depth-1"
+          alt="Sample avatar">
       </div>
+      <h5 class="font-weight-bold mt-4 mb-3">Arczhar Mummuh</h5>
+      <p class="text-uppercase blue-text"><strong>Project Manager</strong></p>
+  
     </div>
-    <!-- Team Member 2 -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-0 shadow">
-        <img src="https://vignette.wikia.nocookie.net/kimetsu-no-yaiba/images/e/e5/Shinobu_anime.png/revision/latest?cb=20190831171723" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-          <h5 class="card-title mb-0">Euginie Tubo</h5>
-          <div class="card-text text-black-50">Web Developer</div>
-        </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+      <div class="avatar mx-auto">
+        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle z-depth-1"
+          alt="Sample avatar">
       </div>
+      <h5 class="font-weight-bold mt-4 mb-3">Haidir Hassan</h5>
+      <p class="text-uppercase blue-text"><strong>Back-End Programmer</strong></p>
+    
     </div>
-    <!-- Team Member 3 -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-0 shadow">
-        <img src="https://vignette.wikia.nocookie.net/kimetsu-no-yaiba/images/3/3f/Uzui_anime.png/revision/latest?cb=20190831171416" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-          <h5 class="card-title mb-0">Haidir Hassan</h5>
-          <div class="card-text text-black-50">Web Developer</div>
-        </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-lg-3 col-md-6 mb-md-0 mb-5">
+      <div class="avatar mx-auto">
+        <img src="<?php echo base_url('assets/Content-filter/img/eug copy.jpg') ?>" class="rounded-circle z-depth-1"
+          alt="Sample avatar">
       </div>
+      <h5 class="font-weight-bold mt-4 mb-3">Euginie Tubo</h5>
+      <p class="text-uppercase blue-text"><strong>Front-end Programmer</strong></p>
+      
     </div>
-    <!-- Team Member 4 -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-0 shadow">
-        <img src="https://vignette.wikia.nocookie.net/kimetsu-no-yaiba/images/f/fd/Kyojuro_anime.png/revision/latest?cb=20190831171655" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-          <h5 class="card-title mb-0">Megg Bryan Tan</h5>
-          <div class="card-text text-black-50">Web Developer</div>
-        </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-lg-3 col-md-6">
+      <div class="avatar mx-auto">
+        <img src="<?php echo base_url('assets/Content-filter/img/tan.jpg') ?>" class="rounded-circle z-depth-1"
+          alt="Sample avatar">
       </div>
+      <h5 class="font-weight-bold mt-4 mb-3">Mig Bryan Tan</h5>
+      <p class="text-uppercase blue-text"><strong>System Analyst</strong></p>
+      
     </div>
+    <!-- Grid column -->
+
   </div>
-  <!-- /.row -->
-</div>
-<!-- /.container -->
+  <!-- Grid row -->
+
+</section>
+<!-- Section: Team v.1 -->

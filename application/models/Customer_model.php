@@ -25,15 +25,20 @@ class Customer_model extends CI_Model {
 
 	public function update_data($data) {
 
-		$this->db->set('first_name', $data['first_name']);
-		$this->db->set('middle_name', $data['middle_name']);
-		$this->db->set('last_name', $data['last_name']);
-		$this->db->set('contact', $data['contact']);
-		$this->db->where('id', $data['id']);
-		$this->db->update('tbl_employee');
+	
+		$this->db->set('email', $data['email']);
+		$this->db->set('license_no', $data['licenseno']);
+		$this->db->set('Gender', $data['gender']);
+		$this->db->set('Birth_Date', $data['date']);		
+		$this->db->set('contact_no', $data['contactno']);
+		$this->db->set('current_address', $data['address']);
+		$this->db->set('age', $data['age']);
+		$this->db->set('Name', $data['name']);
+		$this->db->where('customer_id', $data['id']);
+		$this->db->update('tbl_customer');
 	}
 	public function get_customer_by_id($id) {
-		$this->db->where('id', $id);
+		$this->db->where('customer_id', $id);
 		$query = $this->db->get('tbl_customer');
 		if($query->num_rows() > 0){
 			return $query->row();
