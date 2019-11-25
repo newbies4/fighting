@@ -18,7 +18,7 @@
       <li class="nav-item" role="presentation"><a class="nav-link" href="#"><i class="fa fa-bell"></i>NOTIFICATIONS<span class="badge badge-primary">00</span></a></li>
       <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url('User_controller/index');?>"><i class="fa fa-home"></i>HOME</a></li>
       <li class="nav-item dropdown">
-        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fa fa-user"></i>ADMIN</a>    
+        <a class="dropdown-toggle-admin nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fa fa-user"></i>ADMIN <i class="fa fa-caret-down"></i></a>    
           <div class="dropdown-menu" role="menu">
             <a class="dropdown-item" role="presentation" href="#">Help</a>
             <a class="dropdown-item" role="presentation" href="<?php echo base_url('user_controller/logout'); ?>">Log Out</a>

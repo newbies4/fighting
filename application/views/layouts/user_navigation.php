@@ -29,7 +29,7 @@
               <a class="nav-link"  href="<?php echo base_url('user_controller/logout');?>">LOGOUT</a>
             </li> -->
             <li class="nav-item dropdown">
-            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href=""><?php echo $_SESSION['username']; ?></a>    
+            <a class="dropdown-toggle-user nav-link" data-toggle="dropdown" aria-expanded="false" href=""><?php echo $_SESSION['username']; ?> <i class="fa fa-caret-down"></i></a>    
               <div class="dropdown-menu" role="menu">
                 <a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_overview');?>">My Account</a>
                 <a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_account_storeroom');?>">My Reservation</a>
