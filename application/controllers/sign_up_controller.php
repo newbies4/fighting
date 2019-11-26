@@ -29,9 +29,9 @@ class sign_up_controller extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
         {            // error
-            $data['main_view'] = "user_controller/user_signup";
+            $data['main_view'] = "user/user_signup";
 
-			$this->load->view('layouts/main', $data);
+			$this->load->view('layouts/main_user', $data);
         }
         else
         {

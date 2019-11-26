@@ -11,7 +11,7 @@ body {
    
     
 </header>
-<body >
+<body>
 <br>
 <br>
 <br>
@@ -85,55 +85,25 @@ body {
                           <!-- Table head -->
 
                           <!-- Table body -->
+                          
                           <tbody>
-                            <tr>
-                              <th scope="row">
-                                <!-- Default unchecked -->
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck2" checked>
-                                  <label class="custom-control-label" for="tableDefaultCheck2">Check 2</label>
-                                </div>
-                              </th>
-                              <td>Cell 1</td>
-                              <td><input type="number" class="form-control text-center" value="1"></td>
-                              <td>Cell 3 </td>
-                              <td>Cell 4</td>
-                              <td>Cell 5</td>
-                              
-                              
+                            <?php if($fetch_data->num_rows() == 0): ?>
+                              <tr class="warning no-result">
+                                <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+                              </tr>
+                            <?php endif; ?>
+                            <?php if($fetch_data->num_rows() > 0):?>
+                              <?php foreach($fetch_data->result_array() as $row): ?>
+                               <tr>
+                              <td><?php echo $row['reserve_date'] ?></td>
+                              <td><?php echo $row['pick_up_date'] ?></td>
+                              <td><?php echo $row['pick_up_time'] ?></td> 
+                              <td><?php echo $row['reserve_status'] ?></td>  
                             </tr>
-                            <tr>
-                              <th scope="row">
-                                <!-- Default unchecked -->
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck3">
-                                  <label class="custom-control-label" for="tableDefaultCheck3">Check 3</label>
-                                </div>
-                              </th>
-                              <td>Cell 4</td>
-                              <td><input type="number" class="form-control text-center" value="1"></td>
-                              <td>Cell 6 </td>
-                              <td>Cell 4</td>
-                              <td>Cell 5</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                <!-- Default unchecked -->
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="tableDefaultCheck4">
-                                  <label class="custom-control-label" for="tableDefaultCheck4">Check 4</label>
-                                </div>
-                              </th>
-                              <td>Cell 7</td>
-                              <td><input type="number" class="form-control text-center" value="1"></td>
-                              <td>Cell 9</td>
-                              <td>Cell 4</td>
-                              <td>Cell 5</td>
-                           
-                            </tr>
-                            <tr>
                                 <td colspan="5" align ="right">Total</td>
                                 <td align="right">0.00</td>
+                            <?php endforeach; ?>
+                            <?php endif; ?>
                           </tbody>
                           <!-- Table body -->
                         </table>                           
@@ -145,7 +115,6 @@ body {
 </div>
 
 <br>
-
 </body>
 
  

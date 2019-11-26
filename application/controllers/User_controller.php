@@ -43,9 +43,13 @@ class User_controller extends CI_Controller {
 	}
 	public function user_account_settings()
 	{
-		$data['main_view'] = "user/user_account_settings";
+		if ($id != null) {
+			$this->load->model('Customer_model');
 
-		$this->load->view('layouts/main_user', $data);
+			$data['fetch_data'] = $this->customer_model->get_customer_by_id($id);
+			$data['main_view'] = "user/user_account_settings";
+			$this->load->view('layouts/main_user', $data);
+		}
 	}
 	public function user_account_storeroom()
 	{

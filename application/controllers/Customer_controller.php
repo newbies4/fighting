@@ -190,5 +190,6 @@ class Customer_controller extends CI_Controller {
             $this->session->set_flashdata('add_customer_success', 'Customer successfully added.');
             redirect('User_controller/user_signup_credentials');
         }
-	} */
+    } */
+    
 }

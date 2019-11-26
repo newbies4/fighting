@@ -32,7 +32,7 @@
             <a class="dropdown-toggle-user nav-link" data-toggle="dropdown" aria-expanded="false" href=""><?php echo $_SESSION['username']; ?> <i class="fa fa-caret-down"></i></a>    
               <div class="dropdown-menu" role="menu">
                 <a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_overview');?>">My Account</a>
-                <a class="dropdown-item" role="presentation" href="<?php echo base_url('User_controller/user_account_storeroom');?>">My Reservation</a>
+                <a class="dropdown-item" role="presentation" href="<?php echo base_url('reserve_controller/show');?>">My Reservation</a>
                 <?php if($_SESSION['type'] == 'admin'): ?>
                   <a class="dropdown-item" role="presentation" href="<?php echo base_url('admin_controller/');?>">DASHBOARD</a>
                 <?php endif; ?>
