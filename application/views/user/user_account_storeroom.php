@@ -1,4 +1,4 @@
-<?php $this->load->view('user/user_profile/sidebar'); ?>
+<?php $this->load->view('user/user_profile_sidebar'); ?>
         <div class="col-md-9">
           <div class="profile-content">
             <h4><center>Storeroom</center></h4>
@@ -23,7 +23,7 @@
                           <!-- Table body -->
                           
                           <tbody>
-                            <?php if($fetch_data->num_rows() == 0): ?>
+                            <!-- <?php if($fetch_data->num_rows() == 0): ?>
                               <tr class="warning no-result">
                                 <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
                               </tr>
@@ -39,7 +39,7 @@
                                 <td colspan="5" align ="right">Total</td>
                                 <td align="right">0.00</td>
                             <?php endforeach; ?>
-                            <?php endif; ?>
+                            <?php endif; ?> -->
                           </tbody>
                           <!-- Table body -->
                         </table>                           

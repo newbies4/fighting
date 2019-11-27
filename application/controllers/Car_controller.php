@@ -10,6 +10,45 @@ class Car_controller extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
     }
 
+	public function display_cars()
+	{
+		$this->form_validation->set_rules('from', 'Sart Date', 'required');
+		$this->form_validation->set_rules('to', 'End Date', 'required');
+		// $this->form_validation->set_rules('to', 'End Date', 'required|callback_date_check');
+
+		if ($this->form_validation->run() == FALSE) {
+
+			$data['main_view'] = "user/home2";
+			$this->load->view('layouts/main_user', $data);
+
+        } else {
+        	$from = $this->input->post('from');
+        	$to = $this->input->post('to');
+        	echo "<script>alert(" . $from . ");</script>";
+        	$data['fetch_data'] = $this->car_model->getCars($from, $to);
+			$data['main_view'] = "user/home";
+			// $data['main_view'] = "user/home";
+			var_dump($from);
+			var_dump($to);
+			$this->load->view('layouts/main_user', $data);
+			// var_dump($this->input->post('from'));
+			// var_dump($this->input->post('to'));
+        }
+	}
+
+	/*public function date_check($str)
+    {
+        if ($str == 'test')
+        {
+                $this->form_validation->set_message('username_check', 'The {field} field can not be the word "test"');
+                return FALSE;
+        }
+        else
+        {
+                return TRUE;
+        }
+    }*/
+
     public function show($start = 0)
     {
     	$this->load->library('pagination');

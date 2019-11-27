@@ -1,4 +1,4 @@
-<?php $this->load->view('user/user_profile/sidebar'); ?>
+<?php $this->load->view('user/user_profile_sidebar'); ?>
           <div class="col-md-9">
             <div class="user-nav">
             <ul class="nav nav-tabs">
@@ -17,14 +17,14 @@
                 <div role="tabpanel" class="tab-pane active" id="Information">
                   <h4><center><i class="fa fa-user"></i> Personal Information </center> </h4>
                   <hr />
-                <?php if($fetch_data->num_rows() > 0):?>
-                <?php foreach($fetch_data->result_array() as $row): ?>
+                <!-- <?php if($fetch_data->num_rows() > 0):?> -->
+                <!-- <?php foreach($fetch_data->result_array() as $row): ?> -->
              <div class="row">
                 <div class="col-sm-3 col-md-2 col-5">
                       <label style="font-weight:bold;">Full Name</label>
                   </div>
                   <div class="col-md-8 col-6">
-                  <?php echo $row['Name'] ?> 
+                  <p><?php echo $fetch_data->Name; ?> </p>
                   </div>
                </div>
                <hr />
@@ -35,7 +35,7 @@
                    <label style="font-weight:bold;">Birth Date</label>
                   </div>
                 <div class="col-md-8 col-6">
-                <?php echo $row['age'] ?>
+                <p><?php echo $fetch_data->age; ?> </p>
                 </div>
                </div>
                <hr />
@@ -46,7 +46,7 @@
                    <label style="font-weight:bold;">Gender</label>
                   </div>
                 <div class="col-md-8 col-6">
-                <?php echo $row['current_address'] ?>
+                <p><?php echo $fetch_data->current_address; ?> </p>
                   </div>
               </div>
               <hr />
@@ -56,7 +56,7 @@
                   <label style="font-weight:bold;">Email Address</label>
                 </div>
                 <div class="col-md-8 col-6">
-                <?php echo $row['contact_no'] ?>
+                <p><?php echo $fetch_data->contact_no; ?> </p>
                 </div>
               </div>
               <hr />
@@ -66,14 +66,14 @@
                   <label style="font-weight:bold;">Current Address</label>
                 </div>
                 <div class="col-md-8 col-6">
-                <?php echo $row['Birth_date'] ?>
+                <p><?php echo $fetch_data->Birth_date; ?> </p>
                 </div>
               </div>
                <hr /> 
                <a class="btn btn-primary modal-open pull pull-right" href="">Edit</a> 
               </div>
-              <?php endforeach; ?>
-      <?php endif; ?>
+              <!-- <?php endforeach; ?> -->
+      <!-- <?php endif; ?> -->
             <!-- end information settings-->
 
             <!-- Login Settings -->

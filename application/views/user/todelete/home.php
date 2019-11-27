@@ -747,7 +747,6 @@ xcustom form elements
 
 		<section class="cd-gallery">
 		
-        <p><?php echo $fetch_data->num_rows(); ?> </p>
     <div class="row">
 
       <?php if($fetch_data->num_rows() > 0):?>

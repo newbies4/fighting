@@ -25,6 +25,7 @@ class User_controller extends CI_Controller {
 		$this->load->view('layouts/main_user', $data);
 	}
 
+
 	public function reserve_car($id = null)
 	{
 		if ($id != null) {
@@ -48,18 +49,21 @@ class User_controller extends CI_Controller {
 		$this->load->view('layouts/main_user', $data);
 	}
 
-	public function user_overview()
+	public function user_overview($user)
 	{
+		$this->load->model('customer_model');
+		$data['fetch_data'] = $this->customer_model->get_customer_by_username($user);
 		$data['main_view'] = "user/user_overview";
 
 		$this->load->view('layouts/main_user', $data);
 	}
-	public function user_account_settings()
+	public function user_account_settings($user)
 	{
-		if ($id != null) {
-			$this->load->model('Customer_model');
+		if ($user != null) {
+			$this->load->model('customer_model');
 
-			$data['fetch_data'] = $this->customer_model->get_customer_by_id($id);
+			// $data['fetch_data'] = $this->customer_model->get_customer_by_id($id);
+			$data['fetch_data'] = $this->customer_model->get_customer_by_username($user);
 			$data['main_view'] = "user/user_account_settings";
 			$this->load->view('layouts/main_user', $data);
 		}

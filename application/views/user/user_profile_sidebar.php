@@ -23,7 +23,7 @@
                   <!-- SIDEBAR USER TITLE -->
                   <div class="profile-usertitle">
                       <div class="profile-usertitle-name">
-                          Arczhar Mummuh
+                          <?php echo $fetch_data->Name; ?>
                       </div>
                       <div class="profile-usertitle-job">
                           VERIFIED
@@ -36,17 +36,17 @@
                   <!-- SIDEBAR MENU -->
                   <div class="profile-usermenu">
                       <ul class="list-unstyled components">
-                      <li >
+                      <li class="active">
                               <a href="<?php echo base_url('index.php/User_controller/user_overview');?>">
                               <i class="glyphicon glyphicon-home"></i>
                               Overview </a>
                           </li>
-                          <li class="active">
-                              <a href="<?php echo base_url('User_controller/user_account_settings');?>">
+                          <li class="">
+                              <a href="<?php echo base_url('User_controller/user_account_settings/'.$_SESSION['username']);?>">
                               <i class="glyphicon glyphicon-user"></i>
                               Account Settings </a>
                           </li>
-                          <li >
+                          <li class="">
                               <a href="<?php echo base_url('User_controller/user_account_storeroom');?>">
                               <i class="glyphicon glyphicon-ok"></i>
                               Storeroom </a>
