@@ -382,7 +382,8 @@ class Car_controller extends CI_Controller {
 	public function add_pictures()
 	{
 		$fileCount = count($_FILES);
-		DEFINE('arrayIndex', array('front', 'back', 'interior'));
+		// DEFINE('arrayIndex', array('front', 'back', 'interior'));
+		$arrayIndex = array('front', 'back', 'interior');
 		$files = $_FILES;
 		//var_dump(array_keys($_FILES));
 		$data = array();
@@ -401,10 +402,10 @@ class Car_controller extends CI_Controller {
 
         for ($i=0; $i < 3; $i++) {
         	
-        	$config['file_name'] = arrayIndex[$i] . '-car-img-' . $this->input->post('carid') . ($i + 1);
+        	$config['file_name'] = $arrayIndex[$i] . '-car-img-' . $this->input->post('carid') . ($i + 1);
         	$this->upload->initialize($config);
 
-        	if ( !$this->upload->do_upload(arrayIndex[$i])) {
+        	if ( !$this->upload->do_upload($arrayIndex[$i])) {
             	// $data = array('error' => $this->upload->display_errors('<p style="color: red;">', '</p>'));
             	// array_push($error, $this->upload->display_errors('<p style="color: red;">', '</p>'));
             	$error .= $this->upload->display_errors('<p style="color: red;">', '</p>');
