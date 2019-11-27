@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class sign_up_controller extends CI_Controller {
+class Sign_up_controller extends CI_Controller {
 
 	public function __construct()
     {
@@ -18,14 +18,12 @@ class sign_up_controller extends CI_Controller {
         
         // Setting up the rules
         // $this->form_validation->set_rules('input name', 'Display Error Name', 'validation');
-		$this->form_validation->set_rules('name', 'Name', 'required|min_length[2]|max_length[50]');
-       
+		$this->form_validation->set_rules('fname', 'First Name', 'required|min_length[2]|max_length[50]');
+        $this->form_validation->set_rules('lname', 'Last Name', 'required|min_length[2]|max_length[50]');
         $this->form_validation->set_rules('address', 'Address', 'required|min_length[2]|max_length[50]');
         $this->form_validation->set_rules('contactno', 'Contact No..', 'required|min_length[7]|max_length[15]|numeric');
-       
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[2]|max_length[50]');
 	
-       
-        $this->form_validation->set_rules('email', 'Email', 'required|min_length[2]|max_length[50]');
 
 		if ($this->form_validation->run() == FALSE)
         {            // error
@@ -36,10 +34,12 @@ class sign_up_controller extends CI_Controller {
         else
         {
             // Succcess
+            $fname = $this->input->post('fname');
+            $lname = $this->input->post('lname');
             
-        	$data = array(
+        	$dataArr = array(
                 // database column name => input field name
-        		'Name' => $this->input->post('name'),
+        		'Name' => $fname . ' ' . $lname,
 				
 				'current_address' => $this->input->post('address'),
                 'contact_no' => $this->input->post('contactno'),
@@ -48,9 +48,53 @@ class sign_up_controller extends CI_Controller {
         	);
             $this->load->model('Customer_model');
 
-            $result = $this->Customer_model->insert_data($data);
+            $data['customerid'] = $this->Customer_model->insert_data($dataArr);
             $this->session->set_flashdata('add_customer_success', 'Customer successfully added.');
-            redirect('User_controller/user_signup_credentials');
+            
+            $this->load->view('layouts/header');
+            $this->load->view('user/user_signup_credentials', $data); 
+            $this->load->view('layouts/footer');
         }
 	}
+
+    public function sign_up_credentials()
+    {
+        // Setting up the rules
+        // $this->form_validation->set_rules('input name', 'Display Error Name', 'validation');
+        $this->form_validation->set_rules('username', 'Username', 'required|min_length[2]|max_length[50]');
+        $this->form_validation->set_rules('password', 'Password', 'required|min_length[2]|max_length[50]');
+        $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|min_length[2]|max_length[50]|matches[password]');
+    
+        if ($this->form_validation->run() == FALSE)
+        {
+            $data['customerid'] = $this->input->post('customerid');     
+            $this->load->view('layouts/header');
+            $this->load->view('user/user_signup_credentials', $data); 
+            $this->load->view('layouts/footer');
+        }
+        else
+        {
+            // Succcess
+            $username = $this->input->post('username');
+            $password = $this->input->post('password');
+            
+            $dataArr = array(
+                // database column name => input field name
+                
+                'customer_id_fk' => $this->input->post('customerid'),
+                'user_type' => 'customer',
+                'username' => $username,
+                'password' => $password
+            );
+
+            $this->load->model('sign_up_model');
+
+            $this->sign_up_model->insert_data($dataArr);
+            $this->session->set_flashdata('message', 'Sign up successfully.');
+            
+            $this->load->view('layouts/header');
+            $this->load->view('user/login_user'); 
+            $this->load->view('layouts/footer'); 
+        }
+    }
 }

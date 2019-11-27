@@ -39,17 +39,7 @@
                     <?php if($fetch_data->num_rows() > 0):?>
                         <?php foreach($fetch_data->result_array() as $row): ?>
                        <tr>
-                            <td><?php echo $row['is_available'] ?></td>
-                            <td>
-                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
-                                <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_car_details/'.$row["car_id"]);?>">Edit Details</a>
-                                    <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_car_pictures/'.$row["car_id"]);?>">Edit Pictures</a>
-                                    <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_availability/'.$row["car_id"]);?>">Mark as <?php echo ($row['is_available'] == 'Available' ? 'Unavailable' : 'Available') ?></a>
-                                </div>
-                                </div>
-                            </td>
-                            <td><?php echo $row['created_at'] ?></td>
+                            <td><?php echo $row['car_model'] ?></td>
                             <td><?php echo $row['car_brand'] ?>Brand</td>
                             <td><?php echo $row['car_type'] ?>Type</td>
                             <td><?php echo $row['car_seats'] ?>Seats</td>
@@ -60,6 +50,16 @@
                             <td><?php echo $row['car_driver'] ?>Driver</td>
                             <td><?php echo $row['car_transmission'] ?>Trasmisssion</td>
                             <td><?php echo $row['car_insurance'] ?>Insurance Type</td>
+                            <td><?php echo $row['is_available'] ?></td>
+                            <td>
+                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
+                                <div class="dropdown-menu" role="menu">
+                                    <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_car_details/'.$row["car_id"]);?>">Edit Details</a>
+                                    <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_car_pictures/'.$row["car_id"]);?>">Edit Pictures</a>
+                                    <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_availability/'.$row["car_id"]);?>">Mark as <?php echo ($row['is_available'] == 'Available' ? 'Unavailable' : 'Available') ?></a>
+                                </div>
+                                </div>
+                            </td>
                         </tr>
                         <?php endforeach; ?>
                     <?php endif; ?>

@@ -16,7 +16,8 @@ class Customer_model extends CI_Model {
 	}
 
 	public function insert_data($data) {
-		return $this->db->insert('tbl_customer', $data);
+		$this->db->insert('tbl_customer', $data);
+		return $this->db->insert_id();
 	}
 
 	public function get_count() {

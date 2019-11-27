@@ -13,6 +13,18 @@ class User_controller extends CI_Controller {
 		$this->load->view('layouts/main_user', $data);
 	}
 
+	public function test2()
+	{
+		// $data['test'] = $_SESSION['logged_in'];
+		$this->load->model('user_model');
+
+		$data['fetch_data'] = $this->user_model->test();
+		$data['main_view'] = "user/home";
+		// $data['main_view'] = "user/home";
+
+		$this->load->view('layouts/main_user', $data);
+	}
+
 	public function reserve_car($id = null)
 	{
 		if ($id != null) {
@@ -30,7 +42,8 @@ class User_controller extends CI_Controller {
 		$this->load->model('user_model');
 
 		$data['fetch_data'] = $this->user_model->test();
-		$data['main_view'] = "user/home";
+		$data['main_view'] = "user/home2";
+		// $data['main_view'] = "user/home";
 
 		$this->load->view('layouts/main_user', $data);
 	}
@@ -96,12 +109,12 @@ class User_controller extends CI_Controller {
 		$this->load->view('layouts/footer'); 
 	}
 
-	public function user_signup_credentials()
+	public function user_signup_credentials($id)
 	{
 		$this->load->view('layouts/header');
 
-		$this->load->view('user/user_signup_credentials'); 
-		$this->load->view('layouts/footer'); 	
+		$this->load->view('user/user_signup_credentials', $id); 
+		$this->load->view('layouts/footer');
 	}
 	public function user_car_details()
 	{
