@@ -41,6 +41,7 @@
         </div>  
         
         <div class="details col-sm-4">
+        
         <div class="action">
             <br>
             <h5> Select Date of Rent </h5>
