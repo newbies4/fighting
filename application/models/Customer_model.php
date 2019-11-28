@@ -16,7 +16,8 @@ class Customer_model extends CI_Model {
 	}
 
 	public function insert_data($data) {
-		return $this->db->insert('tbl_customer', $data);
+		$this->db->insert('tbl_customer', $data);
+		return $this->db->insert_id();
 	}
 
 	public function get_count() {
@@ -45,6 +46,27 @@ class Customer_model extends CI_Model {
 		}else{
 			return false;
 		}
+	}
+
+	public function get_customer_by_username($user)
+	{
+		$this->db->select('*');
+		$this->db->from('tbl_useraccount');
+		$this->db->join('tbl_customer', 'tbl_customer.customer_id = tbl_useraccount.customer_id_fk');
+		$this->db->where('username', $user);
+		$query = $this->db->get();
+		if($query->num_rows() == 1){
+			return $query->row();
+		}else{
+			return false;
+		}
+		/*$this->db->where('customer_id', $id);
+		$query = $this->db->get('tbl_customer');
+		if($query->num_rows() > 0){
+			return $query->row();
+		}else{
+			return false;
+		}*/
 	}
 	
 }

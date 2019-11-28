@@ -671,7 +671,7 @@ xcustom form elements
       <!--/.Navbar-->
  
 <main>
-
+<br>
  <br>
  <br>
 <!--Carousel Wrapper-->
@@ -687,7 +687,7 @@ xcustom form elements
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view">
-        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/carousel-img1 copy.jpg') ?>"
+        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/carousel-img1.jpg') ?>"
           alt="First slide">
         <div class="mask rgba-black-light"></div>
       </div>
@@ -698,7 +698,7 @@ xcustom form elements
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/second copy.jpg') ?>"
+        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/second.jpg') ?>"
           alt="Second slide">
         <div class="mask rgba-black-strong"></div>
       </div>
@@ -747,7 +747,6 @@ xcustom form elements
 
 		<section class="cd-gallery">
 		
-        <p><?php echo $fetch_data->num_rows(); ?> </p>
     <div class="row">
 
       <?php if($fetch_data->num_rows() > 0):?>
@@ -759,17 +758,7 @@ xcustom form elements
                         <!-- <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-1.jpg') ?>">
                         <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-1.1.jpg') ?>"> -->
                         <img class="pic-1" src="<?php echo base_url('assets/img/cars/'. $row['car_pic_name']) ?>">
-                        
-                        <div class="pic-2">\
-                          <p><br>Seats:</p>
-                          <p>Type</p>
-                          <p>Trasmisssion:</p>
-                          <p>Color:</p>
-                          <p>Fuel Type:</p>
-                        
-                        
-                        </div>
-                        
+                        <!-- <img class="pic-2" src="<?php echo base_url('assets/img/cars/'. $fetch_data->row(1)->car_pic_name) ?>"> -->
                     </a>
                   
                 </div>

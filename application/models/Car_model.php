@@ -126,4 +126,22 @@ class Car_model extends CI_Model {
 		return $query->row();
 	}
 
+	public function getCars($start, $end)
+	{
+		$queryString = "SELECT car_id, car_model, car_price, car_pic_name
+			FROM tbl_car_profile 
+			LEFT JOIN tbl_car_pic
+		    	ON tbl_car_profile.car_id = tbl_car_pic.car_id_fk
+			LEFT JOIN tbl_reserve_details 
+				ON tbl_reserve_details.car_id_fk = tbl_car_profile.car_id 
+			LEFT JOIN tbl_reserve 
+				ON tbl_reserve_details.reserve_id_fk = tbl_reserve.reserve_id 
+			WHERE ((tbl_reserve.start_date NOT BETWEEN '{$start}' AND '{$end}') AND (tbl_reserve.end_date NOT BETWEEN '{$start}' AND '{$end}'))
+			OR (tbl_reserve.start_date IS null)
+		    GROUP BY car_id, car_model, car_price";
+		$query = $this->db->query($queryString);
+
+		return $query;
+	}
+
 }

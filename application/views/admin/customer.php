@@ -34,7 +34,7 @@
                 <td><?php echo $row['age'] ?></td>
                 <td><?php echo $row['current_address'] ?></td> 
                 <td><?php echo $row['contact_no'] ?></td> 
-                <td><?php echo $row['Email'] ?></td>   
+                <td><?php echo $row['email'] ?></td>   
                 <td><?php echo $row['Birth_Date'] ?></td>  
                 <td><?php echo $row['Gender'] ?></td>  
                 <td><?php echo $row['license_no'] ?></td>
