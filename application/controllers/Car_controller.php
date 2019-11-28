@@ -24,12 +24,11 @@ class Car_controller extends CI_Controller {
         } else {
         	$from = $this->input->post('from');
         	$to = $this->input->post('to');
-        	echo "<script>alert(" . $from . ");</script>";
+        	$this->session->set_tempdata('from', $from, 7200);
+        	$this->session->set_tempdata('to', $to, 7200);
         	$data['fetch_data'] = $this->car_model->getCars($from, $to);
 			$data['main_view'] = "user/home";
 			// $data['main_view'] = "user/home";
-			var_dump($from);
-			var_dump($to);
 			$this->load->view('layouts/main_user', $data);
 			// var_dump($this->input->post('from'));
 			// var_dump($this->input->post('to'));
@@ -393,7 +392,6 @@ class Car_controller extends CI_Controller {
 	            $data = array('upload_data' => $this->upload->data());
 	            array_push($pictureNames, array('car_id_fk' => $this->input->post('carid'),
 					'car_pic_name' => $data['upload_data']['file_name']));
-	            echo "<script> console.log('yah')</script>";
 	        }
         }
 
@@ -467,9 +465,12 @@ class Car_controller extends CI_Controller {
 			$this->load->view('layouts/main', $data);
         } else {
         	// var_dump($pictureNames);
+        	$carid = $this->input->post('carid');
         	$this->car_model->insert_pictures($pictureNames);
+        	$this->session->set_flashdata('success_message', "Car added successfully.");
         	$data['main_view'] = "admin/add_car_finalize";
-
+        	$data['fetch_data'] = $this->car_model->getSelectedCar($carid);
+        	// print_r($data['fetch_data']);
 			$this->load->view('layouts/main', $data);
 			// $this->show();
         }

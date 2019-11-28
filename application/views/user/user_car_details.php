@@ -42,19 +42,16 @@
         
         <div class="details col-sm-4">
         <div class="action">
-        <br>
-        <h5> Select Date of Rent </h5>
-        <br>
-        <label >From</label>
-                  		<input type="date" name="from" max="3000-12-31" 
-                          min="1000-01-01" class="form-control">
+            <br>
+            <h5> Select Date of Rent </h5>
+            <br>
+            <label >From</label>
+            <input disabled type="text" class="form-control" value="<?php echo $this->session->tempdata('from'); ?>">
         <br>
         <label >To</label>
-                  		<input type="date" name="from" max="3000-12-31" 
-                          min="1000-01-01" class="form-control">
-					
-				<button class="add-to-storeroom btn btn-default custom-position" type="button">Add to Storeroom</button>
-			</div>
+            <input disabled class="form-control" value="<?php echo $this->session->tempdata('to'); ?>">
+            <button class="add-to-storeroom btn btn-default custom-position" type="button">Add to Storeroom</button>
+        </div>
         </div>
     </div>
 </div>

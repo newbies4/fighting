@@ -19,10 +19,6 @@
 <?php endif; ?>
 <?php echo form_open_multipart('car_controller/add_pictures');?>
 <div class="col-lg-4">
-			<!-- <div class="form-group">
-				<input type="file" id="input-file-now-custom-2" class="form-control" name="carpics" class="file-upload" multiple data-height="500" />
-				<label for="">Car Pictures *</label>
-			</div>  -->
 			<div class="form-group">
 				<input type="text" class="form-control" id="carid" name="carid" value="<?php echo $this->session->flashdata('car_id') ?>">
 			</div>

@@ -23,6 +23,19 @@ class Car_model extends CI_Model {
 		// }
 	}
 
+	public function getSelectedCar($id)
+    {
+    	$this->db->select('*');
+		$this->db->from('tbl_car_pic');
+		$this->db->join('tbl_car_profile', 'tbl_car_profile.car_id = tbl_car_pic.car_id_fk');
+		$this->db->where('car_id', $id);
+		$this->db->order_by('right(car_pic_name, 10) ASC');
+		// return $this->db->get_compiled_select();
+		return $this->db->get();
+  //   	$query = "SELECT car_id, car_brand, car_model, car_seats, car_transmission, car_gas_type, car_type, car_color, car_price, car_pic_name FROM tbl_car_profile JOIN tbl_car_pic ON tbl_car_profile.car_id = tbl_car_pic.car_id_fk WHERE car_id=$id";
+		// return $this->db->query($query);
+    }
+
 	public function get_car_by_id($id) {
 		$this->db->where('car_id', $id);
 		$query = $this->db->get('tbl_car_profile');

@@ -15,7 +15,7 @@
 
     <div class="col-md-4 mb-3">
       <label for="validationDefault01"></label>
-      <input type="text" class="form-control <?= (form_error('name') == '' ? '':'is-invalid') ?>"  placeholder="Name" name="name" id="name" value="<?php echo set_value('firstname'); ?>" required>
+      <input type="text" class="form-control <?= (form_error('name') == '' ? '':'is-invalid') ?>"  placeholder="Name" name="name" id="name" value="<?php echo set_value('name'); ?>" required>
     </div>
 
     <div class="col-md-4 mb-3">
@@ -37,9 +37,8 @@
     <div class="form-group col-md-4">
       <label for="inputState"></label>
       <select name="gender" id="gender" class="form-control <?= (form_error('gender') == '' ? '':'is-invalid') ?>" value="<?php echo set_value('gender'); ?>" >
-      <option selected>Gender</option>
-      <option>Male</option>
-      <option>Female</option>     
+        <option <?php echo set_select('gender', 'male', TRUE); ?> value="male">Male</option>
+        <option <?php echo set_select('gender', 'female'); ?> value="female">Female</option>     
       </select>
     </div>
     <div class="col-md-4 mb-3">
@@ -49,7 +48,7 @@
 
     <div class="col-md-4 mb-3">
       <label for="validationDefault02"></label>
-      <input type="text" class="form-control <?= (form_error('email') == '' ? '':'is-invalid') ?>" name="email" id="email" placeholder="Email Address" value="<?php echo set_value('license no.'); ?>" required>
+      <input type="text" class="form-control <?= (form_error('email') == '' ? '':'is-invalid') ?>" name="email" id="email" placeholder="Email Address" value="<?php echo set_value('email'); ?>" required>
     </div>
     <div class="col-md-4 mb-3">
       <div class="form-group">

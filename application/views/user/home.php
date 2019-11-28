@@ -739,7 +739,7 @@ xcustom form elements
 					<li class="placeholder"> 
 						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
 					</li> 
-					<li class="filter"><a class="selected" href="#0" data-type="all">PRICING</a></li>
+					<li class="filter"><a class="selected" href="<?php echo base_url('user_controller'); ?>" data-type="all">Select Another Date</a></li>
 					
 				</ul> <!-- cd-filters -->
 			</div> <!-- cd-tab-filter -->
@@ -747,7 +747,6 @@ xcustom form elements
 
 		<section class="cd-gallery">
 		
-        <p><?php echo $fetch_data->num_rows(); ?> </p>
     <div class="row">
 
       <?php if($fetch_data->num_rows() > 0):?>
@@ -755,10 +754,10 @@ xcustom form elements
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
-                    <a href="<?php echo base_url('user_controller/reserve_car/'.$row['car_id']);?>">
+                    <a href="<?php echo base_url('user_controller/reserve_car/'.$row['car_id']);?>" target="_blank">
                         <!-- <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-1.jpg') ?>">
                         <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-1.1.jpg') ?>"> -->
-                        <img class="pic-1" src="<?php echo base_url('assets/img/cars/'. $row['car_pic_name']) ?>">
+                        <img height="600" width="600" class="pic-1" src="<?php echo base_url('assets/img/cars/'. $row['car_pic_name']) ?>">
                         <!-- <img class="pic-2" src="<?php echo base_url('assets/img/cars/'. $fetch_data->row(1)->car_pic_name) ?>"> -->
                     </a>
                   
@@ -769,7 +768,7 @@ xcustom form elements
                       ₱<?php echo $row['car_price'] ?>
                         <span></span>
                     </div>
-                    <a class="add-to-cart" href="<?php echo base_url('user_controller/reserve_car/'.$row['car_id']); ?>">RESERVE</a>
+                    <a class="add-to-cart" href="<?php echo base_url('user_controller/reserve_car/'.$row['car_id']); ?>" target="_blank">RESERVE</a>
                 </div>
             </div>
         </div>
