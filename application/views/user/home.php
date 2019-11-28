@@ -757,11 +757,8 @@ xcustom form elements
                     <a href="<?php echo base_url('user_controller/reserve_car/'.$row['car_id']);?>" target="_blank">
                         <!-- <img class="pic-1" src="<?php echo base_url('assets/Content-filter/home-img/img-1.jpg') ?>">
                         <img class="pic-2" src="<?php echo base_url('assets/Content-filter/home-img/img-1.1.jpg') ?>"> -->
-<<<<<<< HEAD
                         <img height="600" width="600" class="pic-1" src="<?php echo base_url('assets/img/cars/'. $row['car_pic_name']) ?>">
                         <!-- <img class="pic-2" src="<?php echo base_url('assets/img/cars/'. $fetch_data->row(1)->car_pic_name) ?>"> -->
-=======
-                        <img class="pic-1" src="<?php echo base_url('assets/img/cars/'. $row['car_pic_name']) ?>">
                         
                         <div class="pic-2">\
                           <p><br>Seats:</p>
@@ -772,8 +769,6 @@ xcustom form elements
                         
                         
                         </div>
-                        
->>>>>>> 09e5ea2e14cf66b706cc2aea8c33059cd46f1af6
                     </a>
                   
                 </div>
