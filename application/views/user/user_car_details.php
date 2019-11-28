@@ -41,18 +41,20 @@
         </div>  
         
         <div class="details col-sm-4">
-        
-        <div class="action">
+        <?= form_open('user_controller/add_to_storeroom') ?>
+            <div class="action">
+                <br>
+                <h5> Select Date of Rent </h5>
+                <br>
+                <input type="text" name="carid" value="<?php echo $car_id ?>">
+                <label >From</label>
+                <input readonly="readonly" name="from" type="text" class="form-control" value="<?php echo $this->session->tempdata('from'); ?>">
             <br>
-            <h5> Select Date of Rent </h5>
-            <br>
-            <label >From</label>
-            <input disabled type="text" class="form-control" value="<?php echo $this->session->tempdata('from'); ?>">
-        <br>
-        <label >To</label>
-            <input disabled class="form-control" value="<?php echo $this->session->tempdata('to'); ?>">
-            <button class="add-to-storeroom btn btn-default custom-position" type="button">Add to Storeroom</button>
-        </div>
+            <label >To</label>
+                <input readonly="readonly" name="to" class="form-control" value="<?php echo $this->session->tempdata('to'); ?>">
+                <button class="add-to-storeroom btn btn-default custom-position" type="submit">Add to Storeroom</button>
+            </div>
+        <?= form_close(); ?>
         </div>
     </div>
 </div>
