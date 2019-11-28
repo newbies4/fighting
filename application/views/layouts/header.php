@@ -11,5 +11,8 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/fonts/font-awesome.min.css');?>">
     <title>ZC Car Rental</title>
+
+
+    
   </head>
   <body>

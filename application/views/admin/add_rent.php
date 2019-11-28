@@ -34,11 +34,12 @@
         <!-- Table head -->
         <thead>
           <tr>
-            <th>Reserve</th>
+            <th>Choose</th>
+            <th>Brand</th>
             <th>Model</th>
             <th>Picture</th>
             <th>Price</th>
-            <th>Options</th>
+            <th>Brand</th>
           </tr>
         </thead>
         <!-- Table head -->
@@ -50,40 +51,41 @@
               <!-- Default unchecked -->
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="tableDefaultCheck2" checked>
-                <label class="custom-control-label" for="tableDefaultCheck2">Check 2</label>
-              </div>
-            </th>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-            <td>Cell 3</td>
-            <td>Cell 3</td>
+                <?php if($fetch_data->num_rows() == 0): ?>
+                    <tr class="warning no-result">
+                      <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+                    </tr>
+                <?php endif; ?>
+                    <!-- <th id="trs-hd" class="">Picture</th> -->
+                    <?php if($fetch_data->num_rows() > 0):?>
+                        <?php foreach($fetch_data->result_array() as $row): ?>
+                       <tr>
+                            <td><?php echo $row['is_available'] ?></td>
+                            <td>
+                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
+                                <div class="dropdown-menu" role="menu">
+                                    <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_car_details/'.$row["car_id"]);?>">Edit Details</a>
+                                    <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_car_pictures/'.$row["car_id"]);?>">Edit Pictures</a>
+                                    <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_availability/'.$row["car_id"]);?>">Mark as <?php echo ($row['is_available'] == 'Available' ? 'Unavailable' : 'Available') ?></a>
+                                </div>
+                                </div>
+                            </td>
+                            <td><?php echo $row['created_at'] ?></td>
+                            <td><?php echo $row['car_brand'] ?>Brand</td>
+                            <td><?php echo $row['car_type'] ?>Type</td>
+                            <td><?php echo $row['car_seats'] ?>Seats</td>
+                            <td><?php echo $row['car_color'] ?>Color</td>
+                            <td><?php echo $row['car_platenumber'] ?>Plate Number</td>
+                            <td><?php echo $row['car_price'] ?>Price</td>
+                            <td><?php echo $row['car_fuel_capacity'] ?>Fuel Capacity</td>
+                            <td><?php echo $row['car_driver'] ?>Driver</td>
+                            <td><?php echo $row['car_transmission'] ?>Trasmisssion</td>
+                            <td><?php echo $row['car_insurance'] ?>Insurance Type</td>
+                        </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
           </tr>
-          <tr>
-            <th scope="row">
-              <!-- Default unchecked -->
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableDefaultCheck3">
-                <label class="custom-control-label" for="tableDefaultCheck3">Check 3</label>
-              </div>
-            </th>
-            <td>Cell 4</td>
-            <td>Cell 5</td>
-            <td>Cell 6</td>
-            <td>Cell 3</td>
-          </tr>
-          <tr>
-            <th scope="row">
-              <!-- Default unchecked -->
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableDefaultCheck4">
-                <label class="custom-control-label" for="tableDefaultCheck4">Check 4</label>
-              </div>
-            </th>
-            <td>Cell 7</td>
-            <td>Cell 8</td>
-            <td>Cell 9</td>
-            <td>Cell 3</td>
-          </tr>
+          
         </tbody>
         <!-- Table body -->
       </table>

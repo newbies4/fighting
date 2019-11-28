@@ -49,7 +49,7 @@
                                 </div>
                                 </div>
                             </td>
-                            <td><?php echo $row['created_at'] ?></td>
+                            <td><?php echo $row['car_model'] ?></td>
                             <td><?php echo $row['car_brand'] ?>Brand</td>
                             <td><?php echo $row['car_type'] ?>Type</td>
                             <td><?php echo $row['car_seats'] ?>Seats</td>
