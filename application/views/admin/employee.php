@@ -30,7 +30,7 @@
         <tbody>
           <?php if($fetch_data->num_rows() == 0): ?>
             <tr class="warning no-result">
-              <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+              <td colspan="12"><center><i class="fa fa-warning"></i>&nbsp; No Result !!!</center></td>
             </tr>
           <?php endif; ?>
           <?php if($fetch_data->num_rows() > 0):?>
@@ -41,7 +41,8 @@
                   <td><?php echo $row['middle_name'] ?></td> 
                   <td><?php echo $row['contact'] ?></td>                   
                 <td>
-                <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
+                <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle-btn" data-toggle="dropdown" aria-expanded="false" type="button" >Options <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo base_url('employee_controller/edit_employee/'.$row["id"]);?>">Edit</a><a class="dropdown-item" role="presentation" href="<?php echo base_url('employee_controller/delete_employee/'.$row["id"]);?>">Delete</a></div>
                 </div>
                 </td>
