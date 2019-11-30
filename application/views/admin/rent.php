@@ -20,7 +20,7 @@
             </thead>
             <tbody>
                 <tr class="warning no-result">
-                    <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+                    <td colspan="12"><center><i class="fa fa-warning"></i>&nbsp; No Result !!! </center></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -29,7 +29,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button></div>
+                        <div class="dropdown"><button class="btn btn-primary dropdown-toggle-btn" data-toggle="dropdown" aria-expanded="false" type="button" >Options <i class="fa fa-caret-down"></i></button></div>
                         <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Edit</a><a class="dropdown-item" role="presentation" href="#">Release</a><a class="dropdown-item" role="presentation" href="#">Return</a></div>  
                     </td>
                 </tr>

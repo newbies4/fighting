@@ -47,6 +47,10 @@ class Login_controller extends CI_Controller {
 					'type' => $rows->user_type,
 					'logged_in' => TRUE
 				);
+				if ($data['fetch_data']->row()->user_type == 'customer')
+				{
+					array_push($sess_data,"blue","yellow");
+				}
 				$this->session->set_userdata($sess_data);
 				redirect('user_controller/index', 'refresh');
 			} else {

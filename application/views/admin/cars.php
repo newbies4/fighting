@@ -1,12 +1,12 @@
 <div class="admin-content">
 <div class="col-md-12 search-table-col">
+<header>
     <h3> CARS </h3>
-
-    <header>
-        <div class="form-group">
-            <a class="btn btn-primary" href="<?php echo base_url('car_controller/add_car');?>">Add New</a><div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
-        </div>
     </header>
+    
+    <a class="btn btn-primary" href="<?php echo base_url('car_controller/add_car');?>">Add New</a>
+    <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.." class="search form-control"></div><span class="counter pull-right"></span>
+  
     <?php if($this->session->flashdata('edit_car_message')): ?>
       <p class="alert alert-success"><?php echo $this->session->flashdata('edit_car_message'); ?></p>
     <?php endif; ?>
@@ -48,7 +48,7 @@
                         <td><?php echo $row['car_insurance'] ?>Insurance Type</td>
                         <td><?php echo $row['is_available'] ?></td>
                         <td>
-                            <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
+                            <div class="dropdown"><button class="btn btn-primary dropdown-toggle-btn" data-toggle="dropdown" aria-expanded="false" type="button" >Options <i class="fa fa-caret-down"></i></button>
                             <div class="dropdown-menu" role="menu">
                                 <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_car_details/'.$row["car_id"]);?>">Edit Details</a>
                                 <a class="dropdown-item" role="presentation" href="<?php echo base_url('car_controller/edit_car_pictures/'.$row["car_id"]);?>">Edit Pictures</a>
@@ -60,7 +60,7 @@
                     <?php endforeach; ?>
                 <?php elseif($fetch_data->num_rows() == 0): ?>
                     <tr class="warning no-result">
-                        <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+                        <td colspan="12"><center><i class="fa fa-warning"></i>&nbsp; No Result !!! </center></td>
                     </tr>
                 <?php endif; ?>
             </tbody>       

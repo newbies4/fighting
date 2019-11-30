@@ -751,7 +751,7 @@ xcustom form elements
     <div class="container">
 	<?php echo form_open('car_controller/display_cars'); ?>
 		<div class="row justify-content-center">
-			<div class="form-group col-lg-4">
+			<div class="form-group col-sm-4">
 				<label for="from">Start Date</label>
 				<input type="date" name="from" id="from" class="form-control" min="<?php echo date('Y-m-d');?>">
 				<?= form_error('from'); ?>

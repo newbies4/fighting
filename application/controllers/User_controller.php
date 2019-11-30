@@ -30,11 +30,18 @@ class User_controller extends CI_Controller {
 	{
 		if ($id != null) {
 			$this->load->model('user_model');
-
+			$data['car_id'] = $id;
 			$data['fetch_data'] = $this->user_model->getSelectedCar($id);
 			$data['main_view'] = "user/user_car_details";
 			$this->load->view('layouts/main_user', $data);
 		}
+	}
+
+	public function add_to_storeroom()
+	{
+		echo $this->input->post('carid');
+		echo $this->input->post('from');
+		echo $this->input->post('to');
 	}
 
 	public function index()
