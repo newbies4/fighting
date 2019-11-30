@@ -85,3 +85,37 @@ FROM tbl_car_profile
 	WHERE ((tbl_reserve.start_date NOT BETWEEN '2019-11-28' AND '2019-12-11') AND (tbl_reserve.end_date NOT BETWEEN '2019-11-28' AND '2019-12-11')) 
 	OR (tbl_reserve.start_date IS null)
     GROUP BY car_id, car_model, car_price
+
+
+SELECT (end - start) as Days FROM tbl_storeroom
+
+SELECT * FROM tbl_storeroom INNER JOIN tbl_car_profile ON tbl_storeroom.car_id_fk = tbl_car_profile.car_id
+
+
+SELECT * FROM tbl_storeroom 
+    INNER JOIN tbl_car_profile 
+        ON tbl_storeroom.car_id_fk = tbl_car_profile.car_id
+    INNER JOIN tbl_customer
+        ON tbl_customer.customer_id = tbl_storeroom.customer_id_fk
+
+
+
+SELECT car_model, car_pic_name, car_price, (end - start) as Days FROM tbl_storeroom 
+    INNER JOIN tbl_car_profile 
+        ON tbl_storeroom.car_id_fk = tbl_car_profile.car_id
+    INNER JOIN tbl_customer
+        ON tbl_customer.customer_id = tbl_storeroom.customer_id_fk
+    INNER JOIN tbl_car_pic
+        ON tbl_car_profile.car_id = tbl_car_pic.car_id_fk
+    GROUP BY car_model, car_pic_name, car_price
+
+SELECT car_model, car_pic_name, car_price, (end - start) as Days FROM tbl_storeroom 
+    INNER JOIN tbl_car_profile 
+        ON tbl_storeroom.car_id_fk = tbl_car_profile.car_id
+    INNER JOIN tbl_customer
+        ON tbl_customer.customer_id = tbl_storeroom.customer_id_fk
+    INNER JOIN tbl_car_pic
+        ON tbl_car_profile.car_id = tbl_car_pic.car_id_fk
+    GROUP BY car_model, car_price
+
+

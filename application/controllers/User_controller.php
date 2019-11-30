@@ -37,13 +37,6 @@ class User_controller extends CI_Controller {
 		}
 	}
 
-	public function add_to_storeroom()
-	{
-		echo $this->input->post('carid');
-		echo $this->input->post('from');
-		echo $this->input->post('to');
-	}
-
 	public function index()
 	{
 		// $data['test'] = $_SESSION['logged_in'];
@@ -60,6 +53,14 @@ class User_controller extends CI_Controller {
 	{
 		$this->load->model('customer_model');
 		$data['fetch_data'] = $this->customer_model->get_customer_by_username($user);
+		$data['main_view'] = "user/user_overview";
+
+		$this->load->view('layouts/main_user', $data);
+	}
+	public function storeroom()
+	{
+		$this->load->model('reserve_model');
+		$data['fetch_data'] = $this->reserve_model->getAllStoreroom();
 		$data['main_view'] = "user/user_overview";
 
 		$this->load->view('layouts/main_user', $data);

@@ -23,7 +23,7 @@
                   <!-- SIDEBAR USER TITLE -->
                   <div class="profile-usertitle">
                       <div class="profile-usertitle-name">
-                          <?php echo $fetch_data->Name; ?>
+                          <?php echo $this->session->userdata('customername'); ?>
                       </div>
                       <div class="profile-usertitle-job">
                           VERIFIED
@@ -36,18 +36,18 @@
                   <!-- SIDEBAR MENU -->
                   <div class="profile-usermenu">
                       <ul class="list-unstyled components">
-                      <li class="active">
-                              <a href="<?php echo base_url('index.php/User_controller/user_overview');?>">
+                          <li class="<?php if($this->uri->uri_string() == 'User_controller/storeroom') { echo 'active'; } ?>">
+                              <a href="<?php echo base_url('User_controller/storeroom');?>">
                               <i class="glyphicon glyphicon-home"></i>
                               Overview </a>
                           </li>
-                          <li class="">
+                          <li class="<?php if($this->uri->uri_string() == 'User_controller/user_account_settings/'.$_SESSION['username']) { echo 'active'; } ?>">
                               <a href="<?php echo base_url('User_controller/user_account_settings/'.$_SESSION['username']);?>">
                               <i class="glyphicon glyphicon-user"></i>
                               Account Settings </a>
                           </li>
-                          <li class="">
-                              <a href="<?php echo base_url('User_controller/user_account_storeroom');?>">
+                          <li class="<?php if($this->uri->uri_string() == 'reserve_controller/show_storeroom') { echo 'active'; } ?>">
+                              <a href="<?php echo base_url('reserve_controller/show_storeroom');?>">
                               <i class="glyphicon glyphicon-ok"></i>
                               Storeroom </a>
                           </li>

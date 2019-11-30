@@ -14,7 +14,7 @@ class Login_controller extends CI_Controller {
 
 	}
 
-	public function user_login()
+	public function login()
 	{
 		$this->form_validation->set_rules('username', 'Username', 'required|min_length[3]|max_length[20]');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|max_length[20]');
@@ -49,7 +49,10 @@ class Login_controller extends CI_Controller {
 				);
 				if ($data['fetch_data']->row()->user_type == 'customer')
 				{
-					array_push($sess_data,"blue","yellow");
+					$sess_data = array_merge($sess_data, array('customerid' => $rows->customer_id_fk,
+																	'customername' => $rows->name
+																));
+
 				}
 				$this->session->set_userdata($sess_data);
 				redirect('user_controller/index', 'refresh');

@@ -15,7 +15,7 @@
         <section class="col 12 col-sm-6 col-lg-3">
             
 <!-- <form class="admin-login-form-signin"> -->
-<?= form_open('login_controller/user_login', 'class="admin-login-form-signin"') ?>
+<?= form_open('login_controller/login', 'class="admin-login-form-signin"') ?>
             <?php if($this->session->flashdata('message')): ?>
                 <p class="alert alert-success"> <?php echo $this->session->flashdata('message'); ?></p>
             <?php endif; ?>
