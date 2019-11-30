@@ -41,3 +41,7 @@ $("#front").change(function() {
 $("#interior").change(function() {
   readURL3(this);
 });*/
+
+$(document).on('click', 'ul.list-unstyled li', function() {
+  $(this).addClass('active').siblings().removeClass('active')
+});

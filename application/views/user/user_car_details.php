@@ -41,7 +41,7 @@
         </div>  
         
         <div class="details col-sm-4">
-        <?= form_open('user_controller/add_to_storeroom') ?>
+        <?= form_open('reserve_controller/add_to_storeroom') ?>
             <div class="action">
                 <br>
                 <h5> Select Date of Rent </h5>

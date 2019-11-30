@@ -12,10 +12,9 @@
                             <tr>
                               <th>Model</th>
                               <th>Picture</th>
-                              <th style="width:8%">Quantity</th>
-                              <th>Price</th>
-                              <th>Driver</th>
-                              <th>Subtotal</th>                              
+                              <th style="width:8%">Days</th>
+                              <th>Subtotal</th>                            
+                              <th>Action</th>                            
                             </tr>
                           </thead>
                           <!-- Table head -->
@@ -23,28 +22,34 @@
                           <!-- Table body -->
                           
                           <tbody>
-                            <!-- <?php if($fetch_data->num_rows() == 0): ?>
-                              <tr class="warning no-result">
-                                <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
-                              </tr>
-                            <?php endif; ?>
-                            <?php if($fetch_data->num_rows() > 0):?>
+                            <?php if($fetch_data->num_rows() > 0): ?>
                               <?php foreach($fetch_data->result_array() as $row): ?>
-                               <tr>
-                              <td><?php echo $row['reserve_date'] ?></td>
-                              <td><?php echo $row['pick_up_date'] ?></td>
-                              <td><?php echo $row['pick_up_time'] ?></td> 
-                              <td><?php echo $row['reserve_status'] ?></td>  
-                            </tr>
-                                <td colspan="5" align ="right">Total</td>
-                                <td align="right">0.00</td>
-                            <?php endforeach; ?>
-                            <?php endif; ?> -->
+                                <tr>
+                                  <td><?php echo $row['car_model'] ?></td>
+                                  <td><?php echo $row['car_pic_name'] ?></td>
+                                  <td><?php echo $row['days'] ?></td>
+                                  <td><?php echo $row['car_price'] ?></td>
+                                  <td>
+                                    <div class="dropdown">
+                                      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dropdown button
+                                      </button>
+                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              <?php endforeach; ?>
+                            <?php endif; ?>
                           </tbody>
                           <!-- Table body -->
-                        </table>                           
+                        </table>
+                        <p>Total Payment <?php echo $total;?></p>                    
                 </div>
-              <a class="btn btn-primary modal-open pull pull-right" href="">Reserve</a>
+              <a class="btn btn-primary modal-open pull pull-right" href="<?php echo base_url('reserve_controller/add_to_reserve') ?>">Reserve</a>
             </div>
         </div>
     </div>

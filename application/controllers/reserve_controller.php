@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class reserve_controller extends CI_Controller {
+class Reserve_controller extends CI_Controller {
 
 	public function __construct()
     {
@@ -12,37 +12,56 @@ class reserve_controller extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
     }
 
+    public function add_to_reserve()
+    {
+        $custid = $this->session->userdata('customerid');
+        $totalpayment = $this->reserve_model->getTotalPayment($custid);
+        $dates = $this->reserve_model->getDates($custid);
+        $start = $dates->start;
+        $end = $dates->end;
+        $dataArr = array(
+            'customer_id' => $custid,
+            'total_payment' => $totalpayment,
+            'start_date' => $start,
+            'end_date' => $end
+        );
+        $reserveid = $this->reserve_model->addToReserve($dataArr);
+        $this->reserve_model->addToReserveDetails($reserveid, $custid);
+        
+        $data['fetch_data'] = $this->reserve_model->getAllStoreroom();
+        $data['total'] = $this->reserve_model->getTotalPayment($_SESSION['customerid']);
+        $data['main_view'] = "user/reserve_success_message";
+        $this->load->view('layouts/main_user', $data);
+    }
+
+    public function add_to_storeroom()
+    {
+        if (isset($_SESSION['customerid'])) {
+            echo $this->input->post('carid');
+            echo $this->input->post('from');
+            echo $this->input->post('to');
+            echo $this->session->userdata('customerid');
+
+            $data = array(
+                'car_id_fk' => $this->input->post('carid'),
+                'start' => $this->input->post('from'),
+                'end' => $this->input->post('to'),
+                'customer_id_fk' => $this->session->userdata('customerid')
+            );
+
+            $this->reserve_model->addToStoreroom($data);
+            $data['main_view'] = "user/storeroom_redirect";
+            $this->load->view('layouts/main_user', $data);
+        }
+    }
+
     // ========================================================================================= //
     //                                          FRONT END 
-	public function show($start = 0)
+	public function show_storeroom()
 	{
-        $this->load->library('pagination');
-
-        $config['base_url'] = base_url().'employee_controller/show/';
-        $config['total_rows'] = $this->reserve_model->get_count();
-        $config['per_page'] = 5;
-
-        $config['full_tag_open'] = '<ul class="pagination justify-content-end">';
-        $config['full_tag_close'] = '</ul>';
-        $config['first_tag_open'] = '<li page-item">';
-        $config['first_tag_close'] = '</li>';
-        $config['next_tag_open'] = '<li class="page-item">';
-        $config['next_tag_close'] = '</li>';
-        $config['prev_tag_open'] = '<li class="page-item">';
-        $config['prev_tag_close'] = '</li>';
-        $config['cur_tag_open'] = '<li class="page-item active"><a class="page-link">';
-        $config['cur_tag_close'] = '</a></li>';
-        $config['num_tag_open'] = '<li class="page-item">';
-        $config['num_tag_close'] = '</li>';
-        $config['last_tag_open'] = '<li class="page-item">';
-        $config['last_tag_close'] = '</li>';
-        $config['attributes'] = array('class' => 'page-link');
-
-        $this->pagination->initialize($config);
-        $data['pagination'] = $this->pagination->create_links();
-
         // fetch from database
-        $data['fetch_data'] = $this->reserve_model->fetch_data($config['per_page'], $start);
+        $data['fetch_data'] = $this->reserve_model->getAllStoreroom();
+        $data['total'] = $this->reserve_model->getTotalPayment($_SESSION['customerid']);
 
         $data['main_view'] = "user/user_account_storeroom";
 
