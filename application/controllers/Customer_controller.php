@@ -61,10 +61,10 @@ class Customer_controller extends CI_Controller {
 		$this->form_validation->set_rules('name', 'Name', 'required|min_length[2]|max_length[50]');
         $this->form_validation->set_rules('age', 'Age', 'required|min_length[2]|max_length[50]');
         $this->form_validation->set_rules('address', 'Address', 'required|min_length[2]|max_length[50]');
-        $this->form_validation->set_rules('contactno', 'Contact No..', 'required|min_length[7]|max_length[15]|numeric');
+        $this->form_validation->set_rules('contactno', 'Contact No..', 'required|min_length[11]|max_length[11]|numeric');
         $this->form_validation->set_rules('date', 'Selecte Date', 'required');
 		$this->form_validation->set_rules('gender', 'Select Gender', 'required|min_length[2]|max_length[50]');
-        $this->form_validation->set_rules('licenseno', 'license no.', 'required|min_length[7]|max_length[15]');
+        $this->form_validation->set_rules('licenseno', 'license no.', 'required|min_length[13]|max_length[13]');
         $this->form_validation->set_rules('email', 'Email', 'required|min_length[2]|max_length[50]');
 
 		if ($this->form_validation->run() == FALSE)
@@ -191,5 +191,13 @@ class Customer_controller extends CI_Controller {
             redirect('User_controller/user_signup_credentials');
         }
     } */
-    
+    public function delete_customer($id) {
+        $result = $this->customer_model->delete_customer($id);
+        if ($result) {
+            $this->session->set_flashdata('success_msg', 'Customer Deleted');
+        } else {
+            $this->session->set_flashdata('error_msg', 'Faill to delete record');
+        }
+        redirect('customer_controller/show');
+    }
 }

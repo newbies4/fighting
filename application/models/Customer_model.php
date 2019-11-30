@@ -69,5 +69,14 @@ class Customer_model extends CI_Model {
 		}*/
 	}
 	
+	public function delete_customer($id) {
+		$this->db->where('customer_id', $id);
+		$this->db->delete('tbl_customer');
+		if ($this->db->affected_rows() > 0){
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 ?>

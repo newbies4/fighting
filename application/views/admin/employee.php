@@ -42,7 +42,8 @@
                   <td><?php echo $row['contact'] ?></td>                   
                 <td>
                 <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" >Options</button>
-                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo base_url('employee_controller/edit_employee/'.$row["id"]);?>">Edit</a><a class="dropdown-item" role="presentation" href="<?php echo base_url('employee_controller/delete_employee/'.$row["id"]);?>">Delete</a></div>
+                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo base_url('employee_controller/edit_employee/'.$row["id"]);?>">Edit</a>
+                <a class="dropdown-item" role="presentation" href="<?php echo base_url('employee_controller/delete_employee/'.$row["id"]);?>">Delete</a></div>
                 </div>
                 </td>
               </tr>

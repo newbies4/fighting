@@ -672,7 +672,6 @@ xcustom form elements
  
 <main>
 
- 
 <!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
   <!--Indicators-->

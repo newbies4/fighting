@@ -669,11 +669,12 @@ xcustom form elements
 </style>
 </header>
       <!--/.Navbar-->
- 
+ <br>
+ <br>
+ <br>
+ <br>
 <main>
-<br>
- <br>
- <br>
+
 <!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
   <!--Indicators-->
