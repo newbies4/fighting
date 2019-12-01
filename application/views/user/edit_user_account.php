@@ -23,7 +23,7 @@
             <label for="fullname" style="font-weight:bold;">Full Name</label>
           </div>
           <div class="col-md-8 col-6">
-            <input type="text" name="fullname" id="fullname" placeholder="Full Name" value="<?php echo $fetch_data->Name; ?>">
+            <input type="text" class="form-control name="fullname" id="fullname" placeholder="Full Name" value="<?php echo $fetch_data->Name; ?>">
           </div>
         </div>
         <hr />
@@ -34,7 +34,7 @@
             <label for="birthdate" style="font-weight:bold;">Birth Date</label>
           </div>
           <div class="col-md-8 col-6">
-            <input type="date" name="birthdate" id="birthdate" placeholder="Birth Date" value="<?php echo $fetch_data->Birth_Date; ?>">
+            <input type="date" class="form-control" name="birthdate" id="birthdate" placeholder="Birth Date" value="<?php echo $fetch_data->Birth_Date; ?>">
           </div>
         </div>
         <hr />
@@ -45,7 +45,7 @@
             <label style="font-weight:bold;">Gender</label>
           </div>
           <div class="col-md-8 col-6">
-        	<select id="gender" name="gender">
+        	<select id="gender" class="form-control" name="gender">
 				<option <?php echo ($fetch_data->Gender == 'male') ? 'selected' : ''; ?> <?php echo set_select('gender', 'male', TRUE); ?> value="male">Male</option>
 				<option <?php echo ($fetch_data->Gender == 'female') ? 'selected' : ''; ?> <?php echo set_select('gender', 'female'); ?> value="female">Female</option>  
 			</select>
@@ -58,7 +58,7 @@
             <label style="font-weight:bold;">Current Address</label>
           </div>
           <div class="col-md-8 col-6">
-            <input type="text" name="address" id="address" placeholder="Address" value="<?php echo $fetch_data->current_address; ?>">
+            <input type="text" class="form-control" name="address" id="address" placeholder="Address" value="<?php echo $fetch_data->current_address; ?>">
           </div>
         </div>
         <hr /> 
@@ -67,7 +67,7 @@
             <label style="font-weight:bold;">Contact Number</label>
           </div>
           <div class="col-md-8 col-6">
-            <input type="text" name="contactno" id="contactno" placeholder="Contact Number" value="<?php echo $fetch_data->contact_no; ?>">
+            <input type="text" class="form-control" name="contactno" id="contactno" placeholder="Contact Number" value="<?php echo $fetch_data->contact_no; ?>">
           </div>
         </div>
         <hr />
@@ -78,7 +78,7 @@
           </div>
           <div class="col-md-8 col-6">
             <p></p>
-            <input type="email" name="email" id="email" placeholder="Email Address" value="<?php echo $fetch_data->email; ?>">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" value="<?php echo $fetch_data->email; ?>">
           </div>
         </div>
         <hr />
@@ -88,7 +88,7 @@
             <label style="font-weight:bold;">License Number</label>
           </div>
           <div class="col-md-8 col-6">
-            <input type="text" name="licenseno" id="licenseno" placeholder="License Number" value="<?php echo $fetch_data->license_no; ?>">
+            <input type="text" class="form-control" name="licenseno" id="licenseno" placeholder="License Number" value="<?php echo $fetch_data->license_no; ?>">
           </div>
         </div>
         <hr />
