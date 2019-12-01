@@ -18,7 +18,7 @@
 	 		<h2><center><i class="fa fa-user"></i>   <legend>Set up your Account</legend> </center></h2>
             <hr/>
 
-            <input type="text" name="customerid" value="<?php echo $customerid ?>" class="form-control" />
+            <input type="hidden" name="customerid" value="<?php echo $customerid ?>" class="form-control" />
 
 			<div class="form-group">
 				<label>Username *</label>

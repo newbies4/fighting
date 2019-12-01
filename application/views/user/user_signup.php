@@ -35,6 +35,15 @@
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="gender">Gender *</label>
+				<select id="gender" class="form-control <?= (form_error('gender') == '' ? '':'is-invalid') ?>" name="gender">
+					<option <?php echo set_select('gender', 'male', TRUE); ?> value="male">Male</option>
+					<option <?php echo set_select('gender', 'female'); ?> value="female">Female</option>              
+				</select>
+				<?= form_error('gender'); ?>
+				<!-- <input type="text" name="address" class="form-control <?= (form_error('address') == '' ? '':'is-invalid') ?>" id="address" placeholder="Current Address" value="<?php echo set_value('address'); ?>"/> -->
+			</div>
+			<div class="form-group">
 				<label for="address">Current Address *</label>
 				<input type="text" name="address" class="form-control <?= (form_error('address') == '' ? '':'is-invalid') ?>" id="address" placeholder="Current Address" value="<?php echo set_value('address'); ?>"/>
 			</div>

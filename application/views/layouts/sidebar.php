@@ -18,8 +18,8 @@
                 </li>
             </ul>
         </li>
-        <li class="<?php if($this->uri->uri_string() == 'admin_controller/reservation') { echo 'active'; } ?>">
-            <a href="<?php echo base_url('admin_controller/reservation'); ?>">RESERVATION</a>
+        <li class="<?php if($this->uri->uri_string() == 'reserve_controller/show_reservation') { echo 'active'; } ?>">
+            <a href="<?php echo base_url('reserve_controller/show_reservation'); ?>">RESERVATION</a>
         </li>
         <li class="<?php if($this->uri->uri_string() == 'car_controller/show') { echo 'active'; } ?>">
             <a href="<?php echo base_url('car_controller/show'); ?>">CARS</a>

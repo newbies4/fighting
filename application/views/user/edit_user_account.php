@@ -1,7 +1,6 @@
 <?php $this->load->view('user/user_profile_sidebar'); ?>
 
 
-
 <div class="col-md-9">
   <div class="user-nav">
     <ul class="nav nav-tabs">
@@ -21,10 +20,10 @@
         <hr />
         <div class="row">
           <div class="col-sm-3 col-md-2 col-5">
-            <label style="font-weight:bold;">Full Name</label>
+            <label for="fullname" style="font-weight:bold;">Full Name</label>
           </div>
           <div class="col-md-8 col-6">
-            <p><?php echo $fetch_data->Name; ?></p>
+            <input type="text" name="fullname" id="fullname" placeholder="Full Name" value="<?php echo $fetch_data->Name; ?>">
           </div>
         </div>
         <hr />
@@ -32,10 +31,10 @@
         <div class="row">
 
           <div class="col-sm-3 col-md-2 col-5">
-            <label style="font-weight:bold;">Birth Date</label>
+            <label for="birthdate" style="font-weight:bold;">Birth Date</label>
           </div>
           <div class="col-md-8 col-6">
-            <p><?php echo $fetch_data->Birth_Date; ?></p>
+            <input type="date" name="birthdate" id="birthdate" placeholder="Birth Date" value="<?php echo $fetch_data->Birth_Date; ?>">
           </div>
         </div>
         <hr />
@@ -46,7 +45,10 @@
             <label style="font-weight:bold;">Gender</label>
           </div>
           <div class="col-md-8 col-6">
-            <p><?php echo $fetch_data->Gender; ?></p>
+        	<select id="gender" name="gender">
+				<option <?php echo ($fetch_data->Gender == 'male') ? 'selected' : ''; ?> <?php echo set_select('gender', 'male', TRUE); ?> value="male">Male</option>
+				<option <?php echo ($fetch_data->Gender == 'female') ? 'selected' : ''; ?> <?php echo set_select('gender', 'female'); ?> value="female">Female</option>  
+			</select>
           </div>
         </div>
         <hr />
@@ -56,7 +58,7 @@
             <label style="font-weight:bold;">Current Address</label>
           </div>
           <div class="col-md-8 col-6">
-            <p><?php echo $fetch_data->current_address; ?></p>
+            <input type="text" name="address" id="address" placeholder="Address" value="<?php echo $fetch_data->current_address; ?>">
           </div>
         </div>
         <hr /> 
@@ -65,7 +67,7 @@
             <label style="font-weight:bold;">Contact Number</label>
           </div>
           <div class="col-md-8 col-6">
-            <p><?php echo $fetch_data->contact_no; ?></p>
+            <input type="text" name="contactno" id="contactno" placeholder="Contact Number" value="<?php echo $fetch_data->contact_no; ?>">
           </div>
         </div>
         <hr />
@@ -75,7 +77,8 @@
             <label style="font-weight:bold;">Email Address</label>
           </div>
           <div class="col-md-8 col-6">
-            <p><?php echo $fetch_data->email; ?></p>
+            <p></p>
+            <input type="email" name="email" id="email" placeholder="Email Address" value="<?php echo $fetch_data->email; ?>">
           </div>
         </div>
         <hr />
@@ -85,12 +88,12 @@
             <label style="font-weight:bold;">License Number</label>
           </div>
           <div class="col-md-8 col-6">
-            <p><?php echo $fetch_data->license_no; ?></p>
+            <input type="text" name="licenseno" id="licenseno" placeholder="License Number" value="<?php echo $fetch_data->license_no; ?>">
           </div>
         </div>
         <hr />
 
-        <a class="btn btn-primary pull pull-right" href="<?php echo base_url('customer_controller/edit_account/'.$_SESSION['username']); ?>">Edit</a> 
+        <a class="btn btn-primary modal-open pull pull-right" href="">Edit</a> 
       </div>
       <!-- end information settings-->
 
@@ -126,11 +129,5 @@
 
 
 
-
 </div>
 </div>
-
-<br>
-
-
- 

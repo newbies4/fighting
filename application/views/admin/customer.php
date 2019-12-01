@@ -15,7 +15,10 @@
             <tr>   
             <th id="trs-hd" class="">License No.</th>      
             <th id="trs-hd" class="">Name</th>
+<<<<<<< HEAD
             
+=======
+>>>>>>> 2349e3bc7edf7f1fed13d0178252dcc29cc246ed
             <th id="trs-hd" class="">Current Address</th> 
             <th id="trs-hd" class="">Contact No.</th>
             <th id="trs-hd" class="">Email Address</th>
@@ -36,7 +39,6 @@
               <tr>
                 <td><?php echo $row['license_no'] ?></td>
                 <td><?php echo $row['Name'] ?></td>
-                
                 <td><?php echo $row['current_address'] ?></td> 
                 <td><?php echo $row['contact_no'] ?></td> 
                 <td><?php echo $row['email'] ?></td>   

@@ -9,7 +9,7 @@ class Sign_up_controller extends CI_Controller {
 
         // $this->load->library('form_validation');
         $this->load->model('customer_model');
-		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+		$this->form_validation->set_error_delimiters('<div class="invalid-feedback">', '</div>');
     }
     
     //Signup
@@ -20,6 +20,7 @@ class Sign_up_controller extends CI_Controller {
         // $this->form_validation->set_rules('input name', 'Display Error Name', 'validation');
 		$this->form_validation->set_rules('fname', 'First Name', 'required|min_length[2]|max_length[50]');
         $this->form_validation->set_rules('lname', 'Last Name', 'required|min_length[2]|max_length[50]');
+        $this->form_validation->set_rules('gender', 'Gender', 'required');
         $this->form_validation->set_rules('address', 'Address', 'required|min_length[2]|max_length[50]');
         $this->form_validation->set_rules('contactno', 'Contact No..', 'required|min_length[7]|max_length[15]|numeric');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[2]|max_length[50]');
@@ -40,7 +41,7 @@ class Sign_up_controller extends CI_Controller {
         	$dataArr = array(
                 // database column name => input field name
         		'Name' => $fname . ' ' . $lname,
-				
+				'Gender' => $this->input->post('gender'),
 				'current_address' => $this->input->post('address'),
                 'contact_no' => $this->input->post('contactno'),
                 
