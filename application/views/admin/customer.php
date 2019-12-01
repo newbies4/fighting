@@ -1,7 +1,7 @@
 <div class="admin-content">
 <div class="col-md-12 search-table-col">
     <header>
-        <h3> CUSTOMERS </h3>
+        <h3> Customers </h3>
 
     </header>
     <a class="btn btn-primary"  href="<?php echo base_url();?>index.php/admin_controller/add_customer">Add Customer</a>

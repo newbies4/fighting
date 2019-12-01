@@ -1,7 +1,7 @@
 <div class="admin-content">
 <div class="col-md-12 search-table-col">
 <header>
-    <h3> CARS </h3>
+    <h3> Cars </h3>
     </header>
     
     <a class="btn btn-primary" href="<?php echo base_url('car_controller/add_car');?>">Add New</a>
