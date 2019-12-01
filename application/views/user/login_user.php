@@ -20,7 +20,7 @@
                 <p class="alert alert-success"> <?php echo $this->session->flashdata('message'); ?></p>
             <?php endif; ?>
     <img src=<?php echo base_url('assets/Content-filter/img/logo.png')?> class="logo">  
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 font-weight-normal"><center>Please sign in</center></h1>
 
     <div class="form-group">
         <label for="username">Username</label>

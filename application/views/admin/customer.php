@@ -1,7 +1,7 @@
 <div class="admin-content">
 <div class="col-md-12 search-table-col">
     <header>
-        <h3> CUSTOMERS </h3>
+        <h3> Customers </h3>
 
     </header>
     <?php if($this->session->flashdata('success_msg')): ?>

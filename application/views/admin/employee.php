@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <div class="col-md-12 search-table-col">
     <header>
-      <h3>EMPLOYEES</h3> 
+      <h3>Employees</h3> 
     </header>
     <?php if($this->session->flashdata('success_msg')): ?>
     <p class="alert alert-success"><?php echo $this->session->flashdata('success_msg'); ?></p>

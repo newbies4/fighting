@@ -1,7 +1,7 @@
 <div class="admin-content">
 <div class="container"> 
   <header>
-    <left><h3>ADD EMPLOYEE </h3></left>
+    <center><h3>ADD EMPLOYEE </h3></center>
     <br>
   </header>
   <!-- adding employee success message -->
