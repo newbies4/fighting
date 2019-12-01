@@ -14,20 +14,11 @@
   <div class="form-row">
 
     <div class="col-md-4 mb-3">
-<<<<<<< HEAD
-      <label for="validationDefault01"></label>
-      <input type="text" class="form-control <?= (form_error('name') == '' ? '':'is-invalid') ?>"  placeholder="Full Name(FN/MN/LN)" name="name" id="name" value="<?php echo set_value('name'); ?>" required>
-    </div>
-
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault02"></label>
-=======
       <label for="validationDefault01">Name *</label>
       <input type="text" class="form-control <?= (form_error('name') == '' ? '':'is-invalid') ?>"  placeholder="Name" name="name" id="name" value="<?php echo set_value('name'); ?>" required>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationDefault02">Address *</label>
->>>>>>> 126ae85c69afa9709088107c6447608eaaef2f8f
       <input type="text" class="form-control <?= (form_error('address') == '' ? '':'is-invalid') ?>" name="address" id="address" placeholder="Address" value="<?php echo set_value('address'); ?>" required>
     </div>
     <div class="col-md-4 mb-3">
@@ -47,22 +38,12 @@
       </select>
     </div>
     <div class="col-md-4 mb-3">
-<<<<<<< HEAD
-      <label for="validationDefault02"></label>
-      <input type="text" class="form-control <?= (form_error('email') == '' ? '':'is-invalid') ?>" name="email" id="email" placeholder="Email Address" value="<?php echo set_value('email'); ?>" required>
-=======
       <label for="validationDefault02">License No.</label>
       <input type="text" class="form-control <?= (form_error('licenseno') == '' ? '':'is-invalid') ?>" name="licenseno" id="license no." placeholder="License No." value="<?php echo set_value('licenseno'); ?>" required>
->>>>>>> 126ae85c69afa9709088107c6447608eaaef2f8f
     </div>
     <div class="col-md-4 mb-3">
-<<<<<<< HEAD
-      <label for="validationDefault02"></label>
-      <input type="text" class="form-control <?= (form_error('licenseno') == '' ? '':'is-invalid') ?>" name="licenseno" id="license no." placeholder="License No.(***-**-******) " value="<?php echo set_value('licenseno'); ?>" required>
-=======
       <label for="validationDefault02">Email Address *</label>
       <input type="text" class="form-control <?= (form_error('email') == '' ? '':'is-invalid') ?>" name="email" id="email" placeholder="Email Address" value="<?php echo set_value('email'); ?>" required>
->>>>>>> 126ae85c69afa9709088107c6447608eaaef2f8f
     </div>
 
    
