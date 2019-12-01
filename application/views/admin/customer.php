@@ -11,7 +11,6 @@
         <thead class="bill-header cs">
             <tr>        
             <th id="trs-hd" class="">Name</th>
-            <th id="trs-hd" class="">Age</th>
             <th id="trs-hd" class="">Current Address</th> 
             <th id="trs-hd" class="">Contact No.</th>
             <th id="trs-hd" class="">Email Address</th>
@@ -31,7 +30,6 @@
             <?php foreach($fetch_data->result_array() as $row): ?>
               <tr>
                 <td><?php echo $row['Name'] ?></td>
-                <td><?php echo $row['age'] ?></td>
                 <td><?php echo $row['current_address'] ?></td> 
                 <td><?php echo $row['contact_no'] ?></td> 
                 <td><?php echo $row['email'] ?></td>   

@@ -9,7 +9,7 @@ class Reserve_controller extends CI_Controller {
 
         // $this->load->library('form_validation');
         $this->load->model('reserve_model');
-		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+		$this->form_validation->set_error_delimiters('<div class="invalid-feedback">', '</div>');
     }
 
 
@@ -25,7 +25,10 @@ class Reserve_controller extends CI_Controller {
     public function view_details($id)
     {
         if ($id != null) {
-            
+            $data['fetch_data'] = $this->reserve_model->showReservationDetails($id);
+            $data['main_view'] = "admin/reservation_details";
+
+            $this->load->view('layouts/main', $data);
         }
     }
 

@@ -41,8 +41,8 @@
                               <i class="glyphicon glyphicon-home"></i>
                               Overview </a>
                           </li>
-                          <li class="<?php if($this->uri->uri_string() == 'User_controller/user_account_settings/'.$_SESSION['username']) { echo 'active'; } ?>">
-                              <a href="<?php echo base_url('User_controller/user_account_settings/'.$_SESSION['username']);?>">
+                          <li class="<?php if($this->uri->uri_string() == 'user_controller/user_account_settings/'.$_SESSION['username']) { echo 'active'; } ?>">
+                              <a href="<?php echo base_url('user_controller/user_account_settings/'.$_SESSION['username']);?>">
                               <i class="glyphicon glyphicon-user"></i>
                               Account Settings </a>
                           </li>

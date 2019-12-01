@@ -129,3 +129,32 @@ SELECT * FROM tbl_reserve
     JOIN tbl_car_profile
         ON tbl_reserve_details.car_id_fk = tbl_car_profile.car_id
     WHERE reserve_id = '52'
+
+
+SELECT *,(end_date - start_date) as days FROM tbl_reserve
+    JOIN tbl_reserve_details
+        ON tbl_reserve.reserve_id = tbl_reserve_details.reserve_id_fk
+    JOIN tbl_customer
+        ON tbl_reserve.customer_id_fk = tbl_customer.customer_id
+    JOIN tbl_car_profile
+        ON tbl_reserve_details.car_id_fk = tbl_car_profile.car_id
+    JOIN tbl_car_pic
+        ON tbl_car_profile.car_id = tbl_car_pic.car_id_fk
+    WHERE reserve_id = '52'
+    GROUP BY car_owner, car_model, car_brand, car_platenumber
+
+
+#account setting, user side query
+SELECT * FROM tbl_useraccount
+    JOIN tbl_customer
+        ON tbl_useraccount.customer_id_fk = tbl_customer.customer_id
+    WHERE username = 'haidz'
+
+
+
+
+
+
+
+
+

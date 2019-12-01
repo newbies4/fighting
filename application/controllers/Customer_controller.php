@@ -9,7 +9,7 @@ class Customer_controller extends CI_Controller {
 
         // $this->load->library('form_validation');
         $this->load->model('customer_model');
-		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+		$this->form_validation->set_error_delimiters('<div class="invalid-feedback">', '</div>');
     }
     
     // ========================================================================================= //
@@ -49,6 +49,15 @@ class Customer_controller extends CI_Controller {
         $this->load->view('layouts/main', $data);
         
 	}
+
+
+    public function edit_account($user=NULL)
+    {
+        // $data['fetch_data'] = $this->customer_model->get_customer_by_id($id);
+        $data['fetch_data'] = $this->customer_model->get_customer_by_username($user);
+        $data['main_view'] = "user/edit_user_account";
+        $this->load->view('layouts/main_user', $data);
+    }
 
     
     // ========================================================================================= //

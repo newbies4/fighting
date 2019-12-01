@@ -21,6 +21,23 @@ class Reserve_model extends CI_Model {
 		return $query;
 	}
 
+	public function showReservationDetails($id)
+	{
+		$queryString = "SELECT *, (end_date - start_date) as days FROM tbl_reserve
+						    JOIN tbl_reserve_details
+						        ON tbl_reserve.reserve_id = tbl_reserve_details.reserve_id_fk
+						    JOIN tbl_customer
+						        ON tbl_reserve.customer_id_fk = tbl_customer.customer_id
+						    JOIN tbl_car_profile
+						        ON tbl_reserve_details.car_id_fk = tbl_car_profile.car_id
+						    JOIN tbl_car_pic
+						        ON tbl_car_profile.car_id = tbl_car_pic.car_id_fk
+						    WHERE reserve_id = '{$id}'
+						    GROUP BY car_owner, car_model, car_brand, car_platenumber";
+		$query = $this->db->query($queryString);
+		return $query;
+	}
+
 	public function updateReservationStatus($id, $action) {
 		$queryString = "UPDATE tbl_reserve SET reserve_status = '{$action}' WHERE reserve_id = '{$id}'";
 		$this->db->query($queryString);

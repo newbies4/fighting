@@ -9,7 +9,7 @@ class Employee_controller extends CI_Controller {
 
         // $this->load->library('form_validation');
         $this->load->model('employee_model');
-		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+		$this->form_validation->set_error_delimiters('<div class="invalid-feedback">', '</div>');
     }
 
     // ========================================================================================= //

@@ -7,7 +7,7 @@ class Car_controller extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('car_model');
-		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+		$this->form_validation->set_error_delimiters('<div class="invalid-feedback">', '</div>');
     }
 
 	public function display_cars()
