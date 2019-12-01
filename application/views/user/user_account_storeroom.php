@@ -29,18 +29,7 @@
                                   <td><?php echo $row['car_pic_name'] ?></td>
                                   <td><?php echo $row['days'] ?></td>
                                   <td><?php echo $row['car_price'] ?></td>
-                                  <td>
-                                    <div class="dropdown">
-                                      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Dropdown button
-                                      </button>
-                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                      </div>
-                                    </div>
-                                  </td>
+                                  <td><a class="btn btn-danger" href="<?php echo base_url('reserve_controller/remove_storeroom/'.$row['storeroom_id']) ?>" role="button">Remove</a></td>
                                 </tr>
                               <?php endforeach; ?>
                             <?php endif; ?>

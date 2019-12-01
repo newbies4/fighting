@@ -12,6 +12,45 @@ class Reserve_controller extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
     }
 
+
+    // ====================== ADMIN SIDE ======================
+
+    public function show_reservation()
+    {
+        $data['fetch_data'] = $this->reserve_model->showReservation();
+        $data['main_view'] = "admin/reservation";
+        $this->load->view('layouts/main', $data);
+    }
+
+    public function view_details($id)
+    {
+        if ($id != null) {
+            
+        }
+    }
+
+    public function update_reservation_status($id, $action)
+    {
+        if ($id != null && $action != null) {
+            $this->reserve_model->updateReservationStatus($id, $action);
+            if ($action == 'confirmed'){
+                $this->session->set_flashdata('reserve_message', 'Reservation confirmed');
+            } elseif ($action == 'declined') {
+                $this->session->set_flashdata('reserve_message', 'Reservation declined');
+            }
+            redirect('reserve_controller/show_reservation', 'refresh');
+        }
+    }
+
+
+    // ====================== USER SIDE ======================
+
+    public function remove_storeroom($id)
+    {
+        $this->reserve_model->removeStoreroom($id);
+        $this->show_storeroom();
+    }
+
     public function add_to_reserve()
     {
         $custid = $this->session->userdata('customerid');
@@ -20,16 +59,17 @@ class Reserve_controller extends CI_Controller {
         $start = $dates->start;
         $end = $dates->end;
         $dataArr = array(
-            'customer_id' => $custid,
+            'customer_id_fk' => $custid,
             'total_payment' => $totalpayment,
             'start_date' => $start,
             'end_date' => $end
         );
         $reserveid = $this->reserve_model->addToReserve($dataArr);
         $this->reserve_model->addToReserveDetails($reserveid, $custid);
+        $this->reserve_model->deleteStoreroom($custid);
         
         $data['fetch_data'] = $this->reserve_model->getAllStoreroom();
-        $data['total'] = $this->reserve_model->getTotalPayment($_SESSION['customerid']);
+        $data['total'] = $this->reserve_model->getTotalPayment($custid);
         $data['main_view'] = "user/reserve_success_message";
         $this->load->view('layouts/main_user', $data);
     }

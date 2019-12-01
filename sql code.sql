@@ -119,3 +119,13 @@ SELECT car_model, car_pic_name, car_price, (end - start) as Days FROM tbl_storer
     GROUP BY car_model, car_price
 
 
+
+#reservation details
+SELECT * FROM tbl_reserve
+    JOIN tbl_reserve_details
+        ON tbl_reserve.reserve_id = tbl_reserve_details.reserve_id_fk
+    JOIN tbl_customer
+        ON tbl_reserve.customer_id_fk = tbl_customer.customer_id
+    JOIN tbl_car_profile
+        ON tbl_reserve_details.car_id_fk = tbl_car_profile.car_id
+    WHERE reserve_id = '52'

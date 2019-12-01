@@ -46,7 +46,7 @@
                 <br>
                 <h5> Select Date of Rent </h5>
                 <br>
-                <input type="text" name="carid" value="<?php echo $car_id ?>">
+                <input type="hidden" name="carid" value="<?php echo $car_id ?>">
                 <label >From</label>
                 <input readonly="readonly" name="from" type="text" class="form-control" value="<?php echo $this->session->tempdata('from'); ?>">
             <br>
