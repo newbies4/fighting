@@ -135,7 +135,7 @@ class Car_controller extends CI_Controller {
     {
     	//echo '<script type="text/javascript">alert("your alert);</script>';
     	// Setting up the rules
-		$this->form_validation->set_rules('owner', 'Car Owner', 'required|min_length[2]|max_length[50]');
+	
 		$this->form_validation->set_rules('model', 'Model', 'required|min_length[2]|max_length[50]');
 		$this->form_validation->set_rules('brand', 'Brand', 'required|min_length[2]|max_length[50]');
 		$this->form_validation->set_rules('type', 'Type', 'required|min_length[2]|max_length[15]');
@@ -157,7 +157,7 @@ class Car_controller extends CI_Controller {
         } else {
     		$dataArr = array(
     			'car_id' => $this->input->post('carid'),		
-        		'car_owner' => $this->input->post('owner'),
+        		
 				'car_model' => $this->input->post('model'),
 				'car_brand' => $this->input->post('brand'),
 				'car_type' => $this->input->post('type'),
@@ -201,7 +201,7 @@ class Car_controller extends CI_Controller {
 	public function add_car_data()
 	{
 		// Setting up the rules
-		$this->form_validation->set_rules('owner', 'Car Owner', 'required|min_length[2]|max_length[50]');
+	
 		$this->form_validation->set_rules('model', 'Model', 'required|min_length[2]|max_length[50]');
 		$this->form_validation->set_rules('brand', 'Brand', 'required|min_length[2]|max_length[50]');
 		$this->form_validation->set_rules('type', 'Type', 'required|min_length[2]|max_length[15]');
@@ -220,7 +220,7 @@ class Car_controller extends CI_Controller {
 			$this->load->view('layouts/main', $data);
         } else {
     		$dataArr = array(
-        		'car_owner' => $this->input->post('owner'),
+        		
 				'car_model' => $this->input->post('model'),
 				'car_brand' => $this->input->post('brand'),
 				'car_type' => $this->input->post('type'),

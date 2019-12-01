@@ -22,11 +22,7 @@
 	<div class="row">
 		<!-- left part -->
 		<div class="col-lg-6">
-			<div class="form-group">
-				<label for="">Car Owner * </label>
-				<input type="text" class="form-control <?= (form_error('owner') == '' ? '':'is-invalid') ?>" id="" name="owner" value="<?php echo set_value('owner'); ?>">
-				<?= form_error('owner'); ?>
-			</div>
+			
 			<div class="form-group">
 				<label for="">Model * </label>
 				<input type="text" class="form-control <?= (form_error('model') == '' ? '':'is-invalid') ?>" id="" name="model" value="<?php echo set_value('model'); ?>">
@@ -38,8 +34,16 @@
 				<?= form_error('brand'); ?>
 			</div>    
 			<div class="form-group">
-				<label for="">Type * </label>
-				<input type="text" class="form-control <?= (form_error('type') == '' ? '':'is-invalid') ?>" id="" name="type" value="<?php echo set_value('type'); ?>">
+				<label for="">Body Type * </label>
+				<select  class="form-control <?= (form_error('type') == '' ? '':'is-invalid') ?>" id="" name="type">
+					<option <?php echo set_select('type', 'SUV', TRUE); ?> value="SUV">SUV</option>
+					<option <?php echo set_select('type', 'Sedan'); ?> value="Sedan">Sedan</option>   
+					<option <?php echo set_select('type', 'Hatchback'); ?> value="Hatchback">Hatchback</option>
+					<option <?php echo set_select('type', 'Minivan'); ?> value="Minivan">Minivan</option>   
+					<option <?php echo set_select('type', 'Van'); ?> value="Van">Van</option>   
+					<option <?php echo set_select('type', 'Pickup Truck'); ?> value="Pickup Truck">Pickup Truck</option>        
+
+				</select>	 
 				<?= form_error('type'); ?>
 			</div>  
 			<div class="form-group">

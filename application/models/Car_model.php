@@ -58,7 +58,7 @@ class Car_model extends CI_Model {
 
 	public function update_data($data) {
 
-		$this->db->set('car_owner', $data['car_owner']);
+		
 		$this->db->set('car_model', $data['car_model']);
 		$this->db->set('car_brand', $data['car_brand']);
 		$this->db->set('car_type', $data['car_type']);

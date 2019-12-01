@@ -669,7 +669,8 @@ xcustom form elements
 </style>
 </header>
       <!--/.Navbar-->
- 
+ <br>
+ <br>
 <main>
 
 <!--Carousel Wrapper-->
@@ -704,17 +705,7 @@ xcustom form elements
       
       </div>
     </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/third.jpg') ?>"
-          alt="Third slide">
-        <div class="mask rgba-black-slight"></div>
-      </div>
-      <div class="carousel-caption">
-        
-      </div>
-    </div>
+    
   </div>
   <!--/.Slides-->
   <!--Controls-->

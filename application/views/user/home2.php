@@ -669,8 +669,8 @@ xcustom form elements
 </style>
 </header>
       <!--/.Navbar-->
- <br>
- <br>
+<br>
+<br>
  
 <main>
 
@@ -687,7 +687,7 @@ xcustom form elements
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view">
-        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/carousel-img1.jpg') ?>"
+        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/carousel-img1 copy.jpg') ?>"
           alt="First slide">
         <div class="mask rgba-black-light"></div>
       </div>
@@ -698,7 +698,7 @@ xcustom form elements
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/second.jpg') ?>"
+        <img class="d-block w-100" src="<?php echo base_url('assets/Content-filter/img/second copy.jpg') ?>"
           alt="Second slide">
         <div class="mask rgba-black-strong"></div>
       </div>

@@ -17,7 +17,7 @@
 <?php endif; ?>
 <h1>Car Details</h1>
 <!-- <p><?php print_r($fetch_data->row(0)); ?></p> -->
-<p>Car Owner: <?php echo $fetch_data->row(0)->car_owner; ?></p>
+
 <p>Car Model: <?php echo $fetch_data->row(0)->car_model; ?></p>
 <p>Car Brand: <?php echo $fetch_data->row(0)->car_brand; ?></p>
 <p>Car Type: <?php echo $fetch_data->row(0)->car_type; ?></p>

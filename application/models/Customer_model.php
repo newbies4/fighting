@@ -28,15 +28,13 @@ class Customer_model extends CI_Model {
 
 	public function update_data($data) {
 
-	
-		$this->db->set('email', $data['email']);
-		$this->db->set('license_no', $data['licenseno']);
-		$this->db->set('Gender', $data['gender']);
-		$this->db->set('Birth_Date', $data['date']);		
-		$this->db->set('contact_no', $data['contactno']);
-		$this->db->set('current_address', $data['address']);
-		$this->db->set('age', $data['age']);
 		$this->db->set('Name', $data['name']);
+		$this->db->set('current_address', $data['address']);
+		$this->db->set('contact_no', $data['contactno']);
+		$this->db->set('Birth_Date', $data['date']);
+		$this->db->set('Gender', $data['gender']);
+		$this->db->set('license_no', $data['licenseno']);
+		$this->db->set('email', $data['email']);
 		$this->db->where('customer_id', $data['id']);
 		$this->db->update('tbl_customer');
 	}
