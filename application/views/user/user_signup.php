@@ -57,7 +57,7 @@
 			</div>
 			<div class="form-group">
 
-				<span class="help-block">By clicking Continue, you certify that the above information provided are correct and true.</span>
+			
 				<button class="btn btn-lg btn-primary-signup btn-block signup-btn"type="submit">
 				Continue</button>
 

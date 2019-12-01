@@ -36,16 +36,16 @@
                     <?php foreach($fetch_data->result_array() as $row): ?>
                    <tr>
                         <td><?php echo $row['car_model'] ?></td>
-                        <td><?php echo $row['car_brand'] ?>Brand</td>
-                        <td><?php echo $row['car_type'] ?>Type</td>
-                        <td><?php echo $row['car_seats'] ?>Seats</td>
-                        <td><?php echo $row['car_color'] ?>Color</td>
-                        <td><?php echo $row['car_platenumber'] ?>Plate Number</td>
-                        <td><?php echo $row['car_price'] ?>Price</td>
-                        <td><?php echo $row['car_fuel_capacity'] ?>Fuel Capacity</td>
-                        <td><?php echo $row['car_driver'] ?>Driver</td>
-                        <td><?php echo $row['car_transmission'] ?>Trasmisssion</td>
-                        <td><?php echo $row['car_insurance'] ?>Insurance Type</td>
+                        <td><?php echo $row['car_brand'] ?></td>
+                        <td><?php echo $row['car_type'] ?></td>
+                        <td><?php echo $row['car_seats'] ?></td>
+                        <td><?php echo $row['car_color'] ?></td>
+                        <td><?php echo $row['car_platenumber'] ?> </td>
+                        <td><?php echo $row['car_price'] ?></td>
+                        <td><?php echo $row['car_fuel_capacity'] ?>L</td>
+                        <td><?php echo $row['car_driver'] ?></td>
+                        <td><?php echo $row['car_transmission'] ?></td>
+                        <td><?php echo $row['car_insurance'] ?> </td>
                         <td><?php echo $row['is_available'] ?></td>
                         <td>
                             <div class="dropdown"><button class="btn btn-primary dropdown-toggle-btn" data-toggle="dropdown" aria-expanded="false" type="button" >Options <i class="fa fa-caret-down"></i></button>
