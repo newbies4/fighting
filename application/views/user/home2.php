@@ -671,8 +671,7 @@ xcustom form elements
       <!--/.Navbar-->
  <br>
  <br>
- <br>
- <br>
+ 
 <main>
 
 <!--Carousel Wrapper-->

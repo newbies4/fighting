@@ -15,7 +15,7 @@
             <tr>   
             <th id="trs-hd" class="">License No.</th>      
             <th id="trs-hd" class="">Name</th>
-            <th id="trs-hd" class="">Age</th>
+            
             <th id="trs-hd" class="">Current Address</th> 
             <th id="trs-hd" class="">Contact No.</th>
             <th id="trs-hd" class="">Email Address</th>
@@ -36,7 +36,7 @@
               <tr>
                 <td><?php echo $row['license_no'] ?></td>
                 <td><?php echo $row['Name'] ?></td>
-                <td><?php echo $row['age'] ?></td>
+                
                 <td><?php echo $row['current_address'] ?></td> 
                 <td><?php echo $row['contact_no'] ?></td> 
                 <td><?php echo $row['email'] ?></td>   
@@ -49,7 +49,8 @@
                 <td>
                 <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle-btn" data-toggle="dropdown" aria-expanded="false" type="button" >Options <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo base_url('Customer_controller/edit_customer/'.$row['customer_id']);?>">Edit</a></div>
+                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo base_url('Customer_controller/edit_customer/'.$row['customer_id']);?>">Edit</a>
+                <a class="dropdown-item" role="presentation" href="<?php echo base_url('Customer_controller/delete_customer/'.$row['customer_id']);?>">Delete</a></div>
                 </div>
                 </td>
               </tr>

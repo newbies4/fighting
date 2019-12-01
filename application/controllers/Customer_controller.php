@@ -59,7 +59,7 @@ class Customer_controller extends CI_Controller {
         // Setting up the rules
         // $this->form_validation->set_rules('input name', 'Display Error Name', 'validation');
 		$this->form_validation->set_rules('name', 'Name', 'required|min_length[2]|max_length[50]');
-        $this->form_validation->set_rules('age', 'Age', 'required|min_length[2]|max_length[50]');
+       
         $this->form_validation->set_rules('address', 'Address', 'required|min_length[2]|max_length[50]');
         $this->form_validation->set_rules('contactno', 'Contact No..', 'required|min_length[11]|max_length[11]|numeric');
         $this->form_validation->set_rules('date', 'Selecte Date', 'required');
@@ -80,7 +80,7 @@ class Customer_controller extends CI_Controller {
         	$data = array(
                 // database column name => input field name
         		'Name' => $this->input->post('name'),
-				'age' => $this->input->post('age'),
+				
 				'current_address' => $this->input->post('address'),
                 'contact_no' => $this->input->post('contactno'),
                 'Birth_Date' => $this->input->post('date'),
@@ -99,7 +99,7 @@ class Customer_controller extends CI_Controller {
     {
         // Setting up the rules
         $this->form_validation->set_rules('name', 'Name', 'required|min_length[2]|max_length[50]');
-        $this->form_validation->set_rules('age', 'Age', 'required|min_length[2]|max_length[50]');
+        
         $this->form_validation->set_rules('address', 'Address', 'required|min_length[2]|max_length[50]');
         $this->form_validation->set_rules('contactno', 'Contact No..', 'required|min_length[7]|max_length[15]|numeric');
         $this->form_validation->set_rules('date', 'Selecte Date', 'required');
@@ -111,7 +111,7 @@ class Customer_controller extends CI_Controller {
         {
             $data['customer'] = array(
                 'Name' => $this->input->post('name'),
-				'age' => $this->input->post('age'),
+				
 				'current_address' => $this->input->post('address'),
                 'contact_no' => $this->input->post('contactno'),
                 'Birth_Date' => $this->input->post('date'),
