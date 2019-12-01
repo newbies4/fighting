@@ -196,6 +196,14 @@ a.article:hover {
   border-radius: 5px;
 }
 
+.success-message-content{
+  padding: 30px;
+  background:white;
+  height: 460px;
+  box-shadow: 2px 2px 4px rgba(0.5, 0.5,0.5, 0.5);
+  border-radius: 5px;
+}
+
 /* ---------------------------------------------------
     ADMIN BREADCRUMB
 ----------------------------------------------------- */
@@ -769,5 +777,20 @@ img {
             transform: scale(1); } 
 }
 
+.storeroom{
+  width:300px;
+  height: 300px;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#sticky-footer{
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  left:0px;
+  bottom: 0px;
+}
 
 /*   USER HOME   */

@@ -1,4 +1,4 @@
-
+<div class="admin-content">
 
 
 <div class="container">
@@ -164,4 +164,4 @@
 	<?php echo form_close(); ?>
 </div> <!-- end of container -->
 </div> <!-- admin content -->
-	
+</div>

@@ -35,8 +35,8 @@
                             <td><?php echo $row['reserve_status'] ?></td>
                             <td>
                                 <div class="dropdown">
-                                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Option
+                                  <button class="btn btn-primary dropdown-toggle-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Option <i class="fa fa-caret-down"></i>
                                   </button>
                                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="<?php echo base_url('reserve_controller/view_details/'.$row['reserve_id']) ?>">View Details</a>

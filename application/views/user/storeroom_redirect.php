@@ -3,8 +3,12 @@
 <br>
 <br>
 <br>
-<br>
 
-Success Message
+
+<div class="storeroom">
+<img src="<?php echo base_url("assets\Content-filter\img\storeroom.png" )?>" />
+<b><h4><center>Success Message</center></h4></b>
 <br>
-Please go to your storeroom to finalize your reservation
+<center>Please go to your Storeroom to finalize your reservation</center>
+
+</div>

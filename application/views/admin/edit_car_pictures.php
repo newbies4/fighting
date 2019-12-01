@@ -1,4 +1,4 @@
-
+<div class="admin-content">
 
 <h1>Car Pictures</h1>
 <?php if(isset($error)): ?>

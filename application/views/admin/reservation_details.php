@@ -1,4 +1,5 @@
 reservation details
+<div class="admin-content">
 
 <!-- <?php echo print_r($fetch_data); ?> -->
 <?php foreach ($fetch_data->result_array() as $row) {
@@ -50,3 +51,4 @@ reservation details
 </table>
 
 <a href="<?php echo base_url('reserve_controller/show_reservation') ?>" class="btn btn-primary" role="button" aria-pressed="true">Back</a>
+</div>
