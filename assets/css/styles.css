@@ -786,11 +786,18 @@ img {
 }
 
 #sticky-footer{
-  height: 50px;
+  /*height: 50px;
   width: 100%;
   position: absolute;
   left:0px;
-  bottom: 0px;
+  bottom: 0px;*/
+  position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
 }
 
 /*   USER HOME   */

@@ -128,7 +128,7 @@ class Customer_controller extends CI_Controller {
                 'license_no' => $this->input->post('licenseno'),
                 'email' => $this->input->post('email')
             );
-            var_dump($data['customer']);
+            // var_dump($data['customer']);
             $data['main_view'] = "admin/edit_customer";
 
             $this->load->view('layouts/main', $data);
