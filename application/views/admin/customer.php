@@ -40,10 +40,6 @@
                 <td><?php echo $row['email'] ?></td>   
                 <td><?php echo $row['Birth_Date'] ?></td>  
                 <td><?php echo $row['Gender'] ?></td>  
-                
-
-                
-
                 <td>
                 <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle-btn" data-toggle="dropdown" aria-expanded="false" type="button" >Options <i class="fa fa-caret-down"></i></button>

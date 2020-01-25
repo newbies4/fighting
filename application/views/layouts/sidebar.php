@@ -27,12 +27,11 @@
         <li class="<?php if($this->uri->uri_string() == 'customer_controller/show') { echo 'active'; } ?>">
             <a href="<?php echo base_url('customer_controller/show'); ?>">CUSTOMER</a>
         </li>
+        <!--
         <li class="<?php if($this->uri->uri_string() == 'Employee_controller/show') { echo 'active'; } ?>">
             <a href="<?php echo base_url('admin_controller/employee'); ?>">EMPLOYEE</a>
-        </li>
-        <li class="<?php if($this->uri->uri_string() == 'admin_controller/team') { echo 'active'; } ?>">
-            <a href="<?php echo base_url('admin_controller/team'); ?>">ABOUT US</a>
-        </li>
+        </li>--!>
+        
     </ul>
 
     

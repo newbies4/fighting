@@ -6,7 +6,7 @@
 
 <?= form_open('Customer_controller/update_customer') ?>
 
-<input type="hidden" name="id" value="<?php echo (isset($customer->customer_id)) ? $cutomer->customer_id : set_value('id'); ?>">
+<input type="hidden" name="id" value="<?php echo (isset($customer->customer_id)) ? $customer->customer_id : set_value('id'); ?>">
 
 
 <div class="form-row">

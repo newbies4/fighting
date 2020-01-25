@@ -14,6 +14,7 @@
                 <div class="tab-pane active" id="pic-1"><img src=<?php echo base_url("assets/img/cars/" . $fetch_data->row(0)->car_pic_name )?> /></div>
                 <div class="tab-pane" id="pic-2"><img src=<?php echo base_url("assets/img/cars/" . $fetch_data->row(1)->car_pic_name )?> /></div>
                 <div class="tab-pane" id="pic-3"><img src=<?php echo base_url("assets/img/cars/" . $fetch_data->row(2)->car_pic_name )?> /></div>
+                <div class="tab-pane" id="pic-3"><img src=<?php echo base_url("assets/img/cars/" . $fetch_data->row(2)->car_pic_name )?> /></div>
 			</div>
             
             <ul class="preview-thumbnail nav nav-tabs">
